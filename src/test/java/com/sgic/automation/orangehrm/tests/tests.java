@@ -1,17 +1,19 @@
 package com.sgic.automation.orangehrm.tests;
 
 import com.sgic.automation.orangehrm.utils.Constants;
+import com.sgic.automation.orangehrm.utils.TestBase;
 import org.testng.annotations.Test;
+
 
 public class tests extends TestBase {
 
-    @Test(groups = "REGRESSION", priority = 1)
-    public void testLogin() {
-      Login.setUserName(Constants.OrgUserName);
-      Login.setPassword(Constants.OrgPassword);
-        Login.clickLoginButton();
-       // PageBase.staticWait(10);
-    }
+//    @Test(groups = "REGRESSION", priority = 1)
+//    public void testLogin() {
+//      Login.setUserName(Constants.OrgUserName);
+//      Login.setPassword(Constants.OrgPassword);
+//        Login.clickLoginButton();
+//       // PageBase.staticWait(10);
+//    }
 
 //        @Test(groups = "REGRESSION", priority = 7)
 //    public void testVerifyLogin(String username, String password) {

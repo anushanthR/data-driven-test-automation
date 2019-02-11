@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a11ca105-9f41-4ea8-9ec9-c3a0c4835997" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/AddLeave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/AddLeaveMultipleEntitlement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/AddLeaveSingleEntitlement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/HolidaySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/LeaveEntitlements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/LeaveEntitlementsAndUsageReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/LeavePeriod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/LeaveTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/SearchHoliday.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/WorkWeek.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/DashBoardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/DashBoardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIAsddPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIAsddPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/PageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/Perfomance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/Perfomance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/utils/Test.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,104 +22,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/Perfomance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/Constants.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/DashBoardPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
+                <element signature="e#723#724#0" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/LoginPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIAsddPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+              <folding>
+                <element signature="e#1119#1120#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIsPage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/AddLeaveSingleEntitlement.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#576#577#0" expanded="true" />
-                <element signature="e#642#643#0" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#743#744#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/AddLeaveMultipleEntitlement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/PageBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="16" column="83" lean-forward="true" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/tests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/WorkWeek.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/HolidaySearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/AddLeave.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/SearchHoliday.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="374">
+              <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -150,11 +112,17 @@
         <option value="$PROJECT_DIR$/src/test/resources/testplans/REGRESSION.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/utils/TestBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/Login.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/tests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/AddLeaveEntitlement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/AddLeaveSingleEntitlement.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/tests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/PageBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/PerformancePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIsPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIAsddPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/Perfomance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/DashBoardPage.java" />
       </list>
     </option>
   </component>
@@ -167,12 +135,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="selenium-fremwork" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -184,127 +147,172 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="orangehrm" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="orangehrm" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sgic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="orangehrm" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sgic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="automation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sgic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="automation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="orangehrm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sgic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="automation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="orangehrm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="orangehrm" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sgic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="automation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="orangehrm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="utils" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="orangehrm" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="orangehrm" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="data-driven-test-automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-driven-test-automation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="drivers" type="462c0819:PsiDirectoryNode" />
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sgic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sgic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="automation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sgic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="automation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="orangehrm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="data-driven-test-automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="selenium-fremwork" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sgic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="automation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="orangehrm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="utils" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549860541267" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549871591929" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -325,7 +333,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.tests.testLogin">
+  <component name="RunManager" selected="TestNG.Perfomance.addKIPs">
+    <configuration name="Perfomance" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-fremwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sgic.automation.orangehrm.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sgic.automation.orangehrm.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.sgic.automation.orangehrm.tests.Perfomance" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Perfomance.addKIPs" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-fremwork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sgic.automation.orangehrm.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sgic.automation.orangehrm.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.sgic.automation.orangehrm.tests.Perfomance" />
+      <option name="METHOD_NAME" value="addKIPs" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="tests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-fremwork" />
       <extension name="coverage">
@@ -380,6 +422,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Perfomance.addKIPs" />
+        <item itemvalue="TestNG.Perfomance" />
         <item itemvalue="TestNG.tests.testLogin" />
         <item itemvalue="TestNG.tests" />
         <item itemvalue="TestNG.tests.OrgTestLogin" />
@@ -400,42 +444,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests_OrgTestLogin - 2019.02.11 at 05h 17m 56s.xml">
-      <configuration name="tests.OrgTestLogin" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 12h 17m 53s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests_OrgTestLogin - 2019.02.11 at 05h 28m 56s.xml">
-      <configuration name="tests.OrgTestLogin" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 12h 18m 34s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests_OrgTestLogin - 2019.02.11 at 05h 29m 04s.xml">
-      <configuration name="tests.OrgTestLogin" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 12h 21m 27s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests - 2019.02.11 at 05h 29m 18s.xml">
-      <configuration name="tests" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 12h 30m 53s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests_OrgTestLogin - 2019.02.11 at 05h 33m 21s.xml">
-      <configuration name="tests.OrgTestLogin" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 12h 33m 04s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests - 2019.02.11 at 05h 48m 30s.xml">
-      <configuration name="tests" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 12h 34m 26s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests_testLogin - 2019.02.11 at 08h 30m 25s.xml">
-      <configuration name="tests.testLogin" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 12h 36m 58s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests - 2019.02.11 at 10h 15m 51s.xml">
-      <configuration name="tests" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 12h 38m 03s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests_testLogin - 2019.02.11 at 10h 17m 59s.xml">
-      <configuration name="tests.testLogin" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 13h 18m 23s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests_testLogin - 2019.02.11 at 10h 18m 12s.xml">
-      <configuration name="tests.testLogin" configurationId="TestNG" />
+    <history-entry file="Perfomance_addKIPs - 2019.02.11 at 13h 20m 50s.xml">
+      <configuration name="Perfomance.addKIPs" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25037822" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27231467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -445,7 +489,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3420622" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -463,7 +507,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23903178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27231467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -473,19 +517,19 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.10474632" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32980332" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -510,17 +554,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="636" column="7" selection-start-line="636" selection-start-column="4" selection-end-line="636" selection-end-column="7" />
-          <folding>
-            <element signature="e#26222#26223#0" expanded="true" />
-            <element signature="e#26265#26266#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Throwable.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -546,16 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/utils/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,17 +662,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/File.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/File.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/Login.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/utils/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="148" column="13" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="221">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -658,14 +677,24 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="153">
+          <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/utils/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -674,15 +703,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/PageBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="83" lean-forward="true" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
+        <state relative-caret-position="374">
+          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/PerformancePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+          <folding>
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+        <state relative-caret-position="374">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/KPIAsddPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+          <folding>
+            <element signature="e#1119#1120#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sgic/automation/orangehrm/tests/Perfomance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sgic/automation/orangehrm/pages/DashBoardPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -738,7 +830,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Test Automation</last-edited>
+          <last-edited>selenium-fremwork</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

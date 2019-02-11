@@ -25,9 +25,11 @@ public class KPIAsddPage extends PageBase {
         getDriver().findElement(txtKPI).sendKeys(kpis);
     }
     public static void setMinRating(String minRating){
+        getDriver().findElement(txtMinRating).clear();
         getDriver().findElement(txtMinRating).sendKeys(minRating);
     }
     public static void setMaxRating(String maxRating){
+        getDriver().findElement(txtMaxRating).clear();
         getDriver().findElement(txtMaxRating).sendKeys(maxRating);
     }
     public static void clickMakeDefoult(){
