@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class PageBase {
     private static WebDriver driver;
         private static String baseUrl="https://opensource-demo.orangehrmlive.com/";
-        private static String driverPath="resources"+ File.separator+"drivers"+File.separator;
+        private static String driverPath="src"+ File.separator+"test"+ File.separator+"resources"+ File.separator+"drivers"+File.separator;
         private static String osType=System.getProperty("os.Type",Constants.WINDOWS);
         private static String driverType=System.getProperty("browser.type",Constants.CHROME);
 
@@ -57,7 +57,6 @@ public class PageBase {
     }
     /** * Refresh web driver instances */
     public static void refreshDriver()
-
     {
         getDriver().navigate().refresh();
     }
@@ -74,7 +73,6 @@ public class PageBase {
      * */
     public static String getCurrentWindow()
     {
-
         return getDriver().getWindowHandle();
     }
     /**
