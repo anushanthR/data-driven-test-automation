@@ -14,11 +14,11 @@ public class Perfomance extends TestBase {
      * Verify KPIs add
      */
     @Test( priority = 0)
-    public void addKIPs() {
+    public void addKIPs(String username, String password) {
         softAssert = new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
 
-        LoginPage.login();
+        LoginPage.login(username,password);
         //softAssert.assertTrue(LoginPage.isLoginAlertDisplay(),"Alert is not Displayed");
         softAssert.assertTrue(PerformancePage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
         PerformancePage.clickPerfomance();

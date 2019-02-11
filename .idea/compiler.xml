@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="selenium-fremwork" />
-        <module name="Test Automation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
