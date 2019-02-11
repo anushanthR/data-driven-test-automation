@@ -13,7 +13,7 @@ import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 public class PageBase {
-    private static WebDriver driver;
+    public static WebDriver driver;
         private static String baseUrl="https://opensource-demo.orangehrmlive.com/";
         private static String driverPath="src"+ File.separator+"test"+ File.separator+"resources"+ File.separator+"drivers"+File.separator;
         private static String osType=System.getProperty("os.Type",Constants.WINDOWS);
@@ -23,7 +23,7 @@ public class PageBase {
     public static void initiateDriver() throws MalformedURLException {
         switch (driverType) {
             case Constants.CHROME:
-                if(osType.equals(Constants.WINDOWS)) {
+                if(osType.equals(Constants.UBUNTU)) {
                     System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver");
                 } else
                     System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
