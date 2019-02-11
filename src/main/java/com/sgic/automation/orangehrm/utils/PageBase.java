@@ -23,7 +23,7 @@ public class PageBase {
     public static void initiateDriver() throws MalformedURLException {
         switch (driverType) {
             case Constants.CHROME:
-                if(osType.equals(Constants.WINDOWS)) {
+                if(osType.equals(Constants.UBUNTU)) {
                     System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver");
                 } else
                     System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
