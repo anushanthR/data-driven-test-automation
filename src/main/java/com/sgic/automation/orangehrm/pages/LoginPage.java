@@ -1,5 +1,6 @@
 package com.sgic.automation.orangehrm.pages;
 
+import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -31,5 +32,10 @@ public class LoginPage extends PageBase {
     }
     public static void getLoginAlert(){
         getDriver().findElement(alert).getText();
+    }
+    public static void login(){
+        LoginPage.setUserName(Constants.OrgUserName);
+        LoginPage.serPassword(Constants.OrgPassword);
+        LoginPage.clickLogin();
     }
 }
