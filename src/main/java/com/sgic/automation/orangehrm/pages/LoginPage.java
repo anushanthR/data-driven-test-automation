@@ -13,9 +13,11 @@ public class LoginPage extends PageBase {
     private static By alert =By.id("spanMessage");
 
     public static boolean isLoginPageDisplay(){
+
         return getDriver().findElement(loginHeading).isDisplayed();
     }
     public static void setUserName(String userName){
+
         getDriver().findElement(txtuserName).sendKeys(userName);
     }
     public static void serPassword(String password){

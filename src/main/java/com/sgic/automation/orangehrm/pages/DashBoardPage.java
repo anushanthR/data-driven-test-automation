@@ -5,5 +5,7 @@ import org.openqa.selenium.By;
 
 public class DashBoardPage {
     private static final Logger LOGGER = Logger.getLogger(LoginPage.class);
-    private static By loginHeading=By.id("logInPanelHeading");
+    private static By dashboardHeading=By.id("//*[@id=\"content\"]/div/div[1]/h1");
+
+    //public static boolean isDashboard
 }
