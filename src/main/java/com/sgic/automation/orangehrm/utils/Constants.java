@@ -22,7 +22,7 @@ public class Constants {
     public static final String LOGIN_USER_NAME = "Admin";
     public static final String LOGIN_PASSWORD = "admin123";
 
-    public static final String REC_OPTION_1 = "HR Manager";
+  //  public static final String REC_OPTION_1 = "HR Manager";
 
     public static final String REC_OPTION_JOB_TITLE = "IT Manager";
 

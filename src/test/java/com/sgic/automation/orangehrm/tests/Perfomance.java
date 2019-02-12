@@ -16,7 +16,7 @@ public class Perfomance extends TestBase {
      * Verify KPIs add
      *
      */
-<<<<<<< HEAD
+
 //    @DataProvider(name = "OrangeHrmLogin")
 //    public Object[][] orangeHrmKPIs() {
 //
