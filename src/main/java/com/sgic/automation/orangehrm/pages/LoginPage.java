@@ -36,11 +36,16 @@ public class LoginPage extends PageBase {
         getDriver().findElement(alert).getText();
     }
 
-    public static void login(String username, String password){
-        LoginPage.setUserName(username);
-        LoginPage.serPassword(password);
-        LoginPage.clickLogin();
-    }
+//  public static void login() {
+//    LoginPage.setUserName(Constants.OrgUserName);
+//    LoginPage.serPassword(Constants.OrgPassword);
+//    LoginPage.clickLogin();
+//  }
+public static void login(String userName, String password) {
+  LoginPage.setUserName(userName);
+  LoginPage.serPassword(password);
+  LoginPage.clickLogin();
+}
 
 
 }
