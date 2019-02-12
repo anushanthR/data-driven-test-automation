@@ -1,5 +1,9 @@
 package com.sgic.automation.orangehrm.tests;
 
+import com.sgic.automation.orangehrm.TestData.KPIsData;
+
+import com.sgic.automation.orangehrm.TestData.PerformanceReviewData;
+import com.sgic.automation.orangehrm.TestData.TrackerData;
 import com.sgic.automation.orangehrm.pages.*;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.ExcelDataConfig;
@@ -16,31 +20,12 @@ public class Perfomance extends TestBase {
      * Verify KPIs add
      *
      */
-
-    @DataProvider(name = "OrangeHrmLogin")
-    public Object[][] orangeHrmKPIs() {
-
-        ExcelDataConfig exConfig = new ExcelDataConfig("test\\resources\\inputDatas\\OrangeHrm.xlsx");
-        int rows = exConfig.getRowCount(0);
-
-        Object[][] data = new Object[rows][2];
-        for (int i = 1; i < rows; i++) {
-            data[i][0] = exConfig.getData("Sheet1", i, 0);
-            data[i][1] = exConfig.getData("Sheet1", i, 1);
-        }
-        return data;
-    }
-
-    @Test( priority = 0,dataProvider = "OrangeHrmLogin")
-    public void addKIPs() {
+    @Test( priority = 0,dataProviderClass = KPIsData.class,dataProvider = "KPIAdd")
+    public void addKIPs(String jobTitle,String KPI,String minRating,String maxRating ) {
         softAssert = new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
 
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
-
-
-        LoginPage.login("","");
-
         //softAssert.assertTrue(LoginPage.isLoginAlertDisplay(),"Alert is not Displayed");
         softAssert.assertTrue(PerformancePage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
         PerformancePage.clickPerfomance();
@@ -52,10 +37,57 @@ public class Perfomance extends TestBase {
         softAssert.assertTrue(KPIsPage.isAddButtonDisplayed(),"add button  is not Displayed");
         KPIsPage.clickAddbtn();
         softAssert.assertTrue(KPIAsddPage.isAddKIPsPageDisplayes(),"KPIs add page  is not Displayed");
-        KPIAsddPage.addKPIs(Constants.JobTitle,Constants.KPI,Constants.MinRating,Constants.MaxRating);
+        KPIAsddPage.addKPIs(jobTitle,KPI,minRating,maxRating);
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
         softAssert.assertAll();
+    }
+
+    @Test(priority = 1,dataProviderClass = TrackerData.class,dataProvider = "TrackerAdd")
+    public  void addTrackers(String trackerName,String employeeName,String reviewers){
+        softAssert = new SoftAssert();
+        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
+
+        LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
+        //softAssert.assertTrue(LoginPage.isLoginAlertDisplay(),"Alert is not Displayed");
+        softAssert.assertTrue(PerformancePage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
+        PerformancePage.clickPerfomance();
+        softAssert.assertTrue(PerformancePage.isConfigureBtnDisplay(),"Configure button is not Displayed");
+        PerformancePage.clickConfigure();
+        PerformancePage.clickTrackersbtn();
+        softAssert.assertTrue(TrackersPage.isTrackersDisplayed() ,"Trackers page  is not Displayed");
+        TrackersPage.clickAddbtn();
+        softAssert.assertTrue(AddTrackersPage.isAddTrackersDisplayes() ,"Add Trackers page  is not Displayed");
+        AddTrackersPage.addTrackers( trackerName, employeeName, reviewers);
+
+        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
+        DashBoardPage.clickWelcomeAdminbtn();
+        DashBoardPage.clickLogoutbtn();
+        softAssert.assertAll();
+
+    }
+
+    @Test(priority = 2,dataProviderClass = PerformanceReviewData.class,dataProvider = "PerformanceReviewAdd")
+    public  void addReview(String employeeName,String supervisorName,
+                           String startDate,String endDate,String dueDate){
+        softAssert = new SoftAssert();
+        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
+
+        LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
+        softAssert.assertTrue(PerformancePage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
+        PerformancePage.clickPerfomance();
+        PerformancePage.clickManageReviewbtn();
+        PerformancePage.clickManageReviewsbtn();
+        softAssert.assertTrue(ManageReviewsPage.isReviewsPageDisplayed() ,"ManageReviewsPage   is not Displayed");
+        TrackersPage.clickAddbtn();
+        softAssert.assertTrue(AddReviewPage.isAddReviewDisplayes() ,"Add review page  is not Displayed");
+        AddReviewPage.addPerformanceReview(employeeName,supervisorName,startDate,endDate,dueDate);
+
+        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
+        DashBoardPage.clickWelcomeAdminbtn();
+        DashBoardPage.clickLogoutbtn();
+        softAssert.assertAll();
+
     }
 }
