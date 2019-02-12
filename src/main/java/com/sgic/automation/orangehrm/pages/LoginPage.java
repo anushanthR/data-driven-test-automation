@@ -4,6 +4,8 @@ import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.testng.annotations.DataProvider;
+
 
 public class LoginPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(LoginPage.class);
@@ -33,9 +35,13 @@ public class LoginPage extends PageBase {
     public static void getLoginAlert(){
         getDriver().findElement(alert).getText();
     }
-    public static void login(){
-        LoginPage.setUserName(Constants.OrgUserName);
-        LoginPage.serPassword(Constants.OrgPassword);
+
+    public static void login(String username, String password){
+        LoginPage.setUserName(username);
+        LoginPage.serPassword(password);
         LoginPage.clickLogin();
     }
+
+
 }
+

@@ -1,5 +1,6 @@
 package com.sgic.automation.orangehrm.pages;
 
+import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -32,7 +33,7 @@ public class KPIAsddPage extends PageBase {
         getDriver().findElement(txtMaxRating).clear();
         getDriver().findElement(txtMaxRating).sendKeys(maxRating);
     }
-    public static void clickMakeDefoult(){
+    public static void clickMakeDefault(){
         getDriver().findElement(makeDefault).click();
     }
     public static boolean isSaveButtonDisplayed(){
@@ -40,6 +41,14 @@ public class KPIAsddPage extends PageBase {
     }
     public static void clickSaveBtn(){
         getDriver().findElement(savebtn).click();
+    }
+    public static void  addKPIs(String jobTitle,String KPI,String minRating,String maxRating){
+        KPIAsddPage.setJobTitle(jobTitle);
+        KPIAsddPage.setKPIs(KPI);
+        KPIAsddPage.setMinRating(minRating);
+        KPIAsddPage.setMaxRating(maxRating);
+        KPIAsddPage.clickMakeDefault();
+        KPIAsddPage.clickSaveBtn();
     }
 
 }
