@@ -1,7 +1,6 @@
 package com.sgic.automation.orangehrm.tests;
 
 import com.sgic.automation.orangehrm.TestData.KPIsData;
-
 import com.sgic.automation.orangehrm.TestData.PerformanceReviewData;
 import com.sgic.automation.orangehrm.TestData.TrackerData;
 import com.sgic.automation.orangehrm.pages.*;
@@ -83,10 +82,11 @@ public class Perfomance extends TestBase {
         TrackersPage.clickAddbtn();
         softAssert.assertTrue(AddReviewPage.isAddReviewDisplayes() ,"Add review page  is not Displayed");
         AddReviewPage.addPerformanceReview(employeeName,supervisorName,startDate,endDate,dueDate);
-
-        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
-        DashBoardPage.clickWelcomeAdminbtn();
-        DashBoardPage.clickLogoutbtn();
+        softAssert.assertTrue(AddReviewPage.isSavebtnSisplayed(),"save button not found");
+        AddReviewPage.clickSaveBtn();
+//        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
+//        DashBoardPage.clickWelcomeAdminbtn();
+//        DashBoardPage.clickLogoutbtn();
         softAssert.assertAll();
 
     }
