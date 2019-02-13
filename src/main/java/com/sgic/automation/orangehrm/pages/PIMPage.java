@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 /*
 @Author Jenisha
+verify PIM page display
  */
 public class PIMPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(PIMPage.class);
@@ -14,6 +15,10 @@ public class PIMPage extends PageBase {
     private static By configuration=By.id("menu_pim_Configuration");
     private static By optionalFeild=By.id("menu_pim_configurePim");
 
+
+    /*
+    navigate PIM page
+     */
     public static void clickPIM(){
 
         getDriver().findElement(PIM).click();

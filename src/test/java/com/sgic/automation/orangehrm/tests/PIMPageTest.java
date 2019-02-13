@@ -5,6 +5,8 @@ import com.sgic.automation.orangehrm.pages.DashBoardPage;
 import com.sgic.automation.orangehrm.pages.LoginPage;
 import com.sgic.automation.orangehrm.pages.OptionalFieldsPage;
 import com.sgic.automation.orangehrm.pages.PIMPage;
+import com.sgic.automation.orangehrm.pages.ReportingMethodPage;
+import com.sgic.automation.orangehrm.pages.TerminationReasonPage;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.ExcelDataConfig;
 import com.sgic.automation.orangehrm.utils.TestBase;
@@ -30,7 +32,7 @@ public class PIMPageTest extends TestBase {
         PIMPage.clickConfiguration();
         PIMPage.clickOptionalField();
 
-        softAssert.assertTrue(OptionalFieldsPage.isObtionlFieldDisplayes(),"OptionalField is not displayed");
+        softAssert.assertTrue(OptionalFieldsPage.isOptionlFieldDisplayes(),"OptionalField is not displayed");
 
         OptionalFieldsPage.clicEditBtn();
         OptionalFieldsPage.selectOption();
@@ -58,15 +60,76 @@ public class PIMPageTest extends TestBase {
         softAssert.assertTrue(CustomFields.isCustomFieldDisplay(),"CustomField page is not displayed");
 
         CustomFields.setFieldName("xyz");
+
+       // softAssert.assertEquals(CustomFields.getScreenSelectedOption(), "Personal Details", "DropDown value is incorrect");
         CustomFields.setScreenDropDownOption("Personal Details");
+
+        //softAssert.assertEquals(CustomFields.getTypeSelectedOption(), "Drop Down", "DropDown value is incorrect");
         CustomFields.setTypeDropDownOption("Drop Down");
         CustomFields.clickSave();
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
         softAssert.assertAll();
 
+    }
+
+    @Test(priority = 2, dataProvider ="OrangeHRMLogin" )
+    public void reportingMethod(String username, String password){
+        softAssert = new SoftAssert();
+        LoginPage.login(username, password);
+
+        PIMPage.clickPIM();
+        softAssert.assertTrue(PIMPage.isPIMPageDisplay(),"PIM page is not displayed");
+
+        PIMPage.clickConfiguration();
+        ReportingMethodPage.reportingMethodPage();
+        softAssert.assertTrue(ReportingMethodPage.isReportingMethodDisplayed(),"Reporting method page is not displayed");
+        ReportingMethodPage.addReportingMethodName();
+        ReportingMethodPage.setReportingMethodName("bbb");
+        ReportingMethodPage.saveReportingMethodName();
+//        ReportingMethodPage.setReportingMethodName("abc");
+//        ReportingMethodPage.cancelReportingMethodName();
+        ReportingMethodPage.selectReportingMethodName();
+        ReportingMethodPage.deleteReportingMethodName();
+        ReportingMethodPage.clickReportingMethodName();
+        ReportingMethodPage.clearReportingMethodName();
+        ReportingMethodPage.editReportingMethodName();
+        ReportingMethodPage.saveAndEditReportingMethodName();
+        DashBoardPage.clickWelcomeAdminbtn();
+        DashBoardPage.clickLogoutbtn();
+        softAssert.assertAll();
+
 
     }
+    @Test(priority = 3, dataProvider ="OrangeHRMLogin" )
+    public void terminationReasonPage(String username, String password){
+        softAssert = new SoftAssert();
+        LoginPage.login(username, password);
+
+        PIMPage.clickPIM();
+        softAssert.assertTrue(PIMPage.isPIMPageDisplay(),"PIM page is not displayed");
+
+        PIMPage.clickConfiguration();
+       // ReportingMethodPage.reportingMethodPage();
+        TerminationReasonPage.terminationReasonPage();
+       // softAssert.assertTrue(TerminationReasonPage.isTerminationReasonDisplayed(), "Termination reason is not displayed");
+        TerminationReasonPage.addTerminationReasonName();
+        TerminationReasonPage.setTerminationReasonName("bbbbb");
+        TerminationReasonPage.saveTerminationReasonName();
+        TerminationReasonPage.selectTerminationReasonName();
+        TerminationReasonPage.deleteTerminationReasonName();
+        TerminationReasonPage.clickTerminationReasonName();
+        TerminationReasonPage.clearTerminationReasonName();
+        TerminationReasonPage.editTerminationReasonName();
+        TerminationReasonPage.saveAndEditTerminationReasonName();
+        DashBoardPage.clickWelcomeAdminbtn();
+        DashBoardPage.clickLogoutbtn();
+        softAssert.assertAll();
+
+
+    }
+
+
 
     @DataProvider(name = "OrangeHRMLogin")
     public Object[][] orangeHRM() {
@@ -81,4 +144,6 @@ public class PIMPageTest extends TestBase {
         }
         return data;
     }
+
+
 }
