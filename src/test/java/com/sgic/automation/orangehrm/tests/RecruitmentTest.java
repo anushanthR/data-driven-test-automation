@@ -39,7 +39,7 @@ public class RecruitmentTest extends TestBase {
         RecruitmentAddVacancy.AddRecruitmentForm(jobTitle, VacancyName, HiringManager, PositionNum, Description);
         RecruitmentAddVacancy.isSaveBtnVisible();
         RecruitmentAddVacancy.saveBtn();
-        DashBoardPage.clickLogoutbtn();
+        //DashBoardPage.clickLogoutbtn();
         softAssert.assertAll();
     }
 
@@ -69,8 +69,10 @@ public class RecruitmentTest extends TestBase {
         softAssert.assertTrue(RecruitmentAddCandidate.addButtonDis(),"Candidate AddBtn is not Verify");
         RecruitmentAddCandidate.AddButtonClick();
         RecruitmentAddCandidate.AddCandidatePage();
+        RecruitmentAddCandidate.uploadFile("HRMcv.docx");
+        softAssert.assertTrue(RecruitmentAddCandidate.jobVacancy());
         RecruitmentAddCandidate.AddCandidateForms(Firstname, Middlename, Lastname,Mail,ContactNumber,jobVacancy,keyWord,comment,dateofApplication);
-        //RecruitmentAddCandidate.setSaveBtn();
+        RecruitmentAddCandidate.setSaveBtn();
     }
     /**
      * RECRUITMENT_SEARCH CANDIDATE

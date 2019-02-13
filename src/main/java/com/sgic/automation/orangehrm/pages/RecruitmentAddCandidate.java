@@ -16,6 +16,7 @@ public class RecruitmentAddCandidate extends PageBase {
      * Add Candidate form Elements
      */
     private static final Logger LOGGER = Logger.getLogger(RecruitmentAddCandidate.class);
+
     private static By candidateAddBtn = By.xpath("//*[@id=\"btnAdd\"]");
     private static By candidatePageDisplay = By.id("addCandidateHeading");
     private static By FirstName = By.id("addCandidate_firstName");
@@ -30,6 +31,7 @@ public class RecruitmentAddCandidate extends PageBase {
     private static By DateOfApplication = By.id("addCandidate_appliedDate");
     private static By SaveBtn = By.id("btnSave");
 
+
     public static boolean addButtonDis(){return getDriver().findElement(candidateAddBtn).isDisplayed();}
     public static void AddButtonClick(){getDriver().findElement(candidateAddBtn).click();}
     public static void AddCandidatePage(){getDriver().findElement(candidatePageDisplay).isDisplayed();}
@@ -41,6 +43,7 @@ public class RecruitmentAddCandidate extends PageBase {
     public static boolean jobVacancy() { return getDriver().findElement(JobVacancy).isDisplayed();}
     public static void setjobVacancySelectedOption(String jobVacancy) { Select dropDownOption = new Select(getDriver().findElement(JobVacancy));dropDownOption.selectByVisibleText(jobVacancy);}
     //UploadFile
+    public static void uploadFile(String filename) {getDriver().findElement(ResumeFileUpload).sendKeys(PageBase.uploadFilepath+File.separator+ filename); }
     public static void setKeyword(String keyWord){getDriver().findElement(Keyword).sendKeys(keyWord);}
     public static void setComment(String comment){getDriver().findElement(Comment).sendKeys(comment);}
     public static void setDateOfApplication(String dateofApplication){getDriver().findElement(DateOfApplication).sendKeys(dateofApplication);}
@@ -58,15 +61,20 @@ public class RecruitmentAddCandidate extends PageBase {
      * @param comment
      * @param dateofApplication
      */
+
+
     public static void AddCandidateForms(String Firstname,String Middlename,String Lastname,String Mail,String ContactNumber,String jobVacancy,String keyWord,String comment,String dateofApplication){
+        LOGGER.info("Add candidate method display");
         RecruitmentAddCandidate.firstName(Firstname);
         RecruitmentAddCandidate.middleName(Middlename);
         RecruitmentAddCandidate.lastName(Lastname);
         RecruitmentAddCandidate.setEmail(Mail);
         RecruitmentAddCandidate.setContactNum(ContactNumber);
+       // RecruitmentAddCandidate.jobVacancy();
         RecruitmentAddCandidate.setjobVacancySelectedOption(jobVacancy);
         RecruitmentAddCandidate.setKeyword(keyWord);
         RecruitmentAddCandidate.setComment(comment);
         RecruitmentAddCandidate.setDateOfApplication(dateofApplication);
+
     }
 }
