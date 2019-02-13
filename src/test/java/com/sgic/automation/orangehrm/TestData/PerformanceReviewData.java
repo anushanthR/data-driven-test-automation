@@ -16,8 +16,6 @@ public class PerformanceReviewData {
             data[0][2] = exConfig.getData("Trackers", i, 2);
             data[0][3] = exConfig.getData("Trackers", i, 3);
             data[0][4] = exConfig.getData("Trackers", i, 4);
-
-
         }
         return data;
     }
