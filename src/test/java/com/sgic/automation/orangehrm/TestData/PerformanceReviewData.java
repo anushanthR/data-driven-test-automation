@@ -11,11 +11,13 @@ public class PerformanceReviewData {
 
         Object[][] data = new Object[1][5];
         for (int i = 1; i < rows; i++) {
-            data[0][0] = exConfig.getData("Trackers", i, 0);
-            data[0][1] = exConfig.getData("Trackers", i, 1);
-            data[0][2] = exConfig.getData("Trackers", i, 2);
-            data[0][3] = exConfig.getData("Trackers", i, 3);
-            data[0][4] = exConfig.getData("Trackers", i, 4);
+
+            data[0][0] = exConfig.getData("PerfomanceReview", i, 0);
+            data[0][1] = exConfig.getData("PerfomanceReview", i, 1);
+            data[0][2] = exConfig.getData("PerfomanceReview", i, 2);
+            data[0][3] = exConfig.getData("PerfomanceReview", i, 3);
+            data[0][4] = exConfig.getData("PerfomanceReview", i, 4);
+
         }
         return data;
     }

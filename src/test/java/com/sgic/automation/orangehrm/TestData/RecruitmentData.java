@@ -36,6 +36,7 @@ public class RecruitmentData extends ExcelDataConfig {
         "src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
     int rows = exConfig.getRowCount(2);
 
+
     Object[][] data = new Object[1][9];
     for (int i = 1; i < rows; i++) {
       data[0][0] = exConfig.getData("SearchCandidate", i, 0);
@@ -56,6 +57,7 @@ public class RecruitmentData extends ExcelDataConfig {
     ExcelDataConfig exConfig = new ExcelDataConfig(
         "src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
     int rows = exConfig.getRowCount(2);
+
 
     Object[][] data = new Object[1][9];
     for (int i = 1; i < rows; i++) {

@@ -14,12 +14,16 @@ public class AddReviewPage extends PageBase {
     private static By txtstartDate = By.id("saveReview360Form_workPeriodStartDate");
     private static By txtendDate = By.id("saveReview360Form_workPeriodEndDate");
     private static By txtdueDate = By.id("saveReview360Form_dueDate");
-    private static By savebtn = By.id("btnSave");
+    private static By savebtn = By.xpath("//*[@id=\"saveBtn\"]");
     private static By cancelbtn = By.id("btnCancel");
-    private static By dffd=By.xpath("//td[text()='Jasmine Morgan']");
+
 
     public static boolean isAddReviewDisplayes(){
         return getDriver().findElement(addPerformanceReviewPageheading).isDisplayed();
+    }
+    public static boolean isSavebtnSisplayed(){
+        return getDriver().findElement(savebtn).isDisplayed();
+
     }
     public static void setEmloyee(String employeeName){
         implicitWait(2);
@@ -28,25 +32,29 @@ public class AddReviewPage extends PageBase {
     }
     public static void setsupervisorName(String supervisorName){
         getDriver().findElement(txtsupervisorName).sendKeys(supervisorName);
+//        getDriver().findElement(txtsupervisorName).click();
+        getDriver().findElement(txtsupervisorName).sendKeys(Keys.TAB);
 
     }
     public static void setStartDate(String startDate){
+        getDriver().findElement(txtstartDate).click();
+        getDriver().findElement(txtstartDate).clear();
         getDriver().findElement(txtstartDate).sendKeys(startDate);
     }
     public static void setEndDate(String endDate){
+        getDriver().findElement(txtendDate).clear();
         getDriver().findElement(txtendDate).sendKeys(endDate);
     }
     public static void setDueDate(String dueDate){
+        getDriver().findElement(txtdueDate).clear();
         getDriver().findElement(txtdueDate).sendKeys(dueDate);
     }
 
-
-
-
-    public static void clickSaveBtn()
-    {
+    public static void clickSaveBtn()    {
         getDriver().findElement(savebtn).click();
+        implicitWait(5);
     }
+
     public static void  addPerformanceReview(String employeeName,String supervisorName,
                                              String startDate,String endDate,String dueDate){
         AddReviewPage.setEmloyee(employeeName);
@@ -54,6 +62,5 @@ public class AddReviewPage extends PageBase {
         AddReviewPage.setStartDate(startDate);
         AddReviewPage.setEndDate(endDate);
         AddReviewPage.setDueDate(dueDate);
-        AddReviewPage.clickSaveBtn();
     }
 }

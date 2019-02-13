@@ -21,9 +21,7 @@ public class PIMPageTest extends TestBase {
   private static final Logger LOGGER = Logger.getLogger(PIMPageTest.class);
 
   /**
-   *
-   * @Author Jenisha
-   * Edit optional field
+   * @Author Jenisha Edit optional field
    */
 
   @Test(priority = 0, dataProvider = "OrangeHRMLogin")
@@ -32,7 +30,7 @@ public class PIMPageTest extends TestBase {
 
     LOGGER.info("login with username: " + username + " password: " + password);
     LoginPage.login(username, password);
-    LOGGER.info("login success with username: "+ username + " password: " + password);
+    LOGGER.info("login success with username: " + username + " password: " + password);
 
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
@@ -100,6 +98,7 @@ public class PIMPageTest extends TestBase {
     ReportingMethodPage.saveReportingMethodName();
 //        ReportingMethodPage.setReportingMethodName("abc");
 //        ReportingMethodPage.cancelReportingMethodName();
+
     ReportingMethodPage.selectReportingMethodName();
     ReportingMethodPage.deleteReportingMethodName();
     ReportingMethodPage.clickReportingMethodName();
@@ -150,9 +149,63 @@ public class PIMPageTest extends TestBase {
     for (int i = 1; i < rows; i++) {
       data[i][0] = exConfig.getData("Sheet1", i, 0);
       data[i][1] = exConfig.getData("Sheet1", i, 1);
+//=======
+//        ReportingMethodPage.selectReportingMethodName();
+//        ReportingMethodPage.deleteReportingMethodName();
+//        ReportingMethodPage.clickReportingMethodName();
+//        ReportingMethodPage.clearReportingMethodName();
+//        ReportingMethodPage.editReportingMethodName();
+//        ReportingMethodPage.saveAndEditReportingMethodName();
+//        DashBoardPage.clickWelcomeAdminbtn();
+//        DashBoardPage.clickLogoutbtn();
+//        softAssert.assertAll();
+//
+//
+//    }
+//    @Test(priority = 3, dataProvider ="OrangeHRMLogin" )
+//    public void terminationReasonPage(String username, String password){
+//        softAssert = new SoftAssert();
+//        LoginPage.login(username, password);
+//
+//        PIMPage.clickPIM();
+//        softAssert.assertTrue(PIMPage.isPIMPageDisplay(),"PIM page is not displayed");
+//
+//        PIMPage.clickConfiguration();
+//       // ReportingMethodPage.reportingMethodPage();
+//        TerminationReasonPage.terminationReasonPage();
+//       // softAssert.assertTrue(TerminationReasonPage.isTerminationReasonDisplayed(), "Termination reason is not displayed");
+//        TerminationReasonPage.addTerminationReasonName();
+//        TerminationReasonPage.setTerminationReasonName("bbbbb");
+//        TerminationReasonPage.saveTerminationReasonName();
+//        TerminationReasonPage.selectTerminationReasonName();
+//        TerminationReasonPage.deleteTerminationReasonName();
+//        TerminationReasonPage.clickTerminationReasonName();
+//        TerminationReasonPage.clearTerminationReasonName();
+//        TerminationReasonPage.editTerminationReasonName();
+//        TerminationReasonPage.saveAndEditTerminationReasonName();
+//        DashBoardPage.clickWelcomeAdminbtn();
+//        DashBoardPage.clickLogoutbtn();
+//        softAssert.assertAll();
+//
+//
+//    }
+//
+//
+//
+//    @DataProvider(name = "OrangeHRMLogin")
+//    public Object[][] orangeHRM() {
+//        //String sheetName="LeaveTesting";
+//        ExcelDataConfig exConfig = new ExcelDataConfig("src\\test\\resources\\ExcelSheet\\excel.xlsx");
+//        int rows = exConfig.getRowCount("Sheet1");
+//
+//        Object[][] data = new Object[rows][2];
+//        for (int i = 1; i < rows; i++) {
+//            data[i][0] = exConfig.getData("Sheet1", i, 0);
+//            data[i][1] = exConfig.getData("Sheet1", i, 1);
+//        }
+//        return data;
+//>>>>>>> 94517346699bb4841781410e9688a5ccf938afec
     }
     return data;
   }
-
-
 }
