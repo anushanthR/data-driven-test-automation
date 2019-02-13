@@ -8,7 +8,7 @@ public class RecruitmentData  {
     @DataProvider
     public Object[][] VacancyAdd() {
         ExcelDataConfig exConfig = new ExcelDataConfig("src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
-        int rows = exConfig.getRowCount(1);
+        int rows = exConfig.getRowCount("AddVacancy");
 
         Object[][] data = new Object[1][5];
         for (int i = 1; i < rows; i++) {
@@ -24,7 +24,7 @@ public class RecruitmentData  {
     @DataProvider
     public Object[][] CandidateAdd() {
         ExcelDataConfig exConfig = new ExcelDataConfig("src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
-        int rows = exConfig.getRowCount(0);
+        int rows = exConfig.getRowCount("AddCandidate");
 
         Object[][] data = new Object[1][4];
         for (int i = 1; i < rows; i++) {

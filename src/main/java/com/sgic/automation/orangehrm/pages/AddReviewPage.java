@@ -16,7 +16,7 @@ public class AddReviewPage extends PageBase {
     private static By txtdueDate = By.id("saveReview360Form_dueDate");
     private static By savebtn = By.id("btnSave");
     private static By cancelbtn = By.id("btnCancel");
-    private static By dffd=By.xpath("//td[text()='Jasmine Morgan']");
+
 
     public static boolean isAddReviewDisplayes(){
         return getDriver().findElement(addPerformanceReviewPageheading).isDisplayed();

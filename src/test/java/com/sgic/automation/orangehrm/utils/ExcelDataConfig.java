@@ -32,8 +32,8 @@ public class ExcelDataConfig {
         return data;
     }
 
-    public int getRowCount(int sheetIndex) {
-        int row = wb.getSheetAt(sheetIndex).getLastRowNum();
+    public int getRowCount(String sheetName) {
+        int row = wb.getSheet(sheetName).getLastRowNum();
         // it will give the index value so index start with 0 initially so we need
         // actual count so we plus one
         row = row + 1;
