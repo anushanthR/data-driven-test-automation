@@ -8,9 +8,12 @@ public class PerformancePage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(PerformancePage.class);
     private static By performancebtn=By.id("menu__Performance");
     private static By configurebtn=By.id("menu_performance_Configure");
-    private static By manageReviewsbtn=By.id("menu_performance_ManageReviews");
+    private static By manageReviewbtn=By.id("menu_performance_ManageReviews");
     private static By employeeTrackersbtn=By.id("menu_performance_viewEmployeePerformanceTrackerList");
     private static By KPIsbtn=By.id("menu_performance_searchKpi");
+    private static By trackersbtn=By.id("menu_performance_addPerformanceTracker");
+    private static By manageReviewsbtn=By.id("menu_performance_searchPerformancReview");
+
 
     public static boolean isPerfomanceBtnDisplay(){
         return getDriver().findElement(performancebtn).isDisplayed();
@@ -30,6 +33,23 @@ public class PerformancePage extends PageBase {
     public static void clickKPIs(){
         getDriver().findElement(KPIsbtn).click();
     }
+    public static void clickEmployeeTrackersbtn()
+    {
+        getDriver().findElement(employeeTrackersbtn).click();
+    }
+    public static void clickTrackersbtn()
+    {
+        getDriver().findElement(trackersbtn).click();
+    }
+    public static void clickManageReviewbtn()
+    {
+        getDriver().findElement(manageReviewbtn).click();
+    }
+    public static void clickManageReviewsbtn()
+    {
+        getDriver().findElement(manageReviewsbtn).click();
+    }
+
 
 
 }
