@@ -4,6 +4,9 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
+/**
+ * @Author Jeyapriya
+ */
 public class PerformancePage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(PerformancePage.class);
     private static By performancebtn=By.id("menu__Performance");

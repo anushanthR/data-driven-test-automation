@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+ * @Author Jeyapriya
+ */
 public class AttendanceRecordPage extends PageBase {
     private static By hdrAttendanceRecord=By.xpath("//*[@id=\"content\"]/div[1]/div[1]");
     private static By txtEmployeeName=By.id("attendance_employeeName_empName");

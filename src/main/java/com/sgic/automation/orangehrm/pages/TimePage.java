@@ -4,6 +4,9 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+ * @Author Jeyapriya
+ */
 public class TimePage extends PageBase {
     private static By hdrTime=By.xpath("//*[@id=\"content\"]/div[1]/div[1]");
     private static By btnAttendance=By.id("menu_attendance_Attendance");

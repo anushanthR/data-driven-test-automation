@@ -4,6 +4,9 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
+/**
+ * @Author Jeyapriya
+ */
 public class DashBoardPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(LoginPage.class);
     private static By dashboardHeading=By.xpath("//*[@id=\"content\"]/div/div[1]/h1");

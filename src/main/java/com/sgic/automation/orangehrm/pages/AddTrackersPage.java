@@ -4,6 +4,9 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
+/**
+ * @Author Jeyapriya
+ */
 public class AddTrackersPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(PerformancePage.class);
     private static By addTrackersPageheading = By.id("performanceTrackerHeading");

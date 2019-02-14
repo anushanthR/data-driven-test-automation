@@ -3,6 +3,9 @@ package com.sgic.automation.orangehrm.pages;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
+/**
+ * @Author Jeyapriya
+ */
 public class DatePicker {
     private static final Logger LOGGER = Logger.getLogger(PerformancePage.class);
 

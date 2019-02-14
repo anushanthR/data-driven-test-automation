@@ -6,7 +6,7 @@ import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.testng.annotations.Test;
 /**
- *
+ * @Author Jeyapriya
  */
 public class Perfomance extends TestBase {
     /**

@@ -6,6 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+ * @Author Jeyapriya
+ */
 public class AddReviewPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(PerformancePage.class);
     private static By addPerformanceReviewPageheading = By.id("addPerformanceHeading");
