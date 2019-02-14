@@ -53,7 +53,7 @@ public class AttendanceRecordWithDatePickerTest extends TestBase {
         softAssert.assertAll();
     }
 
-    @Test(priority = 1,dataProviderClass = DatePickerData.class,dataProvider = "AttendanceRecord")
+    @Test(priority = 2,dataProviderClass = DatePickerData.class,dataProvider = "AttendanceRecord")
     public void attendanceRecordSelectYear(String employeeName){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.isLoginPageDisplay();
@@ -65,6 +65,42 @@ public class AttendanceRecordWithDatePickerTest extends TestBase {
         TimePage.clickAttendanceRecord();
         AttendanceRecordPage.isAttendanceRecordDisplayed();
         AttendanceRecordPage.viewAttendanceRecord1WithChangeYear(employeeName);
+        softAssert.assertTrue(AttendanceRecordPage.isResultDisplay(),"result is not display");
+        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
+        DashBoardPage.clickWelcomeAdminbtn();
+        DashBoardPage.clickLogoutbtn();
+        softAssert.assertAll();
+    }
+    @Test(priority = 3,dataProviderClass = DatePickerData.class,dataProvider = "AttendanceRecord")
+    public void attendanceRecordSelectNextMonth(String employeeName){
+        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
+        LoginPage.isLoginPageDisplay();
+        LoginPage.login(Constants.OrgUserName,Constants.OrgPassword);
+        softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(), "Dashboard Page is not Displayed");
+        DashBoardPage.clickTime();
+        softAssert.assertTrue(TimePage.isTimeDisplayed(), "Time Page is not Displayed");
+        TimePage.clickAttendance();
+        TimePage.clickAttendanceRecord();
+        AttendanceRecordPage.isAttendanceRecordDisplayed();
+        AttendanceRecordPage.viewAttendanceRecord1WithChangeNextMonth(employeeName);
+        softAssert.assertTrue(AttendanceRecordPage.isResultDisplay(),"result is not display");
+        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
+        DashBoardPage.clickWelcomeAdminbtn();
+        DashBoardPage.clickLogoutbtn();
+        softAssert.assertAll();
+    }
+    @Test(priority = 4,dataProviderClass = DatePickerData.class,dataProvider = "AttendanceRecord")
+    public void attendanceRecordSelectPreviousMonth(String employeeName){
+        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
+        LoginPage.isLoginPageDisplay();
+        LoginPage.login(Constants.OrgUserName,Constants.OrgPassword);
+        softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(), "Dashboard Page is not Displayed");
+        DashBoardPage.clickTime();
+        softAssert.assertTrue(TimePage.isTimeDisplayed(), "Time Page is not Displayed");
+        TimePage.clickAttendance();
+        TimePage.clickAttendanceRecord();
+        AttendanceRecordPage.isAttendanceRecordDisplayed();
+        AttendanceRecordPage.viewAttendanceRecord1WithChangePreviousMonth(employeeName);
         softAssert.assertTrue(AttendanceRecordPage.isResultDisplay(),"result is not display");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();

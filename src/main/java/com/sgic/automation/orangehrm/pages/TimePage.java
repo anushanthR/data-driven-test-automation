@@ -2,6 +2,7 @@ package com.sgic.automation.orangehrm.pages;
 
 import com.sgic.automation.orangehrm.utils.PageBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 
 public class TimePage extends PageBase {
     private static By hdrTime=By.xpath("//*[@id=\"content\"]/div[1]/div[1]");
@@ -13,6 +14,7 @@ public class TimePage extends PageBase {
     }
     public static void clickAttendance(){
         getDriver().findElement(btnAttendance).click();
+
     }
     public static void clickAttendanceRecord(){
         getDriver().findElement(btnAttendanceRecord).click();
