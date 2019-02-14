@@ -1,5 +1,6 @@
 package com.sgic.automation.orangehrm.tests;
 
+import com.sgic.automation.orangehrm.TestData.LoginData;
 import com.sgic.automation.orangehrm.pages.CustomFields;
 import com.sgic.automation.orangehrm.pages.DashBoardPage;
 import com.sgic.automation.orangehrm.pages.DataImportPage;
@@ -25,7 +26,7 @@ public class PIMPageTest extends TestBase {
    * @Author Jenisha Edit optional field
    */
 
-  @Test(priority = 0, dataProvider = "OrangeHRMLogin")
+  @Test(priority = 0, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void optionalField(String username, String password) {
     softAssert = new SoftAssert();
 
@@ -54,7 +55,7 @@ public class PIMPageTest extends TestBase {
     Add Custom field
      */
 
-  @Test(priority = 1, dataProvider = "OrangeHRMLogin")
+  @Test(priority = 1, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void customFields(String username, String password) {
     softAssert = new SoftAssert();
 
@@ -82,7 +83,7 @@ public class PIMPageTest extends TestBase {
 
   }
 
-  @Test(priority = 2, dataProvider = "OrangeHRMLogin")
+  @Test(priority = 2, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void reportingMethod(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
@@ -113,7 +114,7 @@ public class PIMPageTest extends TestBase {
 
   }
 
-  @Test(priority = 3, dataProvider = "OrangeHRMLogin")
+  @Test(priority = 3, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void terminationReasonPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
@@ -139,7 +140,7 @@ public class PIMPageTest extends TestBase {
     softAssert.assertAll();
   }
 
-  @Test(priority = 4, dataProvider ="OrangeHRMLogin")
+  @Test(priority = 4, dataProvider ="OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void importData(String username, String password){
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
@@ -158,18 +159,20 @@ public class PIMPageTest extends TestBase {
   }
 
 
-  @DataProvider(name = "OrangeHRMLogin")
-  public Object[][] orangeHRM() {
-    //String sheetName="LeaveTesting";
-    ExcelDataConfig exConfig = new ExcelDataConfig("src\\test\\resources\\ExcelSheet\\excel.xlsx");
-    int rows = exConfig.getRowCount("Sheet1");
 
-    Object[][] data = new Object[rows][2];
-    for (int i = 1; i < rows; i++) {
-      data[i][0] = exConfig.getData("Sheet1", i, 0);
-      data[i][1] = exConfig.getData("Sheet1", i, 1);
-    }
-    return data;
+
+//  @DataProvider(name = "OrangeHRMLogin")
+//  public Object[][] orangeHRM() {
+//    //String sheetName="LeaveTesting";
+//    ExcelDataConfig exConfig = new ExcelDataConfig("src\\test\\resources\\ExcelSheet\\excel.xlsx");
+//    int rows = exConfig.getRowCount("Sheet1");
+//
+//    Object[][] data = new Object[rows][2];
+//    for (int i = 1; i < rows; i++) {
+//      data[i][0] = exConfig.getData("Sheet1", i, 0);
+//      data[i][1] = exConfig.getData("Sheet1", i, 1);
+//    }
+//    return data;
 
 //=======
 //        ReportingMethodPage.selectReportingMethodName();
@@ -203,8 +206,6 @@ public class PIMPageTest extends TestBase {
 //        TerminationReasonPage.deleteTerminationReasonName();
 //        TerminationReasonPage.clickTerminationReasonName();
 //        TerminationReasonPage.clearTerminationReasonName();
-//        TerminationReasonPage.editTerminationReasonName();
-//        TerminationReasonPage.saveAndEditTerminationReasonName();
 //        DashBoardPage.clickWelcomeAdminbtn();
 //        DashBoardPage.clickLogoutbtn();
 //        softAssert.assertAll();
@@ -230,7 +231,7 @@ public class PIMPageTest extends TestBase {
     }
 
 
-  }
+
 
 
 
