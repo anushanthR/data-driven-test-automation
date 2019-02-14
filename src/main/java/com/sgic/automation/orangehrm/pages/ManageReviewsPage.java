@@ -13,6 +13,7 @@ public class ManageReviewsPage extends PageBase {
     private static By searchbtn = By.id("btnSearch");
     private static By addbtn = By.id("btnAdd");
     private static By deletebtn = By.id("btnDelete");
+    private static By btnSelect=By.xpath("ohrmList_chkSelectAll");
 
     public static boolean isReviewsPageDisplayed(){
         return getDriver().findElement(reviewHeading).isDisplayed();
@@ -22,5 +23,11 @@ public class ManageReviewsPage extends PageBase {
     }
     public static void clickAddbtn(){
         getDriver().findElement(addbtn).click();
+    }
+    public static void clickSelectBtn(){
+        getDriver().findElement(btnSelect).click();
+    }
+    public static void clickDeleteBtn(){
+        getDriver().findElement(btnSelect).click();
     }
 }
