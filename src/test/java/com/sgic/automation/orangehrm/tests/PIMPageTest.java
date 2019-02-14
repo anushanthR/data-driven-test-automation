@@ -143,7 +143,7 @@ public class PIMPageTest extends TestBase {
   public Object[][] orangeHRM() {
     //String sheetName="LeaveTesting";
     ExcelDataConfig exConfig = new ExcelDataConfig("src\\test\\resources\\ExcelSheet\\excel.xlsx");
-    int rows = exConfig.getRowCount(0);
+    int rows = exConfig.getRowCount("Sheet1");
 
     Object[][] data = new Object[rows][2];
     for (int i = 1; i < rows; i++) {

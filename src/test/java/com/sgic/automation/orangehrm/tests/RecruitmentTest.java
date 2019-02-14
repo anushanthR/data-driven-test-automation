@@ -55,24 +55,6 @@ public class RecruitmentTest extends TestBase {
     softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
     LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
 
-//    softAssert.assertTrue(RecruitmentAddVacancy.isRecruitmentBtnDisplay(),
-//        "Recruitment Page is not Displayed");
-//    RecruitmentAddVacancy.recruitmentBtnClick();
-//    softAssert.assertTrue(RecruitmentSearchCandidate.isCandidateBtnVerify(),
-//        "CandidateBtn is not Verify");
-//    RecruitmentSearchCandidate.candidateBtnClick();
-//    softAssert.assertTrue(RecruitmentSearchCandidate.isCandidatePageDisplay(),
-//        "Candidate Page is not Displayed");
-//    softAssert.assertTrue(RecruitmentAddCandidate.addButtonDis(), "Candidate AddBtn is not Verify");
-//    RecruitmentAddCandidate.AddButtonClick();
-//    RecruitmentAddCandidate.AddCandidatePage();
-//    RecruitmentAddCandidate
-//        .AddCandidateForms(Firstname, Middlename, Lastname, Mail, ContactNumber, jobVacancy,
-//            keyWord, comment, dateofApplication);
-//    //RecruitmentAddCandidate.setSaveBtn();
-//  }
-
-
         softAssert.assertTrue(RecruitmentAddVacancy.isRecruitmentBtnDisplay(),"Recruitment Page is not Displayed");
         RecruitmentAddVacancy.recruitmentBtnClick();
         softAssert.assertTrue(RecruitmentSearchCandidate.isCandidateBtnVerify(),"CandidateBtn is not Verify");
