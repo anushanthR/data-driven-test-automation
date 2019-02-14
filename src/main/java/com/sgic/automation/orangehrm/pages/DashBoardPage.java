@@ -8,7 +8,16 @@ public class DashBoardPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(LoginPage.class);
     private static By dashboardHeading=By.id("//*[@id=\"content\"]/div/div[1]/h1");
     private static By welcomeAdminbtn=By.id("welcome");
-    private static By logoutbtn=By.xpath("//*[@id=\"welcome-menu\"]/ul/li[2]/a");
+    private static By btnLogout=By.xpath("//*[@id=\"welcome-menu\"]/ul/li[2]/a");
+
+    private static By btnBerformance=By.id("menu__Performance");
+    private static By btnConfigure=By.id("menu_performance_Configure");
+    private static By btnManageReview=By.id("menu_performance_ManageReviews");
+    private static By btnEmployeeTrackers=By.id("menu_performance_viewEmployeePerformanceTrackerList");
+    private static By btnKPIs=By.id("menu_performance_searchKpi");
+    private static By btnTrackers=By.id("menu_performance_addPerformanceTracker");
+    private static By btnManageReviews=By.id("menu_performance_searchPerformancReview");
+    private static By btnTime=By.id("menu_time_viewTimeModule");
 
     public static boolean isDashboardDisplayed(){
         return  getDriver().findElement(dashboardHeading).isDisplayed();
@@ -21,6 +30,45 @@ public class DashBoardPage extends PageBase {
     }
     public static void clickLogoutbtn(){
         implicitWait(3);
-        getDriver().findElement(logoutbtn).click();
+        getDriver().findElement(btnLogout).click();
     }
+    public static void clickTime(){
+        getDriver().findElement(btnTime).click();
+    }
+
+    public static boolean isPerfomanceBtnDisplay(){
+        return getDriver().findElement(btnBerformance).isDisplayed();
+    }
+    public static void clickPerfomance(){
+        getDriver().findElement(btnBerformance).click();
+    }
+    public static boolean isConfigureBtnDisplay(){
+        return getDriver().findElement(btnConfigure).isDisplayed();
+    }
+    public static void clickConfigure(){
+        getDriver().findElement(btnConfigure).click();
+    }
+    public static boolean isKPIsBtnDisplay(){
+        return getDriver().findElement(btnKPIs).isDisplayed();
+    }
+    public static void clickKPIs(){
+        getDriver().findElement(btnKPIs).click();
+    }
+    public static void clickEmployeeTrackersbtn()
+    {
+        getDriver().findElement(btnEmployeeTrackers).click();
+    }
+    public static void clickTrackersbtn()
+    {
+        getDriver().findElement(btnTrackers).click();
+    }
+    public static void clickManageReviewbtn()
+    {
+        getDriver().findElement(btnManageReview).click();
+    }
+    public static void clickManageReviewsbtn()
+    {
+        getDriver().findElement(btnManageReviews).click();
+    }
+
 }

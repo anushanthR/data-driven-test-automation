@@ -26,12 +26,13 @@ public class Perfomance extends TestBase {
 
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
-        softAssert.assertTrue(PerformancePage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
-        PerformancePage.clickPerfomance();
-        softAssert.assertTrue(PerformancePage.isConfigureBtnDisplay(),"Configure button is not Displayed");
-        PerformancePage.clickConfigure();
-        softAssert.assertTrue(PerformancePage.isKPIsBtnDisplay(),"KPIs button is not Displayed");
-        PerformancePage.clickKPIs();
+        softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
+        softAssert.assertTrue(DashBoardPage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
+        DashBoardPage.clickPerfomance();
+        softAssert.assertTrue(DashBoardPage.isConfigureBtnDisplay(),"Configure button is not Displayed");
+        DashBoardPage.clickConfigure();
+        softAssert.assertTrue(DashBoardPage.isKPIsBtnDisplay(),"KPIs button is not Displayed");
+        DashBoardPage.clickKPIs();
         softAssert.assertTrue(KPIsPage.isKPIsPageDisplayed(),"KPIs page is not  Displayed");
         softAssert.assertTrue(KPIsPage.isAddButtonDisplayed(),"add button  is not Displayed");
         KPIsPage.clickAddbtn();
@@ -54,19 +55,18 @@ public class Perfomance extends TestBase {
     public  void addTrackers(String trackerName,String employeeName,String reviewers){
         softAssert = new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
-
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
+        softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
         //softAssert.assertTrue(LoginPage.isLoginAlertDisplay(),"Alert is not Displayed");
-        softAssert.assertTrue(PerformancePage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
-        PerformancePage.clickPerfomance();
-        softAssert.assertTrue(PerformancePage.isConfigureBtnDisplay(),"Configure button is not Displayed");
-        PerformancePage.clickConfigure();
-        PerformancePage.clickTrackersbtn();
+        softAssert.assertTrue(DashBoardPage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
+        DashBoardPage.clickPerfomance();
+        softAssert.assertTrue(DashBoardPage.isConfigureBtnDisplay(),"Configure button is not Displayed");
+        DashBoardPage.clickConfigure();
+        DashBoardPage.clickTrackersbtn();
         softAssert.assertTrue(TrackersPage.isTrackersDisplayed() ,"Trackers page  is not Displayed");
         TrackersPage.clickAddbtn();
         softAssert.assertTrue(AddTrackersPage.isAddTrackersDisplayes() ,"Add Trackers page  is not Displayed");
         AddTrackersPage.addTrackers( trackerName, employeeName, reviewers);
-
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
@@ -76,7 +76,7 @@ public class Perfomance extends TestBase {
 
     /**
      *
-     * @param employeeName:Linda
+     * @param employeeName:Linda Anderson
      * @param supervisorName:John Smith
      * @param startDate:2018-02-02
      * @param endDate:2019-01-01
@@ -87,12 +87,12 @@ public class Perfomance extends TestBase {
                            String startDate,String endDate,String dueDate){
         softAssert = new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
-
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
-        softAssert.assertTrue(PerformancePage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
-        PerformancePage.clickPerfomance();
-        PerformancePage.clickManageReviewbtn();
-        PerformancePage.clickManageReviewsbtn();
+        softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
+        softAssert.assertTrue(DashBoardPage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
+        DashBoardPage.clickPerfomance();
+        DashBoardPage.clickManageReviewbtn();
+        DashBoardPage.clickManageReviewsbtn();
         softAssert.assertTrue(ManageReviewsPage.isReviewsPageDisplayed() ,"ManageReviewsPage   is not Displayed");
         TrackersPage.clickAddbtn();
         softAssert.assertTrue(AddReviewPage.isAddReviewDisplayes() ,"Add review page  is not Displayed");
