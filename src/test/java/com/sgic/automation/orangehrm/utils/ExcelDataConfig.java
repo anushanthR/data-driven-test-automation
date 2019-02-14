@@ -1,3 +1,4 @@
+
 package com.sgic.automation.orangehrm.utils;
 
 
@@ -8,11 +9,19 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.File;
 import java.io.FileInputStream;
 
+/**
+ *
+ */
 public class ExcelDataConfig {
+
 
     XSSFWorkbook wb;
     XSSFSheet sheet;
 
+    /**
+     *
+     * @param excelPath
+     */
     public ExcelDataConfig(String excelPath) {
         try {
             File src = new File(excelPath);
@@ -25,6 +34,13 @@ public class ExcelDataConfig {
         }
     }
 
+    /**
+     *
+     * @param sheetName
+     * @param row
+     * @param col
+     * @return
+     */
     public String getData(String sheetName, int row, int col) {
         sheet = wb.getSheet(sheetName);
         DataFormatter formatter = new DataFormatter();
@@ -32,19 +48,28 @@ public class ExcelDataConfig {
         return data;
     }
 
-    public int getRowCount(int sheetIndex) {
-        int row = wb.getSheetAt(sheetIndex).getLastRowNum();
+
+    /**
+     *
+     * @param sheetName
+     * @return
+     */
+    public int getRowCount(String sheetName) {
+        int row = wb.getSheet(sheetName).getLastRowNum();
         // it will give the index value so index start with 0 initially so we need
         // actual count so we plus one
-        row = row + 1;
         return row;
 
     }
-//    public int getColCount(int sheetIndex){
-//        int col = wb.getSheetAt(sheetIndex).getLastCo
-//    }
 
+    /**
+     *
+     * @param sheetName
+     * @return
+     */
 
-
-
+    public int getColumnCount(String sheetName) {
+        int noOfColumns = wb.getSheet(sheetName).getRow(0).getLastCellNum();
+        return noOfColumns;
+    }
 }

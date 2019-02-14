@@ -34,7 +34,6 @@ public class TestBase {
 
     @BeforeMethod
     public void beforeMethod() {
-
         softAssert = new SoftAssert();
     }
 
@@ -44,12 +43,14 @@ public class TestBase {
         LOGGER.info("Test name: " + method.getName());
     }
 
-//    @AfterMethod
-//    public void closeBrowser() {
-//        LOGGER.info("Closing Browser");
-//        //PageBase.closeDriver();
-//        LOGGER.info("Browser Closed");
-//    }
+
+    @AfterMethod
+    public void closeBrowser() {
+        LOGGER.info("Closing Browser");
+        PageBase.closeDriver();
+        LOGGER.info("Browser Closed");
+    }
+
 
 //    @AfterMethod
 //    public void afterMethod(Method method, ITestResult result) {
