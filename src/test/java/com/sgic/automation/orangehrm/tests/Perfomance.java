@@ -1,14 +1,10 @@
 package com.sgic.automation.orangehrm.tests;
 
 import com.sgic.automation.orangehrm.TestData.PerformanceTestData;
-import com.sgic.automation.orangehrm.TestData.PerformanceReviewData;
-import com.sgic.automation.orangehrm.TestData.TrackerData;
 import com.sgic.automation.orangehrm.pages.*;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
 /**
  *
  */
@@ -22,9 +18,7 @@ public class Perfomance extends TestBase {
      */
     @Test( priority = 0,dataProviderClass = PerformanceTestData.class,dataProvider = "addKPIs")
     public void addKIPs(String jobTitle,String KPI,String minRating,String maxRating ) {
-        softAssert = new SoftAssert();
-
-        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
+       softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
         softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
         softAssert.assertTrue(DashBoardPage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
@@ -53,7 +47,6 @@ public class Perfomance extends TestBase {
      */
     @Test(priority = 1,dataProviderClass = PerformanceTestData.class,dataProvider = "addTracker")
     public  void addTrackers(String trackerName,String employeeName,String reviewers){
-        softAssert = new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
         softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
@@ -85,7 +78,6 @@ public class Perfomance extends TestBase {
     @Test(priority = 2,dataProviderClass = PerformanceTestData.class,dataProvider = "addPerfomanceReview")
     public  void addReview(String employeeName,String supervisorName,
                            String startDate,String endDate,String dueDate){
-        softAssert = new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
         softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");

@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 public class DashBoardPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(LoginPage.class);
-    private static By dashboardHeading=By.id("//*[@id=\"content\"]/div/div[1]/h1");
+    private static By dashboardHeading=By.xpath("//*[@id=\"content\"]/div/div[1]/h1");
     private static By welcomeAdminbtn=By.id("welcome");
     private static By btnLogout=By.xpath("//*[@id=\"welcome-menu\"]/ul/li[2]/a");
 
