@@ -19,7 +19,7 @@ public class PageBase {
     protected static String uploadFilepath = System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources"+File.separator+"fileUpload";
         private static String osType=System.getProperty("os.Type",Constants.WINDOWS);
         private static String driverType=System.getProperty("browser.type",Constants.CHROME);
-        protected static String uploadFilepath = System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources"+File.separator+"FileUpload";
+        //protected static String uploadFilepath = System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources"+File.separator+"FileUpload";
 
 
 

@@ -51,11 +51,11 @@ public class ExcelDataConfig {
 
     /**
      *
-     * @param sheetName
+     * @param sheetIndex
      * @return
      */
-    public int getRowCount(String sheetName) {
-        int row = wb.getSheet(sheetName).getLastRowNum();
+    public int getRowCount(int sheetIndex) {
+        int row = wb.getSheetAt(sheetIndex).getLastRowNum();
         // it will give the index value so index start with 0 initially so we need
         // actual count so we plus one
         return row;
@@ -64,12 +64,12 @@ public class ExcelDataConfig {
 
     /**
      *
-     * @param sheetName
+     * @param sheetIndex
      * @return
      */
 
-    public int getColumnCount(String sheetName) {
-        int noOfColumns = wb.getSheet(sheetName).getRow(0).getLastCellNum();
+    public int getColumnCount(int sheetIndex) {
+        int noOfColumns = wb.getSheetAt(sheetIndex).getRow(0).getLastCellNum();
         return noOfColumns;
     }
 }

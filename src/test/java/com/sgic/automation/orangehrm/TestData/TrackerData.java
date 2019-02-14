@@ -7,7 +7,7 @@ public class TrackerData {
     @DataProvider
     public Object[][] TrackerAdd() {
         ExcelDataConfig exConfig = new ExcelDataConfig("src\\test\\resources\\ExcelSheet\\OrangeHrm.xlsx");
-        int rows = exConfig.getRowCount("Trackers");
+        int rows = exConfig.getRowCount(0);
 
         Object[][] data = new Object[1][3];
         for (int i = 1; i < rows; i++) {
