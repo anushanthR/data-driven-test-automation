@@ -51,9 +51,9 @@ public class TestBase {
 //        LOGGER.info("Browser Closed");
 //    }
 
-    @AfterMethod
-    public void afterMethod(Method method, ITestResult result) {
-        LOGGER.info("Executed test case name:" + method.getName() + " Execution Results : " + result.toString());
-    }
+//    @AfterMethod
+//    public void afterMethod(Method method, ITestResult result) {
+//        LOGGER.info("Executed test case name:" + method.getName() + " Execution Results : " + result.toString());
+//    }
 
 }

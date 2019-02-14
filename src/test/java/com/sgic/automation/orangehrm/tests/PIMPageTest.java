@@ -2,6 +2,7 @@ package com.sgic.automation.orangehrm.tests;
 
 import com.sgic.automation.orangehrm.pages.CustomFields;
 import com.sgic.automation.orangehrm.pages.DashBoardPage;
+import com.sgic.automation.orangehrm.pages.DataImportPage;
 import com.sgic.automation.orangehrm.pages.LoginPage;
 import com.sgic.automation.orangehrm.pages.OptionalFieldsPage;
 import com.sgic.automation.orangehrm.pages.PIMPage;
@@ -126,6 +127,23 @@ public class PIMPageTest extends TestBase {
         DashBoardPage.clickLogoutbtn();
         softAssert.assertAll();
 
+
+    }
+    @Test(priority = 4, dataProvider ="OrangeHRMLogin")
+    public void importData(String username, String password){
+      softAssert = new SoftAssert();
+      LoginPage.login(username, password);
+
+      PIMPage.clickPIM();
+      softAssert.assertTrue(PIMPage.isPIMPageDisplay(),"PIM page is not displayed");
+
+      PIMPage.clickConfiguration();
+      DataImportPage.dataImportPage();
+      softAssert.assertTrue(DataImportPage.isDataImportDisplayed(),"Data import page is not displayed");
+      DataImportPage.fileUpload("importData.csv");
+      DataImportPage.clickUpload();
+      //softAssert.assertEquals(DataImportPage.verifyFileUpload(), "importData.csv", "Invalid File Name");
+      softAssert.assertAll();
 
     }
 
