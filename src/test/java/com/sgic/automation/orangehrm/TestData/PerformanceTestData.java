@@ -13,8 +13,8 @@ public class PerformanceTestData extends ExcelDataConfig{
     @DataProvider(name = "addKPIs")
     public Object[][] addKPIs() {
 
-        int rows = getRowCount(0);
-        int col = getColumnCount(0);
+        int rows = getRowCount("KPI");
+        int col = getColumnCount("KPI");
 
         LOGGER.info("row = "+ rows + " columns = "+ col);
 
@@ -29,8 +29,8 @@ public class PerformanceTestData extends ExcelDataConfig{
     @DataProvider(name = "addTracker")
     public Object[][] addTracker() {
 
-        int rows = getRowCount(1);
-        int col = getColumnCount(1);
+        int rows = getRowCount("");
+        int col = getColumnCount("");
 
         LOGGER.info("row = "+ rows + " columns = "+ col);
 
@@ -45,8 +45,8 @@ public class PerformanceTestData extends ExcelDataConfig{
     @DataProvider(name = "addPerfomanceReview")
     public Object[][] addPerfomanceReview() {
 
-        int rows = getRowCount(1);
-        int col = getColumnCount(1);
+        int rows = getRowCount("");
+        int col = getColumnCount("");
 
         LOGGER.info("row = "+ rows + " columns = "+ col);
 

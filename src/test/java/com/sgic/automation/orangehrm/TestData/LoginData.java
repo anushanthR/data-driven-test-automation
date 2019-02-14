@@ -13,8 +13,8 @@ public class LoginData extends ExcelDataConfig {
   @DataProvider
   public Object[][] VacancyAdd() {
 
-    int rows = getRowCount(0);
-    int col = getColumnCount(0);
+    int rows = getRowCount("");
+    int col = getColumnCount("");
 
     LOGGER.info("row = "+ rows + " columns = "+ col);
 
