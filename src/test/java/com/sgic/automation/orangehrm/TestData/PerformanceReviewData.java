@@ -7,7 +7,7 @@ public class PerformanceReviewData {
     @DataProvider
     public Object[][] PerformanceReviewAdd() {
         ExcelDataConfig exConfig = new ExcelDataConfig("src\\test\\resources\\ExcelSheet\\OrangeHrm.xlsx");
-        int rows = exConfig.getRowCount(2);
+        int rows = exConfig.getRowCount("PerfomanceReview");
 
         Object[][] data = new Object[1][5];
         for (int i = 1; i < rows; i++) {

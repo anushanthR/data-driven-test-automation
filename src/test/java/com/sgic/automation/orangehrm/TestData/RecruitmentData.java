@@ -16,8 +16,8 @@ public class RecruitmentData extends ExcelDataConfig {
   @DataProvider
   public Object[][] VacancyAdd() {
 
-    int rows = getRowCount(0);
-    int col = getColumnCount(0);
+    int rows = getRowCount("AddVacancy");
+    int col = getColumnCount("AddVacancy");
 
     LOGGER.info("row = "+ rows + " columns = "+ col);
 
@@ -34,7 +34,7 @@ public class RecruitmentData extends ExcelDataConfig {
   public Object[][] CandidateSearch() {
     ExcelDataConfig exConfig = new ExcelDataConfig(
         "src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
-    int rows = exConfig.getRowCount(2);
+    int rows = exConfig.getRowCount("SearchCandidate");
 
 
     Object[][] data = new Object[1][9];
@@ -56,7 +56,7 @@ public class RecruitmentData extends ExcelDataConfig {
   public Object[][] CandidateAdd() {
     ExcelDataConfig exConfig = new ExcelDataConfig(
         "src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
-    int rows = exConfig.getRowCount(2);
+    int rows = exConfig.getRowCount("AddCandidate");
 
 
     Object[][] data = new Object[1][9];
