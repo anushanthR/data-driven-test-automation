@@ -1,31 +1,31 @@
 package com.sgic.automation.orangehrm.tests;
 
-import com.sgic.automation.orangehrm.TestData.KPIsData;
+import com.sgic.automation.orangehrm.TestData.PerformanceTestData;
 import com.sgic.automation.orangehrm.TestData.PerformanceReviewData;
 import com.sgic.automation.orangehrm.TestData.TrackerData;
 import com.sgic.automation.orangehrm.pages.*;
 import com.sgic.automation.orangehrm.utils.Constants;
-import com.sgic.automation.orangehrm.utils.ExcelDataConfig;
 import com.sgic.automation.orangehrm.utils.TestBase;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
 /**
- * data_driven_test_automation
- * jeyapriya 11/02/2019
+ *
  */
 public class Perfomance extends TestBase {
     /**
-     * Verify KPIs add
      *
+     * @param jobTitle :IT Manager
+     * @param KPI:jjjj
+     * @param minRating:1
+     * @param maxRating:2
      */
-    @Test( priority = 0,dataProviderClass = KPIsData.class,dataProvider = "KPIAdd")
+    @Test( priority = 0,dataProviderClass = PerformanceTestData.class,dataProvider = "addKPIs")
     public void addKIPs(String jobTitle,String KPI,String minRating,String maxRating ) {
         softAssert = new SoftAssert();
-        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
 
+        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
-        //softAssert.assertTrue(LoginPage.isLoginAlertDisplay(),"Alert is not Displayed");
         softAssert.assertTrue(PerformancePage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
         PerformancePage.clickPerfomance();
         softAssert.assertTrue(PerformancePage.isConfigureBtnDisplay(),"Configure button is not Displayed");
@@ -40,10 +40,17 @@ public class Perfomance extends TestBase {
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
+
         softAssert.assertAll();
     }
 
-    @Test(priority = 1,dataProviderClass = TrackerData.class,dataProvider = "TrackerAdd")
+    /**
+     *
+     * @param trackerName:Jasmine Morgan
+     * @param employeeName:John Smith
+     * @param reviewers:Hannah Flores
+     */
+    @Test(priority = 1,dataProviderClass = PerformanceTestData.class,dataProvider = "addTracker")
     public  void addTrackers(String trackerName,String employeeName,String reviewers){
         softAssert = new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
@@ -67,7 +74,15 @@ public class Perfomance extends TestBase {
 
     }
 
-    @Test(priority = 2,dataProviderClass = PerformanceReviewData.class,dataProvider = "PerformanceReviewAdd")
+    /**
+     *
+     * @param employeeName:Linda
+     * @param supervisorName:John Smith
+     * @param startDate:2018-02-02
+     * @param endDate:2019-01-01
+     * @param dueDate:2018-12-12
+     */
+    @Test(priority = 2,dataProviderClass = PerformanceTestData.class,dataProvider = "addPerfomanceReview")
     public  void addReview(String employeeName,String supervisorName,
                            String startDate,String endDate,String dueDate){
         softAssert = new SoftAssert();
@@ -84,9 +99,9 @@ public class Perfomance extends TestBase {
         AddReviewPage.addPerformanceReview(employeeName,supervisorName,startDate,endDate,dueDate);
         softAssert.assertTrue(AddReviewPage.isSavebtnSisplayed(),"save button not found");
         AddReviewPage.clickSaveBtn();
-//        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
-//        DashBoardPage.clickWelcomeAdminbtn();
-//        DashBoardPage.clickLogoutbtn();
+        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
+        DashBoardPage.clickWelcomeAdminbtn();
+        DashBoardPage.clickLogoutbtn();
         softAssert.assertAll();
 
     }
