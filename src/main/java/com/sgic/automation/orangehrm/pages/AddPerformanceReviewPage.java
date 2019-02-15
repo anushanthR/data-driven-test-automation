@@ -4,12 +4,11 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Select;
 
 /**
  * @Author Jeyapriya
  */
-public class AddReviewPage extends PageBase {
+public class AddPerformanceReviewPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(PerformancePage.class);
     private static By addPerformanceReviewPageheading = By.id("addPerformanceHeading");
     private static By txtemployeeName = By.id("saveReview360Form_employee");
@@ -60,10 +59,10 @@ public class AddReviewPage extends PageBase {
 
     public static void  addPerformanceReview(String employeeName,String supervisorName,
                                              String startDate,String endDate,String dueDate){
-        AddReviewPage.setEmloyee(employeeName);
-        AddReviewPage.setsupervisorName(supervisorName);
-        AddReviewPage.setStartDate(startDate);
-        AddReviewPage.setEndDate(endDate);
-        AddReviewPage.setDueDate(dueDate);
+        AddPerformanceReviewPage.setEmloyee(employeeName);
+        AddPerformanceReviewPage.setsupervisorName(supervisorName);
+        AddPerformanceReviewPage.setStartDate(startDate);
+        AddPerformanceReviewPage.setEndDate(endDate);
+        AddPerformanceReviewPage.setDueDate(dueDate);
     }
 }

@@ -174,10 +174,10 @@ public class Perfomance extends TestBase {
         DashBoardPage.clickManageReviewsbtn();
         softAssert.assertTrue(ManageReviewsPage.isReviewsPageDisplayed() ,"ManageReviewsPage   is not Displayed");
         ManageReviewsPage.clickAddbtn();
-        softAssert.assertTrue(AddReviewPage.isAddReviewDisplayes() ,"Add review page  is not Displayed");
-        AddReviewPage.addPerformanceReview(employeeName,supervisorName,startDate,endDate,dueDate);
-        softAssert.assertTrue(AddReviewPage.isSavebtnisplayed(),"save button not found");
-        AddReviewPage.clickSaveBtn();
+        softAssert.assertTrue(AddPerformanceReviewPage.isAddReviewDisplayes() ,"Add review page  is not Displayed");
+        AddPerformanceReviewPage.addPerformanceReview(employeeName,supervisorName,startDate,endDate,dueDate);
+        softAssert.assertTrue(AddPerformanceReviewPage.isSavebtnisplayed(),"save button not found");
+        AddPerformanceReviewPage.clickSaveBtn();
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
@@ -234,6 +234,27 @@ public class Perfomance extends TestBase {
         DashBoardPage.clickManageReviewsbtn();
         softAssert.assertTrue(ManageReviewsPage.isReviewsPageDisplayed() ,"ManageReviewsPage   is not Displayed");
         ManageReviewsPage.searchPerformanceReviewByJobTitle();
+        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
+        DashBoardPage.clickWelcomeAdminbtn();
+        DashBoardPage.clickLogoutbtn();
+        softAssert.assertAll();
+
+    }
+    @Test(priority = 7,dataProviderClass = PerformanceTestData.class,dataProvider = "addPerfomanceReview")
+    public  void editPerformanceReview(String startDate,String endDate,String dueDate){
+        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
+        LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
+        softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
+        softAssert.assertTrue(DashBoardPage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
+        DashBoardPage.clickPerfomance();
+        DashBoardPage.clickManageReviewbtn();
+        DashBoardPage.clickManageReviewsbtn();
+        softAssert.assertTrue(ManageReviewsPage.isReviewsPageDisplayed() ,"ManageReviewsPage   is not Displayed");
+        ManageReviewsPage.clickEditButton();
+        EditPerformanceReviewPage.editPerformanceReview(startDate,endDate,dueDate);
+
+        softAssert.assertTrue(AddPerformanceReviewPage.isSavebtnisplayed(),"save button not found");
+        AddPerformanceReviewPage.clickSaveBtn();
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
