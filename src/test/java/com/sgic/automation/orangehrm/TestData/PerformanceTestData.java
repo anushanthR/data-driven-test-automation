@@ -29,6 +29,22 @@ public class PerformanceTestData extends ExcelDataConfig{
         }
         return data;
     }
+    @DataProvider(name = "editKPIs")
+    public Object[][] editKPIs() {
+
+        int rows = getRowCount("EditKPI");
+        int col = getColumnCount("EditKPI");
+
+        LOGGER.info("row = "+ rows + " columns = "+ col);
+
+        Object[][] data = new Object[rows][col];
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 0; j < col; j++) {
+                data[i - 1][j] = getData("EditKPI", i, j);
+            }
+        }
+        return data;
+    }
     @DataProvider(name = "addTracker")
     public Object[][] addTracker() {
 
@@ -61,18 +77,34 @@ public class PerformanceTestData extends ExcelDataConfig{
         }
         return data;
     }
-    @DataProvider(name = "addPerfomanceReview")
+    @DataProvider(name = "addPerformanceReview")
     public Object[][] addPerfomanceReview() {
 
-        int rows = getRowCount("PerfomanceReview");
-        int col = getColumnCount("PerfomanceReview");
+        int rows = getRowCount("PerformanceReview");
+        int col = getColumnCount("PerformanceReview");
 
         LOGGER.info("row = "+ rows + " columns = "+ col);
 
         Object[][] data = new Object[rows][col];
         for (int i = 1; i <= rows; i++) {
             for (int j = 0; j < col; j++) {
-                data[i - 1][j] = getData("PerfomanceReview", i, j);
+                data[i - 1][j] = getData("PerformanceReview", i, j);
+            }
+        }
+        return data;
+    }
+    @DataProvider(name = "editPerformanceReview")
+    public Object[][] editPerfomanceReview() {
+
+        int rows = getRowCount("EditPerformanceReview");
+        int col = getColumnCount("EditPerformanceReview");
+
+        LOGGER.info("row = "+ rows + " columns = "+ col);
+
+        Object[][] data = new Object[rows][col];
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 0; j < col; j++) {
+                data[i - 1][j] = getData("EditPerformanceReview", i, j);
             }
         }
         return data;

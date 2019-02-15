@@ -26,6 +26,7 @@ public class KPIAsddPage extends PageBase {
         getDriver().findElement(txtjobtitle).sendKeys(jobTitle);
     }
     public static void setKPIs(String kpis){
+        getDriver().findElement(txtKPI).clear();
         getDriver().findElement(txtKPI).sendKeys(kpis);
     }
     public static void setMinRating(String minRating){

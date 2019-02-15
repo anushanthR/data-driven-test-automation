@@ -43,6 +43,6 @@ public class EditPerformanceReviewPage extends PageBase {
         EditPerformanceReviewPage.setStartDate(startDate);
         EditPerformanceReviewPage.setEndDate(endDate);
         EditPerformanceReviewPage.setDueDate(dueDate);
-
+        EditPerformanceReviewPage.clickSaveBtn();
     }
 }

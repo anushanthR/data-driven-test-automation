@@ -78,6 +78,28 @@ public class Perfomance extends TestBase {
         DashBoardPage.clickLogoutbtn();
         softAssert.assertAll();
     }
+    @Test( priority = 4,dataProviderClass = PerformanceTestData.class,dataProvider = "editKPIs")
+    public void editKIPs(String jobTitle,String KPI,String minRating,String maxRating ) {
+        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
+        LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
+        softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
+        softAssert.assertTrue(DashBoardPage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
+        DashBoardPage.clickPerfomance();
+        softAssert.assertTrue(DashBoardPage.isConfigureBtnDisplay(),"Configure button is not Displayed");
+        DashBoardPage.clickConfigure();
+        softAssert.assertTrue(DashBoardPage.isKPIsBtnDisplay(),"KPIs button is not Displayed");
+        DashBoardPage.clickKPIs();
+        softAssert.assertTrue(KPIsPage.isKPIsPageDisplayed(),"KPIs page is not  Displayed");
+        KPIsPage.clickEditbtn();
+        softAssert.assertTrue(KPIAsddPage.isAddKIPsPageDisplayes(),"KPIs add page  is not Displayed");
+        KPIAsddPage.addKPIs(jobTitle,KPI,minRating,maxRating);
+        softAssert.assertTrue(KPIsPage.isResultDisplayed(),"KPIs add result  is not Displayed");
+        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
+        DashBoardPage.clickWelcomeAdminbtn();
+        DashBoardPage.clickLogoutbtn();
+
+        softAssert.assertAll();
+    }
 
     /**
      *
@@ -85,7 +107,7 @@ public class Perfomance extends TestBase {
      * @param employeeName:John Smith
      * @param reviewers:Hannah Flores
      */
-    @Test(priority = 4,dataProviderClass = PerformanceTestData.class,dataProvider = "addTracker")
+    @Test(priority = 5,dataProviderClass = PerformanceTestData.class,dataProvider = "addTracker")
     public  void addTrackers(String trackerName,String employeeName,String reviewers){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
@@ -106,7 +128,7 @@ public class Perfomance extends TestBase {
         softAssert.assertAll();
 
     }
-    @Test(priority = 5,dataProviderClass = PerformanceTestData.class,dataProvider = "addTracker")
+    @Test(priority = 6,dataProviderClass = PerformanceTestData.class,dataProvider = "addTracker")
     public  void deleteAllTrackers(){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
@@ -132,7 +154,7 @@ public class Perfomance extends TestBase {
      * @param employeeName
      * @param reviewers
      */
-    @Test(priority = 6,dataProviderClass = PerformanceTestData.class,dataProvider = "editTracker")
+    @Test(priority = 7,dataProviderClass = PerformanceTestData.class,dataProvider = "editTracker")
     public  void editTrackers(String trackerName,String employeeName,String reviewers){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
@@ -162,8 +184,8 @@ public class Perfomance extends TestBase {
      * @param endDate:2019-01-01
      * @param dueDate:2018-12-12
      */
-    @Test(priority = 7,dataProviderClass = PerformanceTestData.class,dataProvider = "addPerfomanceReview")
-    public  void addReview(String employeeName,String supervisorName,
+    @Test(priority = 8,dataProviderClass = PerformanceTestData.class,dataProvider = "addPerformanceReview")
+    public  void addPerformanceReview(String employeeName,String supervisorName,
                            String startDate,String endDate,String dueDate){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
@@ -188,8 +210,8 @@ public class Perfomance extends TestBase {
     /**
      *
      */
-    @Test(priority = 8,dataProviderClass = PerformanceTestData.class,dataProvider = "addPerfomanceReview")
-    public  void deleteReview(){
+    @Test(priority = 9,dataProviderClass = PerformanceTestData.class,dataProvider = "addPerfomanceReview")
+    public  void deletePerformanceReview(){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
         softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
@@ -206,7 +228,7 @@ public class Perfomance extends TestBase {
         softAssert.assertAll();
 
     }
-    @Test(priority = 9)
+    @Test(priority = 10)
     public  void searchPerformanceReviewWithEmployeeName(){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
@@ -223,7 +245,7 @@ public class Perfomance extends TestBase {
         softAssert.assertAll();
 
     }
-    @Test(priority = 10)
+    @Test(priority = 12)
     public  void searchPerformanceReviewWithJobTitle(){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
@@ -240,12 +262,11 @@ public class Perfomance extends TestBase {
         softAssert.assertAll();
 
     }
-    @Test(priority = 7,dataProviderClass = PerformanceTestData.class,dataProvider = "addPerfomanceReview")
+    @Test(priority = 12,dataProviderClass = PerformanceTestData.class,dataProvider = "editPerformanceReview")
     public  void editPerformanceReview(String startDate,String endDate,String dueDate){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
         softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
-        softAssert.assertTrue(DashBoardPage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
         DashBoardPage.clickPerfomance();
         DashBoardPage.clickManageReviewbtn();
         DashBoardPage.clickManageReviewsbtn();
@@ -253,9 +274,6 @@ public class Perfomance extends TestBase {
         ManageReviewsPage.clickEditButton();
         EditPerformanceReviewPage.editPerformanceReview(startDate,endDate,dueDate);
 
-        softAssert.assertTrue(AddPerformanceReviewPage.isSavebtnisplayed(),"save button not found");
-        AddPerformanceReviewPage.clickSaveBtn();
-        softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
         softAssert.assertAll();

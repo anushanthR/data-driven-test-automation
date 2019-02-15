@@ -16,6 +16,7 @@ public class KPIsPage extends PageBase {
     private static By btnSelect=By.id("ohrmList_chkSelectAll");
     private static By result=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]");
     private static By txtjobTitleForSearch=By.id("kpi360SearchForm_jobTitleCode");
+    private static By txtEdit=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]/a");
 
     public static boolean isKPIsPageDisplayed(){
         return getDriver().findElement(KPIsheading).isDisplayed();
@@ -46,6 +47,9 @@ public class KPIsPage extends PageBase {
         KPIsPage.setJobTitleForSearch();
         KPIsPage.clicksearchButton();
 
+    }
+    public static void clickEditbtn(){
+        getDriver().findElement(txtEdit).click();
     }
 
 
