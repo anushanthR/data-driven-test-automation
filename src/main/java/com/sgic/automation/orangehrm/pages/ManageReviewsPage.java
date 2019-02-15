@@ -14,6 +14,7 @@ public class ManageReviewsPage extends PageBase {
     private static By addbtn = By.id("btnAdd");
     private static By deletebtn = By.id("btnDelete");
     private static By btnSelect=By.xpath("ohrmList_chkSelectAll");
+    private static By result=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]");
 
     public static boolean isReviewsPageDisplayed(){
         return getDriver().findElement(reviewHeading).isDisplayed();

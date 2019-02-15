@@ -54,7 +54,6 @@ public class AttendanceRecordWithDatePickerTest extends TestBase {
 
         softAssert.assertAll();
     }
-
     @Test(priority = 2,dataProviderClass = DatePickerData.class,dataProvider = "AttendanceRecord")
     public void attendanceRecordSelectYear(String employeeName){
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");

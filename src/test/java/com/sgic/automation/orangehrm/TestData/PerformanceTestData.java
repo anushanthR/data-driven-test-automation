@@ -45,6 +45,22 @@ public class PerformanceTestData extends ExcelDataConfig{
         }
         return data;
     }
+    @DataProvider(name = "editTracker")
+    public Object[][] editTracker() {
+
+        int rows = getRowCount("EditTrackers");
+        int col = getColumnCount("EditTrackers");
+
+        LOGGER.info("row = "+ rows + " columns = "+ col);
+
+        Object[][] data = new Object[rows][col];
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 0; j < col; j++) {
+                data[i - 1][j] = getData("EditTrackers", i, j);
+            }
+        }
+        return data;
+    }
     @DataProvider(name = "addPerfomanceReview")
     public Object[][] addPerfomanceReview() {
 

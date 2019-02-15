@@ -23,6 +23,7 @@ public class AddTrackersPage extends PageBase {
         return getDriver().findElement(addTrackersPageheading).isDisplayed();
     }
     public static void setTrackerName(String TrackerName){
+        getDriver().findElement(trackerName).clear();
         getDriver().findElement(trackerName).sendKeys(TrackerName);
     }
 

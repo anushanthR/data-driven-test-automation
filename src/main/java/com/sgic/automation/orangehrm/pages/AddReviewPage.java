@@ -24,19 +24,19 @@ public class AddReviewPage extends PageBase {
     public static boolean isAddReviewDisplayes(){
         return getDriver().findElement(addPerformanceReviewPageheading).isDisplayed();
     }
-    public static boolean isSavebtnSisplayed(){
+    public static boolean isSavebtnisplayed(){
         return getDriver().findElement(savebtn).isDisplayed();
 
     }
     public static void setEmloyee(String employeeName){
         implicitWait(2);
-        getDriver().findElement(txtemployeeName).sendKeys(employeeName,Keys.TAB);
+        getDriver().findElement(txtemployeeName).sendKeys(employeeName,Keys.ENTER);
 
     }
     public static void setsupervisorName(String supervisorName){
+        implicitWait(2);
         getDriver().findElement(txtsupervisorName).sendKeys(supervisorName);
-//        getDriver().findElement(txtsupervisorName).click();
-        getDriver().findElement(txtsupervisorName).sendKeys(Keys.TAB);
+        getDriver().findElement(txtsupervisorName).sendKeys(Keys.ENTER);
 
     }
     public static void setStartDate(String startDate){

@@ -14,6 +14,7 @@ public class TrackersPage extends PageBase {
     private static By deletebtn = By.id("btnDelete");
     private static By btnSelect=By.xpath("//*[@id=\"resultTable\"]/thead/tr/th[1]");
     private static By result=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]");
+    private static By edit=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]/a");
 
 
     public static boolean isTrackersDisplayed(){
@@ -33,5 +34,8 @@ public class TrackersPage extends PageBase {
     }
     public static boolean isResultDisplayed(){
         return getDriver().findElement(result).isDisplayed();
+    }
+    public static void clickToEdit(){
+        getDriver().findElement(edit).click();
     }
 }
