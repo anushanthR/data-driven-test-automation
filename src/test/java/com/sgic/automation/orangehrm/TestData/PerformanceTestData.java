@@ -4,6 +4,9 @@ import com.sgic.automation.orangehrm.utils.ExcelDataConfig;
 import org.apache.log4j.Logger;
 import org.testng.annotations.DataProvider;
 
+/**
+ * @Author Jeyapriya
+ */
 public class PerformanceTestData extends ExcelDataConfig{
     private static final Logger LOGGER = Logger.getLogger(PerformanceTestData.class);
     public PerformanceTestData() {super
@@ -26,11 +29,27 @@ public class PerformanceTestData extends ExcelDataConfig{
         }
         return data;
     }
+    @DataProvider(name = "editKPIs")
+    public Object[][] editKPIs() {
+
+        int rows = getRowCount("EditKPI");
+        int col = getColumnCount("EditKPI");
+
+        LOGGER.info("row = "+ rows + " columns = "+ col);
+
+        Object[][] data = new Object[rows][col];
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 0; j < col; j++) {
+                data[i - 1][j] = getData("EditKPI", i, j);
+            }
+        }
+        return data;
+    }
     @DataProvider(name = "addTracker")
     public Object[][] addTracker() {
 
-        int rows = getRowCount("");
-        int col = getColumnCount("");
+        int rows = getRowCount("Trackers");
+        int col = getColumnCount("Trackers");
 
         LOGGER.info("row = "+ rows + " columns = "+ col);
 
@@ -42,18 +61,50 @@ public class PerformanceTestData extends ExcelDataConfig{
         }
         return data;
     }
-    @DataProvider(name = "addPerfomanceReview")
-    public Object[][] addPerfomanceReview() {
+    @DataProvider(name = "editTracker")
+    public Object[][] editTracker() {
 
-        int rows = getRowCount("");
-        int col = getColumnCount("");
+        int rows = getRowCount("EditTrackers");
+        int col = getColumnCount("EditTrackers");
 
         LOGGER.info("row = "+ rows + " columns = "+ col);
 
         Object[][] data = new Object[rows][col];
         for (int i = 1; i <= rows; i++) {
             for (int j = 0; j < col; j++) {
-                data[i - 1][j] = getData("PerfomanceReview", i, j);
+                data[i - 1][j] = getData("EditTrackers", i, j);
+            }
+        }
+        return data;
+    }
+    @DataProvider(name = "addPerformanceReview")
+    public Object[][] addPerfomanceReview() {
+
+        int rows = getRowCount("PerformanceReview");
+        int col = getColumnCount("PerformanceReview");
+
+        LOGGER.info("row = "+ rows + " columns = "+ col);
+
+        Object[][] data = new Object[rows][col];
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 0; j < col; j++) {
+                data[i - 1][j] = getData("PerformanceReview", i, j);
+            }
+        }
+        return data;
+    }
+    @DataProvider(name = "editPerformanceReview")
+    public Object[][] editPerfomanceReview() {
+
+        int rows = getRowCount("EditPerformanceReview");
+        int col = getColumnCount("EditPerformanceReview");
+
+        LOGGER.info("row = "+ rows + " columns = "+ col);
+
+        Object[][] data = new Object[rows][col];
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 0; j < col; j++) {
+                data[i - 1][j] = getData("EditPerformanceReview", i, j);
             }
         }
         return data;
