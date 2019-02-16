@@ -61,6 +61,9 @@ public class DashBoardPage extends PageBase {
     {
         getDriver().findElement(btnEmployeeTrackers).click();
     }
+    public static boolean isTrackerBtnDisplay(){
+        return getDriver().findElement(btnTrackers).isDisplayed();
+    }
     public static void clickTrackersbtn()
     {
         getDriver().findElement(btnTrackers).click();
