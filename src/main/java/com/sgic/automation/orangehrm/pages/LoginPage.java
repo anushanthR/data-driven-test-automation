@@ -3,11 +3,13 @@ package com.sgic.automation.orangehrm.pages;
 import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.testng.asserts.SoftAssert;
 
 /**
  * @Author Jeyapriya
  */
 public class LoginPage extends PageBase {
+  public SoftAssert softAssert;
 
   private static final Logger LOGGER = Logger.getLogger(LoginPage.class);
 
@@ -27,7 +29,7 @@ public class LoginPage extends PageBase {
     getDriver().findElement(txtUserName).sendKeys(userName);
   }
 
-  public static void serPassword(String password) {
+  public static void setPassword(String password) {
     getDriver().findElement(txtPassword).sendKeys(password);
   }
 
@@ -39,15 +41,17 @@ public class LoginPage extends PageBase {
     return getDriver().findElement(alert).isDisplayed();
   }
 
-  public static void getLoginAlert() {
-    getDriver().findElement(alert).getText();
+  public static String getLoginAlert() {
+    return  getDriver().findElement(alert).getText();
   }
 
 
   public static void login(String userName, String password) {
     LoginPage.setUserName(userName);
-    LoginPage.serPassword(password);
+    LoginPage.setPassword(password);
     LoginPage.clickLogin();
+
   }
+
 }
 

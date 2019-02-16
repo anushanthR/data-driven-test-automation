@@ -318,7 +318,7 @@ public class Perfomance extends TestBase {
         softAssert.assertAll();
 
     }
-    @Test(priority = 12)
+    @Test(priority = 11)
     public  void searchPerformanceReviewWithJobTitle(){
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
