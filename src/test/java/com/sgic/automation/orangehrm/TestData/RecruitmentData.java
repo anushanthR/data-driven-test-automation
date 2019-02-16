@@ -13,8 +13,8 @@ public class RecruitmentData extends ExcelDataConfig {
     super("src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
   }
 
-  @DataProvider
-  public Object[][] VacancyAdd() {
+  @DataProvider(name = "AddVacancy")
+  public Object[][] AddVacancy() {
 
     int rows = getRowCount("AddVacancy");
     int col = getColumnCount("AddVacancy");
@@ -31,9 +31,8 @@ public class RecruitmentData extends ExcelDataConfig {
   }
 
 
-
-  @DataProvider()
-  public Object[][] CandidateAdd() {
+  @DataProvider(name = "AddCandidate")
+  public Object[][] AddCandidate() {
 
     int rows = getRowCount("AddCandidate");
     int col = getColumnCount("AddCandidate");
@@ -50,8 +49,8 @@ public class RecruitmentData extends ExcelDataConfig {
   }
 
 
-  @DataProvider
-  public Object[][] CandidateSearch() {
+  @DataProvider(name = "SearchCandidate")
+  public Object[][] SearchCandidate() {
     int rows = getRowCount("SearchCandidate");
     int col = getColumnCount("SearchCandidate");
 
@@ -64,51 +63,56 @@ public class RecruitmentData extends ExcelDataConfig {
       }
     }
     return data;
-
-//  @DataProvider
-//  public Object[][] CandidateSearch() {
-//    ExcelDataConfig exConfig = new ExcelDataConfig(
-//        "src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
-//    //int rows = exConfig.getRowCount("SearchCandidate");
-//
-//
-//    Object[][] data = new Object[1][9];
-//    for (int i = 1; i < rows; i++) {
-//      data[0][0] = exConfig.getData("SearchCandidate", i, 0);
-//      data[0][1] = exConfig.getData("SearchCandidate", i, 1);
-//      data[0][2] = exConfig.getData("SearchCandidate", i, 2);
-//      data[0][3] = exConfig.getData("SearchCandidate", i, 3);
-//      data[0][4] = exConfig.getData("SearchCandidate", i, 4);
-//      data[0][5] = exConfig.getData("SearchCandidate", i, 5);
-//      data[0][6] = exConfig.getData("SearchCandidate", i, 6);
-//      data[0][7] = exConfig.getData("SearchCandidate", i, 7);
-//      data[0][8] = exConfig.getData("SearchCandidate", i, 8);
-//    }
-//    return data;
-//  }
-//
-//  @DataProvider
-//  public Object[][] CandidateAdd() {
-//    ExcelDataConfig exConfig = new ExcelDataConfig(
-//        "src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
-//    int rows = exConfig.getRowCount("AddCandidate");
-
-
-//    Object[][] data = new Object[1][9];
-//    for (int i = 1; i < rows; i++) {
-//      data[0][0] = exConfig.getData("AddCandidate", i, 0);
-//      data[0][1] = exConfig.getData("AddCandidate", i, 1);
-//      data[0][2] = exConfig.getData("AddCandidate", i, 2);
-//      data[0][3] = exConfig.getData("AddCandidate", i, 3);
-//      data[0][4] = exConfig.getData("AddCandidate", i, 4);
-//      data[0][5] = exConfig.getData("AddCandidate", i, 5);
-//      data[0][6] = exConfig.getData("AddCandidate", i, 6);
-//      data[0][7] = exConfig.getData("AddCandidate", i, 7);
-//      data[0][8] = exConfig.getData("AddCandidate", i, 8);
-//    }
-//    return data;
-//  }
-
-
   }
+
+  @DataProvider(name = "SearchVacancy")
+  public Object[][] SearchVacancy() {
+    int rows = getRowCount("SearchVacancy");
+    int col = getColumnCount("SearchVacancy");
+
+    LOGGER.info("row = " + rows + " columns = " + col);
+
+    Object[][] data = new Object[rows][col];
+    for (int i = 1; i <= rows; i++) {
+      for (int j = 0; j < col; j++) {
+        data[i - 1][j] = getData("SearchVacancy", i, j);
+      }
+    }
+    return data;
+  }
+
+  @DataProvider(name = "EditVacancy")
+  public Object[][] EditVacancy() {
+
+    int rows = getRowCount("EditVacancy");
+    int col = getColumnCount("EditVacancy");
+
+    LOGGER.info("row = " + rows + " columns = " + col);
+
+    Object[][] data = new Object[rows][col];
+    for (int i = 1; i <= rows; i++) {
+      for (int j = 0; j < col; j++) {
+        data[i - 1][j] = getData("EditVacancy", i, j);
+      }
+    }
+    return data;
+  }
+
+  @DataProvider(name = "EditCandidate")
+  public Object[][] EditCandidate() {
+
+    int rows = getRowCount("EditCandidate");
+    int col = getColumnCount("EditCandidate");
+
+    LOGGER.info("row = " + rows + " columns = " + col);
+
+    Object[][] data = new Object[rows][col];
+    for (int i = 1; i <= rows; i++) {
+      for (int j = 0; j < col; j++) {
+        data[i - 1][j] = getData("EditCandidate", i, j);
+      }
+    }
+    return data;
+  }
+
 }
