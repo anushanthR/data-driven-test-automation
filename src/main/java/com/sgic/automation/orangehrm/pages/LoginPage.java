@@ -46,12 +46,33 @@ public class LoginPage extends PageBase {
   }
 
 
+  public static void login1(String userName, String password,String status,String alertMSg) {
+    if(status=="valid") {
+      LoginPage.setUserName(userName);
+      LoginPage.setPassword(password);
+      LoginPage.clickLogin();
+      LOGGER.info("DashBoardPage is displayed");
+      DashBoardPage.clickWelcomeAdminbtn();
+      LOGGER.info("logout success");
+      DashBoardPage.clickLogoutbtn();
+    }
+    else {
+      LoginPage.setUserName(userName);
+      LoginPage.setPassword(password);
+      LoginPage.clickLogin();
+      LOGGER.info(alertMSg);
+    }
+
+  }
   public static void login(String userName, String password) {
-    LoginPage.setUserName(userName);
-    LoginPage.setPassword(password);
-    LoginPage.clickLogin();
+
+      LoginPage.setUserName(userName);
+      LoginPage.setPassword(password);
+      LoginPage.clickLogin();
+
+    }
 
   }
 
-}
+
 
