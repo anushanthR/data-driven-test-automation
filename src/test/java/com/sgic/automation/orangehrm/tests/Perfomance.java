@@ -36,7 +36,7 @@ public class Perfomance extends TestBase {
         DashBoardPage.clickKPIs();
         LOGGER.info("KPIs page is Displayed");
         softAssert.assertTrue(KPIsPage.isKPIsPageDisplayed(),"KPIs page is not  Displayed");
-        KPIsPage.clickAddbtn();
+        //KPIsPage.clickAddbtn();
         LOGGER.info("AddKPIs page is displayed");
         softAssert.assertTrue(KPIAsddPage.isAddKIPsPageDisplayes(),"KPIs add page  is not Displayed");
         LOGGER.info("add KPIs with "+"job title: "+jobTitle+" KPI: "+KPI+" MinimumRating: "+minRating+" MaximumRating: "+maxRating);

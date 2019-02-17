@@ -25,13 +25,15 @@ public class LoginTestJP extends TestBase {
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  " + "UserName: " + username + " , Pasword: " + password);
         LoginPage.login(username, password);
-        extentTest.log(LogStatus.PASS, "Login with Username: " + username + " and Password: " + password,alertMSg);
+
 
         LOGGER.info("login status: "+status);
         if(status.equals("valid")) {
             softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(), "Dashboard page is not displayed");
             LOGGER.info("DashboardPage is displayed");
             softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed(), "Welcom admin button  is not Displayed");
+            extentTest.log(LogStatus.PASS, "Login with Username: " + username + " and Password: " + password,alertMSg);
+
             DashBoardPage.clickWelcomeAdminbtn();
             DashBoardPage.clickLogoutbtn();
             softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
@@ -42,7 +44,10 @@ public class LoginTestJP extends TestBase {
             LOGGER.info(alertMSg);
             softAssert.assertEquals(LoginPage.getLoginAlert(), alertMSg,
                     "alert msg is not displayed");
+            extentTest.log(LogStatus.PASS, "Login with Username: " + username + " and Password: " + password,alertMSg);
         }
+
+
         extentReport.endTest(extentTest);
         softAssert.assertAll();
     }

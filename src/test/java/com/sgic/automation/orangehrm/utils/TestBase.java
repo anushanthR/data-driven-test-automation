@@ -2,7 +2,12 @@ package com.sgic.automation.orangehrm.utils;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.apache.commons.io.FileUtils;
+
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -10,13 +15,19 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 
-public class TestBase {
+
+
+public class TestBase extends PageBase{
     public SoftAssert softAssert;
     public static ExtentReports extentReport = new ExtentReports(System.getProperty("user.dir") + "/src/test/resources/reports/ExtentReportResults.html");
     public static ExtentTest extentTest;
+    private static String screenShotFolderPath = System.getProperty("user.dir") + "/src/test/resources/screenshots/";
+
 
     private static final Logger LOGGER = Logger.getLogger(TestBase.class);
 
@@ -53,17 +64,30 @@ public class TestBase {
         if(!result.isSuccess()){
 
             extentReport.endTest(extentTest);
-
+            extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(getFilePath()));
         }
-
-    }
-
-    @AfterMethod
-    public void closeBrowser() {
         LOGGER.info("Closing Browser");
         PageBase.closeDriver();
         LOGGER.info("Browser Closed");
+
     }
+    public static String getFilePath() {
+
+        String filename = "j.png";
+        String filename1 = Functions.getTimeStamp("yyyy-MM-dd_HH:mm:ss")+".jpg";
+        File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+        File file = new File(screenShotFolderPath + filename);
+        try {
+            FileUtils.copyFile(screenshotFile, file);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return file.getAbsolutePath();
+    }
+
+
     @AfterSuite
     public void cleanUp() {
         extentReport.flush();
