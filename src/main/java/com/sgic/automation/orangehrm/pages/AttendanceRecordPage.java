@@ -16,8 +16,8 @@ public class AttendanceRecordPage extends PageBase {
     private static By selectDate=By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[2]/td[4]/a");
     private static By txtSelectMonth=By.xpath("//*[@id=\"ui-datepicker-div\"]/div/div/select[1]");
     private static By txtSelectyear=By.xpath("//*[@id=\"ui-datepicker-div\"]/div/div/select[2]");
-    private static By btnNextMonth=By.id("//*[@id=\"ui-datepicker-div\"]/div/a[2]/span");
-    private static By btnPreviousMonth=By.id("//*[@id=\"ui-datepicker-div\"]/div/a[1]/span");
+    private static By btnNextMonth=By.xpath("//*[@id=\"ui-datepicker-div\"]/div/a[2]/span");
+    private static By btnPreviousMonth=By.xpath("//*[@id=\"ui-datepicker-div\"]/div/a[2]/span");
     private static By result=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[1]");
 
 

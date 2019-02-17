@@ -17,6 +17,7 @@ public class KPIsPage extends PageBase {
     private static By result=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]");
     private static By txtjobTitleForSearch=By.id("kpi360SearchForm_jobTitleCode");
     private static By txtEdit=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]/a");
+    private static By btnAlertOK=By.id("dialogDeleteBtn");
 
     public static boolean isKPIsPageDisplayed(){
         return getDriver().findElement(KPIsheading).isDisplayed();
@@ -31,7 +32,8 @@ public class KPIsPage extends PageBase {
         driver.findElement(btnSelect).click();
     }
     public static void clickDeleteButton(){
-        driver.findElement(btnDelete).click();
+        getDriver().findElement(btnDelete).click();
+
     }
     public static boolean isResultDisplayed(){
         return getDriver().findElement(result).isDisplayed();
@@ -40,7 +42,7 @@ public class KPIsPage extends PageBase {
         getDriver().findElement(btnSearch).click();
     }
     public static void setJobTitleForSearch(){
-        getDriver().findElement(txtjobTitleForSearch).sendKeys("CEO");
+        getDriver().findElement(txtjobTitleForSearch).sendKeys("IT Manager");
     }
 
     public static void searchKPIs(){
@@ -50,6 +52,9 @@ public class KPIsPage extends PageBase {
     }
     public static void clickEditbtn(){
         getDriver().findElement(txtEdit).click();
+    }
+    public static void clickAlertOk(){
+        getDriver().findElement(btnAlertOK).click();
     }
 
 

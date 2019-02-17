@@ -13,12 +13,12 @@ public class ManageReviewsPage extends PageBase {
     private static By btnSearch = By.id("btnSearch");
     private static By btnAdd = By.id("btnAdd");
     private static By btnDelete = By.id("btnDelete");
-    private static By btnSelect=By.xpath("ohrmList_chkSelectAll");
+    private static By btnSelect=By.id("ohrmList_chkSelectAll");
     private static By result=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]");
     private static By txtSearchEmployeeName= By.id("performanceReview360SearchForm_employeeName");
     private static By txtSearchJobTitle= By.id("performanceReview360SearchForm_employeeName");
     private static By btnEdit=By.xpath("//*[@id=\"resultTable\"]/tbody/tr[1]/td[7]/a");
-
+    private static By btnAlertOK=By.id("dialogDeleteBtn");
 
     public static boolean isReviewsPageDisplayed(){
         return getDriver().findElement(reviewHeading).isDisplayed();
@@ -40,10 +40,13 @@ public class ManageReviewsPage extends PageBase {
         getDriver().findElement(btnSearch).click();
     }
     public static void searchPerformanceReviewByJobTitle(){
-        getDriver().findElement(txtSearchJobTitle).sendKeys("CEO");
+        getDriver().findElement(txtSearchJobTitle).sendKeys("HR Manager");
         getDriver().findElement(btnSearch).click();
     }
     public static void clickEditButton(){
         getDriver().findElement(btnEdit).click();
+    }
+    public static void clickAlertOk(){
+        getDriver().findElement(btnAlertOK).click();
     }
 }

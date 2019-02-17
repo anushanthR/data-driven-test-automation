@@ -1,8 +1,12 @@
 package com.sgic.automation.orangehrm.utils;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.apache.log4j.Logger;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
@@ -12,6 +16,8 @@ import java.net.MalformedURLException;
 
 public class TestBase {
     public SoftAssert softAssert;
+    public static ExtentReports extentReport = new ExtentReports(System.getProperty("user.dir") + "/src/test/resources/reports/ExtentReportResults.html");
+    public static ExtentTest extentTest;
 
     private static final Logger LOGGER = Logger.getLogger(TestBase.class);
 
@@ -42,7 +48,16 @@ public class TestBase {
 
         LOGGER.info("Test name: " + method.getName());
     }
+    @AfterMethod(alwaysRun=true)
+    public void endTest(ITestResult result){
 
+        if(!result.isSuccess()){
+
+            extentReport.endTest(extentTest);
+
+        }
+
+    }
 
     @AfterMethod
     public void closeBrowser() {
@@ -50,6 +65,13 @@ public class TestBase {
         PageBase.closeDriver();
         LOGGER.info("Browser Closed");
     }
+    @AfterSuite
+    public void cleanUp() {
+        extentReport.flush();
+
+
+    }
+
 
 
 //    @AfterMethod

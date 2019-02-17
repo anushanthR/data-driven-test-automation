@@ -15,6 +15,7 @@ public class TrackersPage extends PageBase {
     private static By btnSelect=By.xpath("//*[@id=\"resultTable\"]/thead/tr/th[1]");
     private static By result=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]");
     private static By edit=By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]/a");
+    private static By btnAlertOK=By.id("dialogDeleteBtn");
 
 
     public static boolean isTrackersDisplayed(){
@@ -37,5 +38,8 @@ public class TrackersPage extends PageBase {
     }
     public static void clickToEdit(){
         getDriver().findElement(edit).click();
+    }
+    public static void clickAlertOk(){
+        getDriver().findElement(btnAlertOK).click();
     }
 }
