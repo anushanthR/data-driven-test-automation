@@ -1,5 +1,6 @@
 package com.sgic.automation.orangehrm.tests;
 
+import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.TestData.PerformanceTestData;
 import com.sgic.automation.orangehrm.pages.*;
 import com.sgic.automation.orangehrm.utils.Constants;
@@ -20,6 +21,7 @@ public class Perfomance extends TestBase {
      */
     @Test( groups = "REGRESSION",priority = 1,dataProviderClass = PerformanceTestData.class,dataProvider = "addKPIs")
     public void addKIPs(String jobTitle,String KPI,String minRating,String maxRating ) {
+        extentTest=extentReport.startTest("Add KPIs");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+" , Pasword: "+Constants.OrgPassword);
@@ -39,17 +41,21 @@ public class Perfomance extends TestBase {
         softAssert.assertTrue(KPIAsddPage.isAddKIPsPageDisplayes(),"KPIs add page  is not Displayed");
         LOGGER.info("add KPIs with "+"job title: "+jobTitle+" KPI: "+KPI+" MinimumRating: "+minRating+" MaximumRating: "+maxRating);
         KPIAsddPage.addKPIs(jobTitle,KPI,minRating,maxRating);
+        extentTest.log(LogStatus.PASS, "add KPIS with jobtitle: " + jobTitle + " , KPI: " + KPI+" , MaximumRating "
+                +minRating+" , maximumRating "+maxRating);
+
         softAssert.assertTrue(KPIsPage.isResultDisplayed(),"KPIs add result  is not Displayed");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
-
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
 
     @Test(groups = "REGRESSION", priority = 2)
     public void searchKIPs( ) {
+        extentTest=extentReport.startTest("search KPIs");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -66,15 +72,18 @@ public class Perfomance extends TestBase {
         softAssert.assertTrue(KPIsPage.isKPIsPageDisplayed(),"KPIs page is not  Displayed");
         LOGGER.info("search a KPI with particular job title  ");
         KPIsPage.searchKPIs();
+        extentTest.log(LogStatus.PASS, "search KPIs ");
         softAssert.assertTrue(KPIsPage.isResultDisplayed(),"KPIs search result  is not Displayed");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
     @Test( groups = "REGRESSION",priority = 3,dataProviderClass = PerformanceTestData.class,dataProvider = "editKPIs")
     public void editKIPs(String jobTitle,String KPI,String minRating,String maxRating ) {
+        extentTest=extentReport.startTest("Edit KPIs");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -95,16 +104,18 @@ public class Perfomance extends TestBase {
         LOGGER.info("edit KPI change the job title to :"+jobTitle+", change the KPI to "+KPI+", change the minrating to "+
                 minRating+", change the maxrating to  "+maxRating);
         KPIAsddPage.addKPIs(jobTitle,KPI,minRating,maxRating);
+        extentTest.log(LogStatus.PASS, "edit KPIs ");
         softAssert.assertTrue(KPIsPage.isResultDisplayed(),"KPIs add result  is not Displayed");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
-
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
     @Test( groups = "REGRESSION",priority = 4)
     public void deleteAllKIPs( ) {
+        extentTest=extentReport.startTest("Delete KPIs");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -122,11 +133,13 @@ public class Perfomance extends TestBase {
         KPIsPage.clickSelectButton();
         KPIsPage.clickDeleteButton();
         KPIsPage.clickAlertOk();
+        extentTest.log(LogStatus.PASS, "delete KPIs ");
         LOGGER.info("Delete KPI ");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
 
@@ -138,6 +151,7 @@ public class Perfomance extends TestBase {
      */
     @Test(groups = "REGRESSION",priority = 5,dataProviderClass = PerformanceTestData.class,dataProvider = "addTracker")
     public  void addTrackers(String trackerName,String employeeName,String reviewers){
+        extentTest=extentReport.startTest("Add Trackers");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -157,11 +171,13 @@ public class Perfomance extends TestBase {
         softAssert.assertTrue(AddTrackersPage.isAddTrackersDisplayes() ,"Add Trackers page  is not Displayed");
         LOGGER.info("Add Trackers with tracker name: "+trackerName+", employee name: "+employeeName + ", reviewers: "+reviewers);
         AddTrackersPage.addTrackers( trackerName, employeeName, reviewers);
+        extentTest.log(LogStatus.PASS, "add trackers ");
         softAssert.assertTrue(TrackersPage.isResultDisplayed(),"Trackers add result  is not Displayed");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
 
     }
@@ -175,6 +191,7 @@ public class Perfomance extends TestBase {
      */
     @Test(groups = "REGRESSION",priority = 6,dataProviderClass = PerformanceTestData.class,dataProvider = "editTracker")
     public  void editTrackers(String trackerName,String employeeName,String reviewers){
+        extentTest=extentReport.startTest("Edit Trackers");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -194,16 +211,19 @@ public class Perfomance extends TestBase {
         LOGGER.info("edit Trackers with tracker name change to: "+trackerName+", employee namechange to: "+employeeName +
                 ", reviewers change to: "+reviewers);
         AddTrackersPage.addTrackers( trackerName, employeeName, reviewers);
+        extentTest.log(LogStatus.PASS, "edit trackers ");
         softAssert.assertTrue(TrackersPage.isResultDisplayed(),"Trackers add result  is not Displayed");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
 
     }
     @Test(groups = "REGRESSION",priority = 7)
     public  void deleteAllTrackers(){
+        extentTest=extentReport.startTest("Delete Trackers");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -221,10 +241,12 @@ public class Perfomance extends TestBase {
         LOGGER.info("delete all tracker details");
         TrackersPage.clickDeleteBtn();
         TrackersPage.clickAlertOk();
+        extentTest.log(LogStatus.PASS, "delete trackers ");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
 
@@ -239,6 +261,7 @@ public class Perfomance extends TestBase {
     @Test(groups = "REGRESSION",priority = 8,dataProviderClass = PerformanceTestData.class,dataProvider = "addPerformanceReview")
     public  void addPerformanceReview(String employeeName,String supervisorName,
                            String startDate,String endDate,String dueDate){
+        extentTest=extentReport.startTest("Add Performance Review");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -259,11 +282,13 @@ public class Perfomance extends TestBase {
         AddPerformanceReviewPage.addPerformanceReview(employeeName,supervisorName,startDate,endDate,dueDate);
         softAssert.assertTrue(AddPerformanceReviewPage.isSavebtnisplayed(),"save button not found");
         AddPerformanceReviewPage.clickSaveBtn();
+        extentTest.log(LogStatus.PASS, "add Performance review ");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
         softAssert.assertAll();
+        extentReport.endTest(extentTest);
 
     }
 
@@ -273,6 +298,7 @@ public class Perfomance extends TestBase {
 
     @Test(groups = "REGRESSION",priority = 9)
     public  void searchPerformanceReviewWithEmployeeName(){
+        extentTest=extentReport.startTest("search Performance Review with employee name");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -287,15 +313,18 @@ public class Perfomance extends TestBase {
         softAssert.assertTrue(ManageReviewsPage.isReviewsPageDisplayed() ,"ManageReviewsPage   is not Displayed");
         LOGGER.info("search manage review by employee name");
         ManageReviewsPage.searchPerformanceReviewByEmployeeName();
+        extentTest.log(LogStatus.PASS, "search Performance review with employee name");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
 
     }
     @Test(groups = "REGRESSION",priority = 10)
     public  void searchPerformanceReviewWithJobTitle(){
+        extentTest=extentReport.startTest("search Performance Review with job title");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -310,15 +339,18 @@ public class Perfomance extends TestBase {
         softAssert.assertTrue(ManageReviewsPage.isReviewsPageDisplayed() ,"ManageReviewsPage   is not Displayed");
         LOGGER.info("search manage review by jobTitle");
         ManageReviewsPage.searchPerformanceReviewByJobTitle();
+        extentTest.log(LogStatus.PASS, "search Performance review with  job title");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
 
     }
     @Test(groups = "REGRESSION",priority = 11,dataProviderClass = PerformanceTestData.class,dataProvider = "editPerformanceReview")
     public  void editPerformanceReview(String startDate,String endDate,String dueDate){
+        extentTest=extentReport.startTest("edit Performance Review");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -334,14 +366,17 @@ public class Perfomance extends TestBase {
         LOGGER.info("edit ManageReviews with startDate change to: "+
                 startDate+", endDate change to "+endDate+", dueDate change to:"+dueDate);
         EditPerformanceReviewPage.editPerformanceReview(startDate,endDate,dueDate);
+        extentTest.log(LogStatus.PASS, "edit Performance review ");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
 
     }
     @Test(groups = "REGRESSION",priority = 12)
     public  void deletePerformanceReview(){
+        extentTest=extentReport.startTest("delete  Performance Review ");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+Constants.OrgUserName+"  Pasword: "+Constants.OrgPassword);
@@ -359,10 +394,12 @@ public class Perfomance extends TestBase {
         LOGGER.info("delete all trackers details");
         ManageReviewsPage.clickDeleteBtn();
         ManageReviewsPage.clickAlertOk();
+        extentTest.log(LogStatus.PASS, "delete Performance review ");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         LOGGER.info("logout success");
         DashBoardPage.clickLogoutbtn();
+        extentReport.endTest(extentTest);
         softAssert.assertAll();
 
     }
