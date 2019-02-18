@@ -23,7 +23,7 @@ public class LoginTestJP extends TestBase {
         extentTest =extentReport.startTest("login with userName: "+username+", password : "+password);
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
-        LOGGER.info("Login with  " + "UserName: " + username + " , Pasword: " + password);
+        LOGGER.info("Login with  " + "UserName: " + username + " , Password: " + password);
         LoginPage.login(username, password);
 
 
