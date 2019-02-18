@@ -5,6 +5,9 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
+/**
+ * @Author Jeyapriya
+ */
 public class KPIAsddPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(PerformancePage.class);
     private static By addKPIsheading = By.id("PerformanceHeading");
@@ -23,6 +26,7 @@ public class KPIAsddPage extends PageBase {
         getDriver().findElement(txtjobtitle).sendKeys(jobTitle);
     }
     public static void setKPIs(String kpis){
+        getDriver().findElement(txtKPI).clear();
         getDriver().findElement(txtKPI).sendKeys(kpis);
     }
     public static void setMinRating(String minRating){

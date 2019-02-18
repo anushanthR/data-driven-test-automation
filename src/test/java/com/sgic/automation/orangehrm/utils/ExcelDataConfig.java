@@ -34,13 +34,7 @@ public class ExcelDataConfig {
         }
     }
 
-    /**
-     *
-     * @param sheetName
-     * @param row
-     * @param col
-     * @return
-     */
+
     public String getData(String sheetName, int row, int col) {
         sheet = wb.getSheet(sheetName);
         DataFormatter formatter = new DataFormatter();
@@ -49,11 +43,7 @@ public class ExcelDataConfig {
     }
 
 
-    /**
-     *
-     * @param sheetName
-     * @return
-     */
+
     public int getRowCount(String sheetName) {
         int row = wb.getSheet(sheetName).getLastRowNum();
         // it will give the index value so index start with 0 initially so we need
@@ -61,12 +51,6 @@ public class ExcelDataConfig {
         return row;
 
     }
-
-    /**
-     *
-     * @param sheetName
-     * @return
-     */
 
     public int getColumnCount(String sheetName) {
         int noOfColumns = wb.getSheet(sheetName).getRow(0).getLastCellNum();

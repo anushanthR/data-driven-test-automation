@@ -4,9 +4,11 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Select;
 
-public class AddReviewPage extends PageBase {
+/**
+ * @Author Jeyapriya
+ */
+public class AddPerformanceReviewPage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(PerformancePage.class);
     private static By addPerformanceReviewPageheading = By.id("addPerformanceHeading");
     private static By txtemployeeName = By.id("saveReview360Form_employee");
@@ -21,19 +23,19 @@ public class AddReviewPage extends PageBase {
     public static boolean isAddReviewDisplayes(){
         return getDriver().findElement(addPerformanceReviewPageheading).isDisplayed();
     }
-    public static boolean isSavebtnSisplayed(){
+    public static boolean isSavebtnisplayed(){
         return getDriver().findElement(savebtn).isDisplayed();
 
     }
     public static void setEmloyee(String employeeName){
         implicitWait(2);
-        getDriver().findElement(txtemployeeName).sendKeys(employeeName,Keys.TAB);
+        getDriver().findElement(txtemployeeName).sendKeys(employeeName,Keys.ENTER);
 
     }
     public static void setsupervisorName(String supervisorName){
+        implicitWait(2);
         getDriver().findElement(txtsupervisorName).sendKeys(supervisorName);
-//        getDriver().findElement(txtsupervisorName).click();
-        getDriver().findElement(txtsupervisorName).sendKeys(Keys.TAB);
+        getDriver().findElement(txtsupervisorName).sendKeys(Keys.ENTER);
 
     }
     public static void setStartDate(String startDate){
@@ -57,10 +59,10 @@ public class AddReviewPage extends PageBase {
 
     public static void  addPerformanceReview(String employeeName,String supervisorName,
                                              String startDate,String endDate,String dueDate){
-        AddReviewPage.setEmloyee(employeeName);
-        AddReviewPage.setsupervisorName(supervisorName);
-        AddReviewPage.setStartDate(startDate);
-        AddReviewPage.setEndDate(endDate);
-        AddReviewPage.setDueDate(dueDate);
+        AddPerformanceReviewPage.setEmloyee(employeeName);
+        AddPerformanceReviewPage.setsupervisorName(supervisorName);
+        AddPerformanceReviewPage.setStartDate(startDate);
+        AddPerformanceReviewPage.setEndDate(endDate);
+        AddPerformanceReviewPage.setDueDate(dueDate);
     }
 }

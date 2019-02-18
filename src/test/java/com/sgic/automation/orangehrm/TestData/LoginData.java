@@ -13,8 +13,13 @@ public class LoginData extends ExcelDataConfig {
   @DataProvider
   public Object[][] OrangeHRMLogin() {
 
+<<<<<<< HEAD
     int rows = getRowCount("Sheet1");
     int col = getColumnCount("Sheet1");
+=======
+    int rows = getRowCount("");
+    int col = getColumnCount("");
+>>>>>>> 8d6ef7fff6f7535d24a57cb7dcda65b42184b6c9
 
     LOGGER.info("row = "+ rows + " columns = "+ col);
 
