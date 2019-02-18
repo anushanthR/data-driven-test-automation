@@ -27,7 +27,7 @@ import org.testng.asserts.SoftAssert;
 public class PIMPageTest extends TestBase {
 
 
- private static final Logger LOGGER = Logger.getLogger(PIMPageTest.class);
+  private static final Logger LOGGER = Logger.getLogger(PIMPageTest.class);
 
   /**
    * @Author Jenisha Edit optional field
@@ -37,10 +37,10 @@ public class PIMPageTest extends TestBase {
   @Test(priority = 0, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void optionalField(String username, String password) {
     softAssert = new SoftAssert();
-    extentTest =extentReport.startTest("OrangeHRMLogin");
+    extentTest = extentReport.startTest("OrangeHRMLogin");
     LOGGER.info("login with username: " + username + " password: " + password);
     LoginPage.login(username, password);
-    extentTest.log(LogStatus.PASS, "username = "+username+" password ="+password);
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     LOGGER.info("login success with username: " + username + " password: " + password);
 
     PIMPage.clickPIM();
@@ -69,8 +69,9 @@ public class PIMPageTest extends TestBase {
   @Test(priority = 1, dataProviderClass = PIMData.class, dataProvider = "CustomFieldData")
   public void customFields(String fieldName, String screen, String type) {
     softAssert = new SoftAssert();
-    extentTest =extentReport.startTest("Add custom field");
-    extentTest.log(LogStatus.PASS, "FieldName = "+fieldName+" Screen ="+screen+ " Type ="+type);
+    extentTest = extentReport.startTest("Add custom field");
+    extentTest
+        .log(LogStatus.PASS, "FieldName = " + fieldName + " Screen =" + screen + " Type =" + type);
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
 
     PIMPage.clickPIM();
@@ -79,8 +80,9 @@ public class PIMPageTest extends TestBase {
     CustomFields.clickCustomField();
 
     softAssert.assertTrue(CustomFields.isCustomFieldDisplay(), "CustomField page is not displayed");
-    CustomFields.addCustomFieldForm(fieldName, screen,type);
-    softAssert.assertEquals(CustomFields.isScreenDropDownDisplayed(), "Personal Details", "DropDown value is incorrect");
+    CustomFields.addCustomFieldForm(fieldName, screen, type);
+    softAssert.assertEquals(CustomFields.isScreenDropDownDisplayed(), "Personal Details",
+        "DropDown value is incorrect");
     //softAssert.assertEquals(CustomFields.isTypeDropDownDisplayed(), "Drop Down", "DropDown value is incorrect");
     CustomFields.clickSave();
     //softAssert.assertEquals(CustomFields.isTypeDropDownDisplayed(), "Drop Down", "DropDown value is incorrect");
@@ -99,8 +101,8 @@ public class PIMPageTest extends TestBase {
   public void addReportingMethod(String name) {
     softAssert = new SoftAssert();
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
-    extentTest =extentReport.startTest("Add reporting method");
-    extentTest.log(LogStatus.PASS, "ReportingMethod = "+name);
+    extentTest = extentReport.startTest("Add reporting method");
+    extentTest.log(LogStatus.PASS, "ReportingMethod = " + name);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
 
@@ -111,7 +113,8 @@ public class PIMPageTest extends TestBase {
     ReportingMethodPage.addReportingMethodName();
     ReportingMethodPage.addReportingMethodForm(name);
     ReportingMethodPage.saveReportingMethodName();
-    softAssert.assertTrue(ReportingMethodPage.isAddReportingMethodDisplayed(), "Add function is not displayed");
+    softAssert.assertTrue(ReportingMethodPage.isAddReportingMethodDisplayed(),
+        "Add function is not displayed");
 
     DashBoardPage.clickWelcomeAdminbtn();
     DashBoardPage.clickLogoutbtn();
@@ -120,6 +123,7 @@ public class PIMPageTest extends TestBase {
 
 
   }
+
   /*
   Verify delete function in reporting method page
    */
@@ -127,8 +131,8 @@ public class PIMPageTest extends TestBase {
   public void deleteReportingMethod(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest =extentReport.startTest("delete custom field");
-    extentTest.log(LogStatus.PASS, "username = "+username+" password ="+password);
+    extentTest = extentReport.startTest("delete custom field");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
 
@@ -136,7 +140,6 @@ public class PIMPageTest extends TestBase {
     ReportingMethodPage.reportingMethodPage();
     softAssert.assertTrue(ReportingMethodPage.isReportingMethodDisplayed(),
         "Reporting method page is not displayed");
-
 
     ReportingMethodPage.selectReportingMethodName();
     ReportingMethodPage.deleteReportingMethodName();
@@ -148,6 +151,7 @@ public class PIMPageTest extends TestBase {
 
 
   }
+
   /*
   Verify edit function in reporting method page
    */
@@ -155,8 +159,8 @@ public class PIMPageTest extends TestBase {
   public void editReportingMethod(String name) {
     softAssert = new SoftAssert();
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
-    extentTest =extentReport.startTest("Add custom field");
-    extentTest.log(LogStatus.PASS, "name = "+name);
+    extentTest = extentReport.startTest("Add custom field");
+    extentTest.log(LogStatus.PASS, "name = " + name);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
 
@@ -168,9 +172,10 @@ public class PIMPageTest extends TestBase {
     ReportingMethodPage.clickReportingMethodName();
     ReportingMethodPage.clearReportingMethodName();
     ReportingMethodPage.addReportingMethodForm(name);
-   // ReportingMethodPage.editReportingMethodName("abcd");
+    // ReportingMethodPage.editReportingMethodName("abcd");
     ReportingMethodPage.saveAndEditReportingMethodName();
-    softAssert.assertTrue(ReportingMethodPage.isEditReportingMethodDisplayed(), "Edit function is not displayed");
+    softAssert.assertTrue(ReportingMethodPage.isEditReportingMethodDisplayed(),
+        "Edit function is not displayed");
 
     DashBoardPage.clickWelcomeAdminbtn();
     DashBoardPage.clickLogoutbtn();
@@ -187,8 +192,8 @@ public class PIMPageTest extends TestBase {
   public void addTerminationReasonPage(String name) {
     softAssert = new SoftAssert();
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
-    extentTest =extentReport.startTest("Edit custom field");
-    extentTest.log(LogStatus.PASS, "name = "+name);
+    extentTest = extentReport.startTest("Edit custom field");
+    extentTest.log(LogStatus.PASS, "name = " + name);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
 
@@ -199,12 +204,14 @@ public class PIMPageTest extends TestBase {
     TerminationReasonPage.addTerminationReasonName();
     TerminationReasonPage.addTerminationReasonForm(name);
     TerminationReasonPage.saveTerminationReasonName();
-    softAssert.assertTrue(TerminationReasonPage.isAddTerminationReasonDisplayed(), "Add function is not displayed");
+    softAssert.assertTrue(TerminationReasonPage.isAddTerminationReasonDisplayed(),
+        "Add function is not displayed");
     DashBoardPage.clickWelcomeAdminbtn();
     DashBoardPage.clickLogoutbtn();
     extentReport.endTest(extentTest);
     softAssert.assertAll();
   }
+
   /*
   Verify delete function in termination reason page
    */
@@ -212,8 +219,8 @@ public class PIMPageTest extends TestBase {
   public void deleteTerminationReasonPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest =extentReport.startTest("delete Termination Reason");
-    extentTest.log(LogStatus.PASS, "username = "+username+" password ="+password);
+    extentTest = extentReport.startTest("delete Termination Reason");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
 
@@ -230,6 +237,7 @@ public class PIMPageTest extends TestBase {
     extentReport.endTest(extentTest);
     softAssert.assertAll();
   }
+
   /*
   Verify edit function in Termination Reason page
    */
@@ -237,8 +245,8 @@ public class PIMPageTest extends TestBase {
   public void editTerminationReasonPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest =extentReport.startTest("Edit Termination Reason");
-    extentTest.log(LogStatus.PASS, "username = "+username+" password ="+password);
+    extentTest = extentReport.startTest("Edit Termination Reason");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
 
@@ -251,7 +259,8 @@ public class PIMPageTest extends TestBase {
     TerminationReasonPage.clearTerminationReasonName();
     TerminationReasonPage.setTerminationReasonName("abcde");
     TerminationReasonPage.saveAndEditTerminationReasonName();
-    softAssert.assertTrue(TerminationReasonPage.isEditTerminationReasonDisplayed(), "Edit function is not displayed");
+    softAssert.assertTrue(TerminationReasonPage.isEditTerminationReasonDisplayed(),
+        "Edit function is not displayed");
     DashBoardPage.clickWelcomeAdminbtn();
     DashBoardPage.clickLogoutbtn();
     extentReport.endTest(extentTest);
@@ -261,18 +270,19 @@ public class PIMPageTest extends TestBase {
   Verify file upload in importData page
    */
 
-  @Test(priority = 8, dataProvider ="OrangeHRMLogin", dataProviderClass = LoginData.class)
-  public void importData(String username, String password){
+  @Test(priority = 8, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  public void importData(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest =extentReport.startTest("Upload file");
-    extentTest.log(LogStatus.PASS, "username = "+username+" password ="+password);
+    extentTest = extentReport.startTest("Upload file");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
-    softAssert.assertTrue(PIMPage.isPIMPageDisplay(),"PIM page is not displayed");
+    softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
 
     PIMPage.clickConfiguration();
     DataImportPage.dataImportPage();
-    softAssert.assertTrue(DataImportPage.isDataImportDisplayed(),"Data import page is not displayed");
+    softAssert
+        .assertTrue(DataImportPage.isDataImportDisplayed(), "Data import page is not displayed");
     DataImportPage.fileUpload("importData.csv");
     DataImportPage.clickUpload();
     //softAssert.assertEquals(DataImportPage.verifyFileUpload(), "importData.csv", "Invalid File Name");
@@ -280,15 +290,16 @@ public class PIMPageTest extends TestBase {
     softAssert.assertAll();
 
   }
+
   /*
   Verify search function in report page
    */
-  @Test(priority = 9, dataProvider ="OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 9, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void reportPageSearch(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest =extentReport.startTest("Search report name");
-    extentTest.log(LogStatus.PASS, "username = "+username+" password ="+password);
+    extentTest = extentReport.startTest("Search report name");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
     ReportPage.clickReportPage();
@@ -303,11 +314,13 @@ public class PIMPageTest extends TestBase {
 
 
   }
+
   /*
   Verify add function in report page
    */
-  @Test(priority = 10, dataProvider ="AddReport", dataProviderClass = PIMData.class)
-  public void addReportPage(String name, String criteria, String criteriaInclude, String fieldGroup, String field) {
+  @Test(priority = 10, dataProvider = "AddReport", dataProviderClass = PIMData.class)
+  public void addReportPage(String name, String criteria, String criteriaInclude, String fieldGroup,
+      String field) {
     softAssert = new SoftAssert();
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
 
@@ -317,22 +330,22 @@ public class PIMPageTest extends TestBase {
     softAssert.assertTrue(ReportPage.isReportPageDisplayed(), "Report page is not displayed");
     ReportPage.clickAddBtn();
 
-    ReportPage.addReportForm(name,criteria,criteriaInclude,fieldGroup,field);
-
+    ReportPage.addReportForm(name, criteria, criteriaInclude, fieldGroup, field);
 
     softAssert.assertAll();
 
 
   }
+
   /*
   Verify delete function in report page
    */
-  @Test(priority = 11, dataProvider ="OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 11, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void deleteReportPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest =extentReport.startTest("Delete report name");
-    extentTest.log(LogStatus.PASS, "username = "+username+" password ="+password);
+    extentTest = extentReport.startTest("Delete report name");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
     ReportPage.clickReportPage();
@@ -345,15 +358,16 @@ public class PIMPageTest extends TestBase {
 
 
   }
+
   /*
   Verify edit function in report page
    */
-  @Test(priority = 11, dataProvider ="OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 11, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void editReportPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest =extentReport.startTest("Edit report name");
-    extentTest.log(LogStatus.PASS, "username = "+username+" password ="+password);
+    extentTest = extentReport.startTest("Edit report name");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
     ReportPage.clickReportPage();
@@ -362,29 +376,33 @@ public class PIMPageTest extends TestBase {
     ReportPage.clearReportName();
     ReportPage.typeReportName("test");
     ReportPage.clickSaveBtn();
-    softAssert.assertTrue(ReportPage.isEditValueDisplayed(), "Report page edit function is not displayed");
+    softAssert.assertTrue(ReportPage.isEditValueDisplayed(),
+        "Report page edit function is not displayed");
     extentReport.endTest(extentTest);
     softAssert.assertAll();
 
   }
+
   /*
 
    */
-  @Test(priority = 11, dataProvider ="OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 11, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void searchEmployeePage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest =extentReport.startTest("Search employee ");
-    extentTest.log(LogStatus.PASS, "username = "+username+" password ="+password);
+    extentTest = extentReport.startTest("Search employee ");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
     EmployeeListPage.clickEmployeeList();
-    softAssert.assertTrue(EmployeeListPage.isEmployeeListDisplayes(), "Employee list page is not displayed");
+    softAssert.assertTrue(EmployeeListPage.isEmployeeListDisplayes(),
+        "Employee list page is not displayed");
     EmployeeListPage.typeSearchName("Linda");
     EmployeeListPage.clickSearchBtn();
     extentReport.endTest(extentTest);
     softAssert.assertAll();
   }
+}
 
 
 
