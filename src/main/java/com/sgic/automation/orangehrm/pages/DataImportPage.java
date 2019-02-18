@@ -20,6 +20,7 @@ public class DataImportPage extends PageBase {
   public static void dataImportPage(){
 
     getDriver().findElement(dataImport).click();
+    LOGGER.info("Data import page clicked");
   }
   public static boolean isDataImportDisplayed(){
     return getDriver().findElement(dataImportHeading).isDisplayed();
@@ -27,6 +28,7 @@ public class DataImportPage extends PageBase {
 
   public static void fileUpload(String fileName){
     getDriver().findElement(chooseFile).sendKeys(PageBase.uploadFilepath+ File.separator+ fileName);
+    LOGGER.info("File Choose");
   }
 
 
@@ -34,13 +36,16 @@ public class DataImportPage extends PageBase {
   public static void clickUpload(){
 
     getDriver().findElement(upload).click();
+    LOGGER.info("File uploaded");
   }
 
 //  public static boolean verifyFileUpload(){
 //    return getDriver().findElement(verifyUpload).getText();
 //  }
 public static String verifyFileUpload() {
-  return getDriver().findElement(verifyUpload).getText();
+
+    return getDriver().findElement(verifyUpload).getText();
+
 }
 
 

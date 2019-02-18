@@ -5,30 +5,30 @@ import com.sgic.automation.orangehrm.utils.ExcelDataConfig;
 import org.apache.log4j.Logger;
 import org.testng.annotations.DataProvider;
 
-public class RecruitmentData extends ExcelDataConfig {
+public class RecruitmentData  {
 
-  private static final Logger LOGGER = Logger.getLogger(RecruitmentData.class);
-
-  public RecruitmentData() {
-    super("src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
-  }
-
-  @DataProvider
-  public Object[][] VacancyAdd() {
-
-    int rows = getRowCount(0);
-    int col = getColumnCount(0);
-
-    LOGGER.info("row = "+ rows + " columns = "+ col);
-
-    Object[][] data = new Object[rows][col];
-    for (int i = 1; i <= rows; i++) {
-      for (int j = 0; j < col; j++) {
-        data[i - 1][j] = getData("AddVacancy", i, j);
-      }
-    }
-    return data;
-  }
+//  private static final Logger LOGGER = Logger.getLogger(RecruitmentData.class);
+//
+//  public RecruitmentData() {
+//    super("src\\test\\resources\\ExcelSheet\\Recruitment.xlsx");
+//  }
+//
+//  @DataProvider
+//  public Object[][] VacancyAdd() {
+//
+//    int rows = getRowCount(0);
+//    int col = getColumnCount(0);
+//
+//    LOGGER.info("row = "+ rows + " columns = "+ col);
+//
+//    Object[][] data = new Object[rows][col];
+//    for (int i = 1; i <= rows; i++) {
+//      for (int j = 0; j < col; j++) {
+//        data[i - 1][j] = getData("AddVacancy", i, j);
+//      }
+//    }
+//    return data;
+//  }
 
 //  @DataProvider
 //  public Object[][] CandidateSearch() {

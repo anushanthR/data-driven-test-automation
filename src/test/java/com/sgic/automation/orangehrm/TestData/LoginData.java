@@ -5,23 +5,23 @@ import org.apache.log4j.Logger;
 import org.testng.annotations.DataProvider;
 
 public class LoginData extends ExcelDataConfig {
-  private static final Logger LOGGER = Logger.getLogger(RecruitmentData.class);
+  private static final Logger LOGGER = Logger.getLogger(LoginData.class);
 
   public LoginData () {
     super("src\\test\\resources\\ExcelSheet\\excel.xlsx");
   }
   @DataProvider
-  public Object[][] VacancyAdd() {
+  public Object[][] OrangeHRMLogin() {
 
-    int rows = getRowCount(0);
-    int col = getColumnCount(0);
+    int rows = getRowCount("Sheet1");
+    int col = getColumnCount("Sheet1");
 
     LOGGER.info("row = "+ rows + " columns = "+ col);
 
     Object[][] data = new Object[rows][col];
     for (int i = 1; i <= rows; i++) {
       for (int j = 0; j < col; j++) {
-        data[i - 1][j] = getData("AddVacancy", i, j);
+        data[i - 1][j] = getData("Sheet1", i, j);
       }
     }
     return data;

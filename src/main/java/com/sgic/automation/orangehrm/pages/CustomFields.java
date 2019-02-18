@@ -13,10 +13,11 @@ public class CustomFields extends PageBase {
   private static final Logger LOGGER = Logger.getLogger(CustomFields.class);
   private static By customFieldHeading=By.xpath("//*[@id=\"heading\"]");
   private static By customField=By.id("menu_pim_listCustomFields");
-  private static By fieldName=By.id("customField_name");
-  private static By screen =By.id("customField_screen");
-  private static By type =By.id("customField_type");
+  private static By fieldName1=By.id("customField_name");
+  private static By screen1 =By.id("customField_screen");
+  private static By type1 =By.id("customField_type");
   private static By save =By.id("btnSave");
+  private static By addConfirmation=By.xpath("//*[@id=\"customFieldList\"]/tbody/tr[1]/td[2]/a");
 
   /*
   Click custom field
@@ -24,6 +25,7 @@ public class CustomFields extends PageBase {
   public static void clickCustomField(){
 
     getDriver().findElement(customField).click();
+    LOGGER.info("Custom Fields page clicked");
   }
 
   /*
@@ -36,40 +38,34 @@ public class CustomFields extends PageBase {
   /*
   Type field name method
    */
-  public static void setFieldName(String name) {
-    getDriver().findElement(fieldName).sendKeys(name);
+  public static void setFieldName(String fieldName) {
+    getDriver().findElement(fieldName1).sendKeys(fieldName);
+    LOGGER.info("Type field name");
   }
 
   /*
   Screen drop down method
    */
   public static boolean isScreenDropDownDisplayed() {
-    return getDriver().findElement(screen).isDisplayed();
+    return getDriver().findElement(screen1).isDisplayed();
   }
 
-  public static String getScreenSelectedOption() {
-    Select screenDropDownOption = new Select(getDriver().findElement(screen));
-    return screenDropDownOption.getFirstSelectedOption().getText();
-  }
 
-  public static void setScreenDropDownOption(String option) {
-    Select screenDropDownOption = new Select(getDriver().findElement(screen));
-    screenDropDownOption.selectByVisibleText(option);
+  public static void setScreenDropDownOption(String screen) {
+    Select screenDropDownOption = new Select(getDriver().findElement(screen1));
+    screenDropDownOption.selectByVisibleText(screen);
+    LOGGER.info("Select screen drop down option");
   }
 
 // Type dropdown method
   public static boolean isTypeDropDownDisplayed() {
-    return getDriver().findElement(type).isDisplayed();
+    return getDriver().findElement(type1).isDisplayed();
   }
 
-  public static String getTypeSelectedOption() {
-    Select screenDropDownOption = new Select(getDriver().findElement(type));
-    return screenDropDownOption.getFirstSelectedOption().getText();
-  }
-
-  public static void setTypeDropDownOption(String option) {
-    Select screenDropDownOption = new Select(getDriver().findElement(type));
-    screenDropDownOption.selectByVisibleText(option);
+  public static void setTypeDropDownOption(String type) {
+    Select screenDropDownOption = new Select(getDriver().findElement(type1));
+    screenDropDownOption.selectByVisibleText(type);
+    LOGGER.info("Select type drop down option");
   }
   /*
   Save Details
@@ -77,8 +73,19 @@ public class CustomFields extends PageBase {
   public static void clickSave(){
 
     getDriver().findElement(save).click();
+    LOGGER.info("save button clicked");
+  }
+  public static void addCustomFieldForm(String fieldName, String screen, String type){
+    CustomFields.setFieldName(fieldName);
+    CustomFields.setScreenDropDownOption(screen);
+    CustomFields.setTypeDropDownOption(type);
+    LOGGER.info("Custom Fields added");
   }
 
+  public static boolean isAddConfirmationDisplay(){
+
+    return getDriver().findElement(addConfirmation).isDisplayed();
+  }
 
 
 

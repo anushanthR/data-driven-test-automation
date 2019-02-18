@@ -1,6 +1,7 @@
 package com.sgic.automation.orangehrm.pages;
 
 import com.sgic.automation.orangehrm.utils.PageBase;
+import java.io.File;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -32,6 +33,132 @@ public class EmployeeListPage extends PageBase {
   private static By select=By.id("ohrmList_chkSelectRecord_37");
   private static By deleteBtn=By.id("btnDelete");
   private static By okBtnForDelete=By.id("dialogDeleteBtn");
+  private static By confirmationMessage=By.xpath("//*[@id=\"frmList_ohrmListComponent\"]/script");
+
+
+  public static void clickEmployeeList(){
+
+    getDriver().findElement(employeeList).click();
+    LOGGER.info("Employee List page clicked");
+  }
+  public static boolean isEmployeeListDisplayes(){
+    return getDriver().findElement(employeeListHeading).isDisplayed();
+  }
+
+  public static void typeSearchName(String name){
+
+    getDriver().findElement(searchByName).sendKeys(name);
+    LOGGER.info("Search by name");
+  }
+
+  public static void typeSearchId( int id){
+    getDriver().findElement(searchById).sendKeys();
+  }
+  public static void typeSearchEmploymentStatus(String status){
+    getDriver().findElement(searchByEmploymentStatus).sendKeys(status);
+    LOGGER.info("Search by id ");
+  }
+  public static void typeSearchInclude(String include){
+    getDriver().findElement(searchByInclude).sendKeys(include);
+    LOGGER.info("Search by include");
+  }
+  public static void typeSearchSupervisorName(String supervisorName){
+    getDriver().findElement(searchBySupervisorName).sendKeys(supervisorName);
+    LOGGER.info("Search by supervisor name");
+  }
+  public static void typeSearchJobTitle(String jobTitle){
+    getDriver().findElement(searchByJobTitle).sendKeys(jobTitle);
+    LOGGER.info("Search by job title");
+  }
+  public static void typeSearchSubUnit(String subUnit){
+    getDriver().findElement(searchBySubUnit).sendKeys(subUnit);
+    LOGGER.info("Search by sub unit");
+  }
+  public static void clickSearchBtn(){
+
+    getDriver().findElement(searchBtn).click();
+    LOGGER.info("Search button clicked");
+  }
+  public static void clickResetBtn(){
+
+    getDriver().findElement(resetBtn).click();
+    LOGGER.info("Reset button clicked");
+  }
+  public static void clickCreateLogin(){
+
+    getDriver().findElement(createLogin).click();
+    LOGGER.info("Create login clicked");
+  }
+
+  public static void typeFirstName(String fName){
+    getDriver().findElement(firstName).sendKeys(fName);
+    LOGGER.info("First Name");
+  }
+  public static void typeMiddleName(String mName){
+    getDriver().findElement(middleName).sendKeys(mName);
+    LOGGER.info("Middle Name");
+  }
+  public static void typeLastName(String lName){
+    getDriver().findElement(lastName).sendKeys(lName);
+    LOGGER.info("Last name");
+  }
+  public static void typeEmployeeId(int id){
+
+    getDriver().findElement(employeeId).sendKeys();
+    LOGGER.info("Employee id");
+  }
+  public static void photoUpload(String fileName){
+    getDriver().findElement(photograph).sendKeys(PageBase.uploadFilepath+ File.separator+ fileName);
+    LOGGER.info("photo uploaded");
+  }
+  public static void clickAddBtn(){
+
+    getDriver().findElement(addBtn).click();
+    LOGGER.info("Add button clicked");
+  }
+
+
+  public static void typeUserName(String uName){
+    getDriver().findElement(userName).sendKeys(uName);
+    LOGGER.info("UserName");
+  }
+  public static void typePassword(String userPassword){
+    getDriver().findElement(password).sendKeys(userPassword);
+    LOGGER.info("password");
+  }
+  public static void confirmPassword(String userPassword){
+    getDriver().findElement(confirmPassword).sendKeys(userPassword);
+    LOGGER.info("confirm password");
+  }
+  public static void typeStatus(String userStatus){
+    getDriver().findElement(status).sendKeys(userStatus);
+    LOGGER.info("Status");
+  }
+
+  public static void clicSaveBtn(){
+
+    getDriver().findElement(saveBtn).click();
+    LOGGER.info("Save button clicked");
+  }
+  public static void clickSelectBtn(){
+
+    getDriver().findElement(select).click();
+    LOGGER.info("Select button clicked");
+  }
+  public static void clickDeleteBtn(){
+
+    getDriver().findElement(deleteBtn).click();
+    LOGGER.info("Delete clicked");
+  }
+  public static void clickOkBtn(){
+
+    getDriver().findElement(okBtnForDelete).click();
+    LOGGER.info(" ok button clicked");
+  }
+
+  public static boolean isConfirmationMessageDisplayed(){
+    return getDriver().findElement(confirmationMessage).isDisplayed();
+  }
 
 
 }

@@ -23,6 +23,8 @@ public class TerminationReasonPage extends PageBase {
   private static By editTerminationReason=By.xpath("//*[@id=\"terminationReason_name\"]");
   private static By saveBtnForEdit=By.id("btnSave");
   private static By cancelBtnForEdit=By.id("btnCancel");
+  private static By addConfirmation=By.xpath("//*[@id=\"recordsListTable\"]/tbody/tr[2]/td[2]");
+  private static By editConfirmation=By.xpath("//*[@id=\"recordsListTable\"]/tbody/tr[1]/td[2]");
 
   public static void terminationReasonPage(){
 
@@ -37,9 +39,9 @@ public class TerminationReasonPage extends PageBase {
     getDriver().findElement(addTerminationReason).click();
   }
 
-  public static void setTerminationReasonName(String reason) {
+  public static void setTerminationReasonName(String name) {
 
-    getDriver().findElement(terminationReasonName).sendKeys(reason);
+    getDriver().findElement(terminationReasonName).sendKeys(name);
   }
 
   public static void saveTerminationReasonName(){
@@ -66,9 +68,9 @@ public class TerminationReasonPage extends PageBase {
 
     getDriver().findElement(editTerminationReason).clear();
   }
-  public static void editTerminationReasonName(){
+  public static void editTerminationReasonName(String name){
 
-    getDriver().findElement(editTerminationReason).click();
+    getDriver().findElement(editTerminationReason).sendKeys(name);
   }
   public static void saveAndEditTerminationReasonName(){
 
@@ -78,6 +80,18 @@ public class TerminationReasonPage extends PageBase {
 
     getDriver().findElement(cancelBtnForEdit).click();
   }
+  public static boolean isAddTerminationReasonDisplayed(){
+    return getDriver().findElement(addConfirmation).isDisplayed();
+  }
+  public static boolean isEditTerminationReasonDisplayed(){
+    return getDriver().findElement(editConfirmation).isDisplayed();
+  }
+
+  public static void addTerminationReasonForm(String name){
+
+    TerminationReasonPage.setTerminationReasonName(name);
+  }
+
 
 
 
