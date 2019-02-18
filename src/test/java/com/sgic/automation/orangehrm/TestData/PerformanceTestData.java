@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import org.testng.annotations.DataProvider;
 
 /**
- * @Author Jeyapriya
+ * @author Jeyapriya
  */
 public class PerformanceTestData extends ExcelDataConfig{
     private static final Logger LOGGER = Logger.getLogger(PerformanceTestData.class);
