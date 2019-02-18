@@ -1,6 +1,5 @@
 package com.sgic.automation.orangehrm.TestData;
 
-import com.sgic.automation.orangehrm.tests.RecruitmentTest;
 import com.sgic.automation.orangehrm.utils.ExcelDataConfig;
 import org.apache.log4j.Logger;
 import org.testng.annotations.DataProvider;

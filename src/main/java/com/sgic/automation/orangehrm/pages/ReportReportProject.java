@@ -34,7 +34,4 @@ public class ReportReportProject extends PageBase {
     public static void ReportViewBtnClick(){getDriver().findElement(Report_ViewBtn).click();
         LOGGER.info("Report view button clicked");}
 
-
-
-
 }

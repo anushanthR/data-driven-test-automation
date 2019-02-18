@@ -6,6 +6,9 @@
             <!--<class name="com.test.qa.test.UiAutomationTrainingBasicTest"/>-->
             <!--<class name="com.test.qa.test.UiAutomationTrainingMediumTest"/>-->
             <!--<class name="com.test.qa.test.UiAutomationTrainingAdvanceTest"/>-->
+            <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.TimeTest"/>
+
         </classes>
     </test>
 </suite>

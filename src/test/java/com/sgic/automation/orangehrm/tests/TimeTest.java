@@ -8,7 +8,7 @@ import org.testng.asserts.SoftAssert;
 
 public class TimeTest extends TestBase {
 
-    @Test(priority = 0, testName = "TimePageTest")
+    @Test(priority = 8,groups = "REGRESSION",testName = "TimePageTest")
     public void TimePageTest() {
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
@@ -42,7 +42,7 @@ public class TimeTest extends TestBase {
 
     }
 
-    @Test(priority = 1, testName = "TimePageTimesheetTest")
+    @Test(priority = 9, groups = "REGRESSION", testName = "TimePageTimesheetTest")
     public void TimePageTimesheetTest() {
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
@@ -67,7 +67,7 @@ public class TimeTest extends TestBase {
 
     }
 
-    @Test(priority = 2, testName = "TimePageTimesheetTest")
+    @Test(priority = 10,groups = "REGRESSION", testName = "TimePageTimesheetTest")
     public void TimePageAttendanceTest() {
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
@@ -87,7 +87,7 @@ public class TimeTest extends TestBase {
         AttendanceEmployeeRecord.viewButtonClick();
     }
 
-    @Test(priority = 3, testName = "TimePageAttendanceCofigurationTest")
+    @Test(priority = 11, groups = "REGRESSION",testName = "TimePageAttendanceCofigurationTest")
     public void TimePageAttendanceCofigurationTest() {
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
@@ -108,7 +108,7 @@ public class TimeTest extends TestBase {
         AttendanceConfiguration.saveBtnClick();
     }
 
-    @Test(priority = 4, testName = "TimePageProjectReportTest")
+    @Test(priority = 12,groups = "REGRESSION", testName = "TimePageProjectReportTest")
     public void TimePageProjectReportTest() {
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);

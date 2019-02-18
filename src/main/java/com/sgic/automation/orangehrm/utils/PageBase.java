@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,6 +18,7 @@ public class PageBase {
         protected static String uploadFilepath = System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources"+File.separator+"fileUpload";
         private static String osType=System.getProperty("os.Type",Constants.WINDOWS);
         private static String driverType=System.getProperty("browser.type",Constants.CHROME);
+
 
 
 
@@ -42,6 +42,8 @@ public class PageBase {
         getDriver().manage().window().maximize();
         getDriver().get(baseUrl);
     }
+
+
 
     /**
      * Get web driver instance

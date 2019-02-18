@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
 /**
- * @author Thusya 
+ * @author Thusya
  */
 public class TimePage extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(TimePage.class);

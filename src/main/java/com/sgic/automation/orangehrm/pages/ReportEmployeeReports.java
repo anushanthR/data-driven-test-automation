@@ -20,6 +20,4 @@ public class ReportEmployeeReports extends PageBase {
 //    public static void reportEmpName(){getDriver().findElement(Report_EmployeeReportEmpName).sendKeys("RaviTharakan K S");}
 //    public static boolean reportEmpProjectName(){return getDriver().findElement(Report_EmployeeReportProjectName).isDisplayed();}
 
-
-
 }

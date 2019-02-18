@@ -1,11 +1,14 @@
 package com.sgic.automation.orangehrm.tests;
 
+import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.TestData.RecruitmentData;
 import com.sgic.automation.orangehrm.pages.*;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
+
+
 
 
 /**
@@ -19,9 +22,10 @@ public class RecruitmentTest extends TestBase {
     /**
      * RECRUITMENT_ADD VACANCY
      */
-  @Test(priority = 0, dataProviderClass = RecruitmentData.class, dataProvider = "AddVacancy", testName = "AddRecruitmentVacancy")
+  @Test(priority = 0,groups = "REGRESSION", dataProviderClass = RecruitmentData.class, dataProvider = "AddVacancy", testName = "AddRecruitmentVacancy")
   public void addRecruitmentVacancyTest(String jobTitle, String VacancyName, String HiringManager,
                                     String PositionNum, String Description) {
+      extentTest =extentReport.startTest("AddRecruitmentVacancy");
     softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
     LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
 
@@ -29,18 +33,24 @@ public class RecruitmentTest extends TestBase {
     softAssert.assertTrue(AddRecruitmentVacancy.isRecruitmentBtnDisplay(),
         "RecruitmentBtn is not Displayed");
     AddRecruitmentVacancy.recruitmentBtnClick();
+      extentTest.log(LogStatus.PASS, "recruitment Button Click");
     softAssert.assertTrue(AddRecruitmentVacancy.isVancyBtnDisplay());
     AddRecruitmentVacancy.vacancyBtnClick();
+      extentTest.log(LogStatus.PASS, "Vacancy Button Click");
     AddRecruitmentVacancy.isVacancyAddBtnVerify();
+      extentTest.log(LogStatus.PASS, "Vacancy Add Button Verify");
     AddRecruitmentVacancy.vacancyAddBtnClick();
+      extentTest.log(LogStatus.PASS, "Vacancy Add Button Click");
     softAssert.assertTrue(AddRecruitmentVacancy.isVacancyAddPageVerify());
     softAssert.assertTrue(AddRecruitmentVacancy.isJobTitleDropDownDisplayed(), "DropDown not Display");
+      extentTest.log(LogStatus.PASS, "Vacancy Add Page Verify");
+      extentTest.log(LogStatus.PASS, "jobtitle = " +jobTitle+"vacancy name = " + VacancyName+"hiringmanager = "+HiringManager+"position num = "+PositionNum+"description ="+Description);
     AddRecruitmentVacancy.AddRecruitmentVacancyForm(jobTitle, VacancyName, HiringManager, PositionNum, Description);
     AddRecruitmentVacancy.isSaveBtnVisible();
+      extentTest.log(LogStatus.PASS, "Vacancy save Button verify");
     AddRecruitmentVacancy.saveBtn();
-//    softAssert.assertTrue(AddRecruitmentVacancy.isAddDataVisible());
-//    AddRecruitmentVacancy.Adddatacheck();
-    //DashBoardPage.clickLogoutbtn();
+      extentTest.log(LogStatus.PASS, "Vacancy save button click");
+      extentReport.endTest(extentTest);
     softAssert.assertAll();
 
   }
@@ -53,9 +63,10 @@ public class RecruitmentTest extends TestBase {
       String dateofApplication) {
     softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
     LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
-
+      extentTest.log(LogStatus.PASS, " Login worked");
     softAssert.assertTrue(AddRecruitmentVacancy.isRecruitmentBtnDisplay(),"Recruitment Page is not Displayed");
     AddRecruitmentVacancy.recruitmentBtnClick();
+      extentTest.log(LogStatus.PASS, " Recruitment button worked");
     softAssert.assertTrue(SearchRecruitmentCandidate.isCandidateBtnVerify(),"CandidateBtn is not Verify");
     SearchRecruitmentCandidate.candidateBtnClick();
     softAssert.assertTrue(SearchRecruitmentCandidate.isCandidatePageDisplay(),"Candidate Page is not Displayed");
@@ -63,10 +74,13 @@ public class RecruitmentTest extends TestBase {
     AddRecruitmentCandidate.AddButtonClick();
     AddRecruitmentCandidate.AddCandidatePage();
     AddRecruitmentCandidate.uploadFile("HRMcv.docx");
+      extentTest.log(LogStatus.PASS, " Recruitment file upload");
     softAssert.assertTrue(AddRecruitmentCandidate.jobVacancy());
     AddRecruitmentCandidate.dateclear();
+      extentTest.log(LogStatus.PASS, "FirstName = "+Firstname+"Middle Name = "+Middlename+"Last Name = "+Lastname);
     AddRecruitmentCandidate.AddCandidateForms(Firstname, Middlename, Lastname,Mail,ContactNumber,jobVacancy,keyWord,comment,dateofApplication);
     AddRecruitmentCandidate.setSaveBtn();
+      extentReport.endTest(extentTest);
     //DashBoardPage.clickLogoutbtn();
     }
     /**
@@ -77,6 +91,9 @@ public class RecruitmentTest extends TestBase {
   public void searchCandidates(String CanJobTitle, String CanVacancy, String CanHiringManager,
       String CanStatus, String CanName, String CanKey, String fromDate, String toDate,
       String CanMethodApplication) {
+
+      extentTest =extentReport.startTest("Search Recruitment Candidate");
+
     softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
     LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
 
@@ -110,7 +127,7 @@ public class RecruitmentTest extends TestBase {
       softAssert.assertTrue(SearchRecruitmentVacancy.vacancySearch_button_verify());
       SearchRecruitmentVacancy.VacancySearch_button_Click();
   }
-    @Test(priority = 4,  testName = "DeleteRecruitmentVacancy")
+    @Test(priority = 6,  testName = "DeleteRecruitmentVacancy")
     public void deleteRecruitmentVacancy() {
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
@@ -134,7 +151,7 @@ public class RecruitmentTest extends TestBase {
 
     }
 
-    @Test(priority = 5,  testName = "DeleteCandidate")
+    @Test(priority = 7,  testName = "DeleteCandidate")
     public void deleteCandidate() {
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
@@ -157,7 +174,7 @@ public class RecruitmentTest extends TestBase {
         softAssert.assertAll();
     }
 
-    @Test(priority = 6, dataProviderClass = RecruitmentData.class, dataProvider = "EditVacancy", testName = "EditRecruitmentVacancy")
+    @Test(priority = 4, dataProviderClass = RecruitmentData.class, dataProvider = "EditVacancy", testName = "EditRecruitmentVacancy")
     public void editRecruitmentVacancy(String jobTitle, String VacancyName, String HiringManager,
                                              String PositionNum, String Description) {
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
@@ -184,7 +201,7 @@ public class RecruitmentTest extends TestBase {
 
     }
 
-    @Test(priority = 7, dataProviderClass = RecruitmentData.class, dataProvider = "EditCandidate", testName = "EditRecruitmentCandidate")
+    @Test(priority = 5, dataProviderClass = RecruitmentData.class, dataProvider = "EditCandidate", testName = "EditRecruitmentCandidate")
     public void editCandidates(String Firstname, String Middlename, String Lastname, String Mail,
                               String ContactNumber, String jobVacancy, String keyWord, String comment,
                               String dateofApplication) {
