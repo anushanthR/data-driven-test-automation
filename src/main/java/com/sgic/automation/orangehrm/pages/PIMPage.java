@@ -22,6 +22,7 @@ public class PIMPage extends PageBase {
     public static void clickPIM(){
 
         getDriver().findElement(PIM).click();
+        LOGGER.info("PIM page clicked");
     }
     public static boolean isPIMPageDisplay(){
 
@@ -30,10 +31,12 @@ public class PIMPage extends PageBase {
     public static void clickConfiguration(){
 
         getDriver().findElement(configuration).click();
+        LOGGER.info("Configuration page clicked");
     }
     public static void clickOptionalField(){
 
         getDriver().findElement(optionalFeild).click();
+        LOGGER.info("Optional field page clicked");
     }
 
 

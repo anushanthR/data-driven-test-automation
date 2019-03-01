@@ -4,7 +4,7 @@ import com.sgic.automation.orangehrm.utils.ExcelDataConfig;
 import org.apache.log4j.Logger;
 import org.testng.annotations.DataProvider;
 
-public class RecruitmentData extends ExcelDataConfig {
+public class RecruitmentData  extends ExcelDataConfig{
 
   private static final Logger LOGGER = Logger.getLogger(RecruitmentData.class);
 
@@ -28,6 +28,7 @@ public class RecruitmentData extends ExcelDataConfig {
     }
     return data;
   }
+
 
 
   @DataProvider(name = "AddCandidate")

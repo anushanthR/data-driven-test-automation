@@ -3,7 +3,6 @@ package com.sgic.automation.orangehrm.utils;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 import org.apache.log4j.Logger;
 
 import org.testng.ITestResult;
@@ -12,17 +11,14 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
-
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 
-public class TestBase{
+public class TestBase extends PageBase {
+
     public SoftAssert softAssert;
     public static ExtentReports extentReport = new ExtentReports(System.getProperty("user.dir") + "/src/test/resources/reports/ExtentReportResults.html");
     public static ExtentTest extentTest;
-
-
-
     private static final Logger LOGGER = Logger.getLogger(TestBase.class);
 
     @BeforeTest
@@ -58,6 +54,7 @@ public class TestBase{
             extentReport.endTest(extentTest);
             extentTest.log(LogStatus.FAIL,extentTest.addScreenCapture(ExtentReportFunctions.getFilePath()));
 
+
         }
         LOGGER.info("Closing Browser");
         PageBase.closeDriver();
@@ -65,18 +62,17 @@ public class TestBase{
 
     }
 
-    @AfterSuite
-    public void cleanUp() {
-        extentReport.flush();
-    }
-
-
-
-
 
 //    @AfterMethod
 //    public void afterMethod(Method method, ITestResult result) {
 //        LOGGER.info("Executed test case name:" + method.getName() + " Execution Results : " + result.toString());
 //    }
 
+    //report generation
+
+    @AfterSuite
+    public void cleanUp() {
+        extentReport.flush();
+
+    }
 }
