@@ -19,10 +19,6 @@ public class PageBase {
         private static String osType=System.getProperty("os.Type",Constants.WINDOWS);
         private static String driverType=System.getProperty("browser.type",Constants.CHROME);
 
-
-
-
-
     public static void initiateDriver() throws MalformedURLException {
         switch (driverType) {
             case Constants.CHROME:
