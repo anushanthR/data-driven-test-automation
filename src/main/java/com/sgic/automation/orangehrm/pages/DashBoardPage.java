@@ -23,7 +23,9 @@ public class DashBoardPage extends PageBase {
     private static By btnTime=By.id("menu_time_viewTimeModule");
 
     public static boolean isDashboardDisplayed(){
+
         return  getDriver().findElement(dashboardHeading).isDisplayed();
+
     }
     public static boolean isWelcomeAdminbtnDisplayed(){
        return getDriver().findElement(welcomeAdminbtn).isDisplayed();
