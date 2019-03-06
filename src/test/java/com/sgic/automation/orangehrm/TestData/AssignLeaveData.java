@@ -13,23 +13,55 @@ public class AssignLeaveData extends ExcelDataConfig {
                 ("src\\test\\resources\\ExcelSheet\\Leave.xlsx");
     }
 
-    @DataProvider(name = "AssignLeave")
-    public Object[][] AssignLeave() {
+    @DataProvider(name = "AssignLeaveFullDay")
+    public Object[][] AssignLeaveFullDay() {
 
-        int rows = getRowCount("Assign_Leave");
-        int col = getColumnCount("Assign_Leave");
+        int rows = getRowCount("Assign_Leave_Full_Day");
+        int col = getColumnCount("Assign_Leave_Full_Day");
 
         LOGGER.info("row = " + rows + " columns = " + col);
 
         Object[][] data = new Object[rows][col];
         for (int i = 1; i <= rows; i++) {
             for (int j = 0; j < col; j++) {
-                data[i - 1][j] = getData("Assign_Leave", i, j);
+                data[i - 1][j] = getData("Assign_Leave_Full_Day", i, j);
             }
         }
         return data;
     }
 
+    @DataProvider(name = "AssignLeaveHalfDay")
+    public Object[][] AssignLeaveHalfDay() {
 
+        int rows = getRowCount("Assign_Leave_Half_Day");
+        int col = getColumnCount("Assign_Leave_Half_Day");
+
+        LOGGER.info("row = " + rows + " columns = " + col);
+
+        Object[][] data = new Object[rows][col];
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 0; j < col; j++) {
+                data[i - 1][j] = getData("Assign_Leave_Half_Day", i, j);
+            }
+        }
+        return data;
+    }
+
+    @DataProvider(name = "AssignLeaveSpecificTime")
+    public Object[][] AssignLeaveSpecificTime() {
+
+        int rows = getRowCount("Assign_Leave_Specific_Time");
+        int col = getColumnCount("Assign_Leave_Specific_Time");
+
+        LOGGER.info("row = " + rows + " columns = " + col);
+
+        Object[][] data = new Object[rows][col];
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 0; j < col; j++) {
+                data[i - 1][j] = getData("Assign_Leave_Specific_Time", i, j);
+            }
+        }
+        return data;
+    }
     }
 
