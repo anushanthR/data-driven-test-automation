@@ -20,7 +20,8 @@ public class AssignLeave {
     private static By fromDate = By.id("assignleave_txtFromDate");
     private static By toDate = By.id("assignleave_txtToDate");
     private static By partialDays = By.id("assignleave_partialDays");
-    private static By specifictime = By.id("assignleave_firstDuration_duration");
+    private static By specificDuration = By.id("assignleave_duration_duration");
+    private static By specificTime = By.id("assignleave_duration_ampm");
     private static By specifictimeFrom = By.id("assignleave_firstDuration_time_from");
     private static By specifictimeTo = By.id("assignleave_firstDuration_time_to");
     private static By comment = By.id("assignleave_txtComment");
@@ -45,20 +46,20 @@ public class AssignLeave {
         Select dropDownOption = new Select(getDriver().findElement(leaveType));
         dropDownOption.selectByVisibleText(assignleave_txtFromDate);
     }
-    public static void setFromDate(String holiday_date) {
+    public static void setFromDate(String from_Date) {
         getDriver().findElement(fromDate).clear();
-        getDriver().findElement(fromDate).sendKeys(holiday_date);
+        getDriver().findElement(fromDate).sendKeys(from_Date);
     }
-    public static void setToDate(String assignleave_txtToDate) {
+    public static void setToDate(String to_Date) {
         getDriver().findElement(toDate).clear();
-        getDriver().findElement(toDate).sendKeys(assignleave_txtToDate);
+        getDriver().findElement(toDate).sendKeys(to_Date);
     }
     public static void setPartialDays(String assignleave_partialDays) {
         Select dropDownOption = new Select(getDriver().findElement(partialDays));
         dropDownOption.selectByVisibleText(assignleave_partialDays);
     }
     public static void setSpecifictime(String assignleave_firstDuration_duration) {
-        Select dropDownOption = new Select(getDriver().findElement(specifictime));
+        Select dropDownOption = new Select(getDriver().findElement(specificTime));
         dropDownOption.selectByVisibleText(assignleave_firstDuration_duration);
     }
     public static void setSpecifictimeFrom(String assignleave_firstDuration_time_from) {
@@ -73,9 +74,9 @@ public class AssignLeave {
         getDriver().findElement(comment).clear();
         getDriver().findElement(comment).sendKeys(assignleave_txtComment);
     }
-    public static void setDuration(String assignleave_duration_duration) {
-        Select dropDownOption = new Select(getDriver().findElement(duration));
-        dropDownOption.selectByVisibleText(assignleave_duration_duration);
+    public static void setDuration(String duration) {
+        Select dropDownOption = new Select(getDriver().findElement(specificDuration));
+        dropDownOption.selectByVisibleText(duration);
     }
     public static void clickAssignBtn() {
         getDriver().findElement(assignBtn).click();
@@ -91,18 +92,45 @@ public class AssignLeave {
     public static void clickCancelbtn() {
         getDriver().findElement(cancelBtn).click();
     }
-    public static void AssignLeaveData(String employeeName, String leaveType,String fromDate,String toDate,String duration, String comment){
+    public static void AssignFullDayLeaveData(String employeeName, String leaveType,String fromDate,String toDate,String specificDuration, String comment){
+        staticWait(2);
+        AssignLeave.setEmployeeName(employeeName);
+        AssignLeave.setLeaveType(leaveType);
+        AssignLeave.setFromDate(fromDate);
+        AssignLeave.setToDate(toDate);
+        //AssignLeave.setDuration(specificDuration);
+        AssignLeave.setComment(comment);
+        AssignLeave.clickAssignBtn();
+    }
+    public static void AssignLeaveHalfDayData(String employeeName, String leaveType,String fromDate,String toDate,String duration,String specificTime, String comment){
+
+        AssignLeave.setEmployeeName(employeeName);
+        AssignLeave.setLeaveType(leaveType);
+        AssignLeave.setFromDate(fromDate);
+        AssignLeave.setToDate(toDate);
+        AssignLeave.setDuration(duration);
+        AssignLeave.setSpecifictime(specificTime);
+        staticWait(2);
+        AssignLeave.setComment(comment);
+        AssignLeave.clickAssignBtn();
+
+    }
+    public static void AssignLeaveSpecificTimeData(String employeeName, String leaveType,String fromDate,String toDate,String specificDuration,String specifictimeFrom,String specifictimeTo,String comment){
         staticWait(2);
         AssignLeave.setEmployeeName(employeeName);
         staticWait(2);
         AssignLeave.setLeaveType(leaveType);
         staticWait(2);
         AssignLeave.setFromDate(fromDate);
-        staticWait(3);
+        staticWait(2);
         AssignLeave.setToDate(toDate);
-        staticWait(3);
-        AssignLeave.setDuration(duration);
-        staticWait(4);
+        staticWait(2);
+        AssignLeave.setDuration(specificDuration);
+        staticWait(2);
+        AssignLeave.setSpecifictimeFrom(specifictimeFrom);
+        staticWait(2);
+        AssignLeave.setSpecifictimeTo(specifictimeTo);
+        staticWait(2);
         AssignLeave.setComment(comment);
         implicitWait(2);
     }
