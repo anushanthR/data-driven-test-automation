@@ -8,7 +8,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+/**test for performance functionality
+ * @Author Jeyapriya
+ */
 public class ExtentReportFunctions extends PageBase{
 
 	private static String screenShotFolderPath = System.getProperty("user.dir") + "/src/test/resources/screenshots/";
