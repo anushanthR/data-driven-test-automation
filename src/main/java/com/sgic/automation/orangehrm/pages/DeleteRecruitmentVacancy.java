@@ -3,6 +3,9 @@ package com.sgic.automation.orangehrm.pages;
 import com.sgic.automation.orangehrm.utils.PageBase;
 import org.openqa.selenium.By;
 
+/**Identify the DELETE RECRUITMENT VACANCY form elements and path
+ * @author Thusya
+ */
 public class DeleteRecruitmentVacancy extends PageBase {
 
     private static By deleteCheckboxVerify = By.id("ohrmList_chkSelectAll");
@@ -15,13 +18,8 @@ public class DeleteRecruitmentVacancy extends PageBase {
         return getDriver().findElement(deleteCheckboxVerify).isDisplayed();}
     public static void recruitmentdeleteCBoxClick(){getDriver().findElement(deleteCheckboxVerify).click();}
 
-        public static boolean isRecruitmentdeleteBtnDisplay(){
-            return getDriver().findElement(deleteBtn).isDisplayed();}
-        public static void recruitmentdeleteBtnClick(){getDriver().findElement(deleteBtn).click();}
-//        public static boolean setPopupHeading(){return getDriver().findElement(popupHeading).isDisplayed();}
-//        public static void
-        public static void setOkBtn(){getDriver().findElement(okBtn).click();}
-
-    //private static void acceptDelete(){getDriver().switchTo().alert().accept();}
-
+    public static boolean isRecruitmentdeleteBtnDisplay(){
+        return getDriver().findElement(deleteBtn).isDisplayed();}
+    public static void recruitmentdeleteBtnClick(){getDriver().findElement(deleteBtn).click();}
+    public static void setOkBtn(){getDriver().findElement(okBtn).click();}
 }

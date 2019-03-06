@@ -5,7 +5,7 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
-/**
+/**Identify the TIME PAGE elements and path
  * @author Thusya
  */
 public class TimePage extends PageBase {
@@ -65,11 +65,9 @@ public class TimePage extends PageBase {
     public static void projectInfodropdownClick(){getDriver().findElement(time_viewProjects).click();
         LOGGER.info("projectInfo dropdown clicked ");}
 
-
-
-/**
- * @Author Jeyapriya
- */
+    /**
+     * @Author Jeyapriya
+     */
 
     private static By hdrTime=By.xpath("//*[@id=\"content\"]/div[1]/div[1]");
     private static By btnAttendance=By.id("menu_attendance_Attendance");
@@ -85,5 +83,6 @@ public class TimePage extends PageBase {
     public static void clickAttendanceRecord(){
         getDriver().findElement(btnAttendanceRecord).click();
     }
+
 
 }
