@@ -11,8 +11,9 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CustomFields extends PageBase {
   private static final Logger LOGGER = Logger.getLogger(CustomFields.class);
-  private static By customFieldHeading=By.xpath("//*[@id=\"heading\"]");
+  private static By customFieldHeading=By.xpath("//*[@id=\"customFieldListPane\"]/div[1]/h1");
   private static By customField=By.id("menu_pim_listCustomFields");
+  private static By addBtn=By.id("buttonAdd");
   private static By fieldName1=By.id("customField_name");
   private static By screen1 =By.id("customField_screen");
   private static By type1 =By.id("customField_type");
@@ -26,6 +27,11 @@ public class CustomFields extends PageBase {
 
     getDriver().findElement(customField).click();
     LOGGER.info("Custom Fields page clicked");
+  }
+  public static void clickAddBtn(){
+
+    getDriver().findElement(addBtn).click();
+    LOGGER.info("Add button clicked");
   }
 
   /*
@@ -50,6 +56,11 @@ public class CustomFields extends PageBase {
     return getDriver().findElement(screen1).isDisplayed();
   }
 
+  public static String getSelectedOption() {
+    Select dropDownOption = new Select(getDriver().findElement(screen1));
+    return dropDownOption.getFirstSelectedOption().getText();
+  }
+
 
   public static void setScreenDropDownOption(String screen) {
     Select screenDropDownOption = new Select(getDriver().findElement(screen1));
@@ -57,9 +68,13 @@ public class CustomFields extends PageBase {
     LOGGER.info("Select screen drop down option");
   }
 
-// Type dropdown method
+  // Type dropdown method
   public static boolean isTypeDropDownDisplayed() {
     return getDriver().findElement(type1).isDisplayed();
+  }
+  public static String getTypeDropDownOption() {
+    Select dropDownOption = new Select(getDriver().findElement(type1));
+    return dropDownOption.getFirstSelectedOption().getText();
   }
 
   public static void setTypeDropDownOption(String type) {
@@ -86,7 +101,11 @@ public class CustomFields extends PageBase {
 
     return getDriver().findElement(addConfirmation).isDisplayed();
   }
+  public static void clickBtn(){
 
+    getDriver().findElement(fieldName1).click();
+    LOGGER.info("Add button clicked");
+  }
 
 
 

@@ -4,6 +4,7 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import java.io.File;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 
 public class EmployeeListPage extends PageBase {
   private static final Logger LOGGER = Logger.getLogger(EmployeeListPage.class);
@@ -18,7 +19,7 @@ public class EmployeeListPage extends PageBase {
   private static By searchBySubUnit=By.id("empsearch_sub_unit");
   private static By searchBtn=By.id("searchBtn");
   private static By resetBtn=By.id("resetBtn");
-  private static By addBtn=By.id("");
+  private static By addBtn=By.id("btnAdd");
   private static By firstName=By.id("firstName");
   private static By middleName=By.id("middleName");
   private static By lastName=By.id("lastName");
@@ -34,6 +35,8 @@ public class EmployeeListPage extends PageBase {
   private static By deleteBtn=By.id("btnDelete");
   private static By okBtnForDelete=By.id("dialogDeleteBtn");
   private static By confirmationMessage=By.xpath("//*[@id=\"frmList_ohrmListComponent\"]/script");
+  private static By checkSearchName=By.xpath("//*[@id=\"resultTable\"]/tbody/tr[1]/td[3]/a");
+  private static By ConfirmUserCreate=By.xpath("//*[@id=\"pdMainContainer\"]/div[1]/h1");
 
 
   public static void clickEmployeeList(){
@@ -45,13 +48,15 @@ public class EmployeeListPage extends PageBase {
     return getDriver().findElement(employeeListHeading).isDisplayed();
   }
 
-  public static void typeSearchName(String name){
 
+  public static void typeSearchName(String name){
     getDriver().findElement(searchByName).sendKeys(name);
+
     LOGGER.info("Search by name");
   }
 
   public static void typeSearchId( int id){
+
     getDriver().findElement(searchById).sendKeys();
   }
   public static void typeSearchEmploymentStatus(String status){
@@ -130,9 +135,23 @@ public class EmployeeListPage extends PageBase {
     getDriver().findElement(confirmPassword).sendKeys(userPassword);
     LOGGER.info("confirm password");
   }
-  public static void typeStatus(String userStatus){
-    getDriver().findElement(status).sendKeys(userStatus);
-    LOGGER.info("Status");
+//  public static void typeStatus(String userStatus){
+//    getDriver().findElement(status).sendKeys(userStatus);
+//    LOGGER.info("Status");
+//  }
+
+  public static boolean isDropDownDisplayed() {
+    return getDriver().findElement(status).isDisplayed();
+  }
+
+  public static String getSelectedOption() {
+    Select dropDownOption = new Select(getDriver().findElement(status));
+    return dropDownOption.getFirstSelectedOption().getText();
+  }
+
+  public static void setDropDownOption(String option) {
+    Select dropDownOption = new Select(getDriver().findElement(status));
+    dropDownOption.selectByVisibleText(option);
   }
 
   public static void clicSaveBtn(){
@@ -158,6 +177,14 @@ public class EmployeeListPage extends PageBase {
 
   public static boolean isConfirmationMessageDisplayed(){
     return getDriver().findElement(confirmationMessage).isDisplayed();
+  }
+
+  public static boolean isSearchNameDisplayed(){
+    return getDriver().findElement(checkSearchName).isDisplayed();
+  }
+
+  public static boolean isUserDisplayed(){
+    return getDriver().findElement(ConfirmUserCreate).isDisplayed();
   }
 
 

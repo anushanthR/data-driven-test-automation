@@ -66,7 +66,7 @@ public class PIMPageTest extends TestBase {
     Add Custom field
      */
 
-  @Test(priority = 1, dataProviderClass = PIMData.class, dataProvider = "CustomFieldData")
+  @Test(priority = 1, groups = "REGRESSION", dataProviderClass = PIMData.class, dataProvider = "CustomFieldData")
   public void customFields(String fieldName, String screen, String type) {
     softAssert = new SoftAssert();
     extentTest = extentReport.startTest("Add custom field");
@@ -80,10 +80,11 @@ public class PIMPageTest extends TestBase {
     CustomFields.clickCustomField();
 
     softAssert.assertTrue(CustomFields.isCustomFieldDisplay(), "CustomField page is not displayed");
+    CustomFields.clickAddBtn();
     CustomFields.addCustomFieldForm(fieldName, screen, type);
-    softAssert.assertEquals(CustomFields.isScreenDropDownDisplayed(), "Personal Details",
+    softAssert.assertEquals(CustomFields.getSelectedOption(), "Personal Details",
         "DropDown value is incorrect");
-    //softAssert.assertEquals(CustomFields.isTypeDropDownDisplayed(), "Drop Down", "DropDown value is incorrect");
+    softAssert.assertEquals(CustomFields.getTypeDropDownOption(), "Text or Number", "DropDown value is incorrect");
     CustomFields.clickSave();
     //softAssert.assertEquals(CustomFields.isTypeDropDownDisplayed(), "Drop Down", "DropDown value is incorrect");
     softAssert.assertTrue(CustomFields.isAddConfirmationDisplay(), "Add function is not work");
@@ -362,7 +363,7 @@ public class PIMPageTest extends TestBase {
   /*
   Verify edit function in report page
    */
-  @Test(priority = 11, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 12, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void editReportPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
@@ -384,10 +385,10 @@ public class PIMPageTest extends TestBase {
   }
 
   /*
-
+    verify search by name
    */
-  @Test(priority = 11, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
-  public void searchEmployeePage(String username, String password) {
+  @Test(priority = 13, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  public void searchEmployeePage(String username, String password) throws InterruptedException {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
     extentTest = extentReport.startTest("Search employee ");
@@ -395,14 +396,102 @@ public class PIMPageTest extends TestBase {
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
     EmployeeListPage.clickEmployeeList();
+    Thread.sleep(1000);
     softAssert.assertTrue(EmployeeListPage.isEmployeeListDisplayes(),
         "Employee list page is not displayed");
+
     EmployeeListPage.typeSearchName("Linda");
     EmployeeListPage.clickSearchBtn();
+    softAssert.assertTrue(EmployeeListPage.isSearchNameDisplayed(),
+        "Employee name is not displayed");
+    DashBoardPage.clickWelcomeAdminbtn();
+    DashBoardPage.clickLogoutbtn();
     extentReport.endTest(extentTest);
     softAssert.assertAll();
   }
+  @Test(priority = 14, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  public void resetEmployeePage(String username, String password) throws InterruptedException {
+    softAssert = new SoftAssert();
+    LoginPage.login(username, password);
+    extentTest = extentReport.startTest("reset employee name ");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
+    PIMPage.clickPIM();
+    softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
+    EmployeeListPage.clickEmployeeList();
+    Thread.sleep(1000);
+    softAssert.assertTrue(EmployeeListPage.isEmployeeListDisplayes(),
+        "Employee list page is not displayed");
+    EmployeeListPage.typeSearchName("Linda");
+    EmployeeListPage.clickResetBtn();
+    DashBoardPage.clickWelcomeAdminbtn();
+    DashBoardPage.clickLogoutbtn();
+    extentReport.endTest(extentTest);
+    softAssert.assertAll();
+  }
+
+  @Test(priority = 15, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  public void addEmployee(String username, String password) throws InterruptedException {
+    softAssert = new SoftAssert();
+    LoginPage.login(username, password);
+    extentTest = extentReport.startTest("Create user ");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
+    PIMPage.clickPIM();
+    softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
+    EmployeeListPage.clickEmployeeList();
+    EmployeeListPage.clickAddBtn();
+    EmployeeListPage.typeFirstName("Jeni");
+    EmployeeListPage.typeMiddleName("Nisha");
+    EmployeeListPage.typeLastName("Jenisha");
+    // EmployeeListPage.typeEmployeeId(22);
+    EmployeeListPage.photoUpload("profile-blank-female.png");
+    EmployeeListPage.clickCreateLogin();
+    EmployeeListPage.typeUserName("jenishaa");
+    EmployeeListPage.typePassword("jenisha123");
+    EmployeeListPage.confirmPassword("jenisha123");
+    EmployeeListPage.setDropDownOption("Disabled");
+    softAssert.assertEquals(EmployeeListPage.getSelectedOption(), "Disabled",
+        "DropDown value is incorrect");
+    EmployeeListPage.clicSaveBtn();
+    //softAssert.assertTrue(EmployeeListPage.isUserDisplayed(), "User not created");
+    DashBoardPage.clickWelcomeAdminbtn();
+    DashBoardPage.clickLogoutbtn();
+    extentReport.endTest(extentTest);
+    softAssert.assertAll();
+
+  }
+
+  @Test(priority = 16, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  public void deleteEmployee(String username, String password) throws InterruptedException {
+    softAssert = new SoftAssert();
+    LoginPage.login(username, password);
+    extentTest = extentReport.startTest("Delete user ");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
+    PIMPage.clickPIM();
+    softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
+    EmployeeListPage.clickEmployeeList();
+    EmployeeListPage.clickSelectBtn();
+    EmployeeListPage.clickDeleteBtn();
+    EmployeeListPage.clickOkBtn();
+    DashBoardPage.clickWelcomeAdminbtn();
+    DashBoardPage.clickLogoutbtn();
+    extentReport.endTest(extentTest);
+    softAssert.assertAll();
+
+  }
+  @Test(priority = 16, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  public void editPersonalDetails(String username, String password) throws InterruptedException {
+    softAssert = new SoftAssert();
+    LoginPage.login(username, password);
+    extentTest = extentReport.startTest("Delete user ");
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
+    PIMPage.clickPIM();
+    softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
+    EmployeeListPage.clickEmployeeList();
+
+  }
 }
+
+
 
 
 
