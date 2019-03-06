@@ -19,7 +19,7 @@ public class Report extends TestBase {
 
 
     //Leave Entitlements and Usage Report
-    @Test(priority = 1, dataProviderClass = ReportData.class, dataProvider = "UsageReport_1", testName = "Leave Entitlements and Usage Report")
+    @Test(priority = 5,groups = "REGRESSION",dataProviderClass = ReportData.class, dataProvider = "UsageReport_1", testName = "Leave Entitlements and Usage Report")
     public void LeaveEntitlementsAndUsageReport1(String leaveBalance, String leaveType, String leavePeriod, String leaveJobTitle, String leaveBalanceLocation, String leaveBalanceSubUnit) {
         extentTest = extentReport.startTest("Leave Entitlements And Usage Report");
         LOGGER.info("Login page is displayed");
@@ -40,7 +40,7 @@ public class Report extends TestBase {
     }
 
     //Leave Entitlements and Usage Report
-    @Test(priority = 2, dataProviderClass = ReportData.class, dataProvider = "UsageReport_1", testName = "Leave Entitlements and Usage Report")
+    @Test(priority = 6,groups = "REGRESSION",dataProviderClass = ReportData.class, dataProvider = "UsageReport_1", testName = "Leave Entitlements and Usage Report")
     public void LeaveEntitlementsAndUsageReport2(String leaveBalance, String periodFrom, String employeeName) {
         extentTest = extentReport.startTest("Leave Entitlements And Usage Report");
         LOGGER.info("Login page is displayed");
