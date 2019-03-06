@@ -29,7 +29,9 @@ public class DashBoardPage extends PageBase {
     }
 
     public static boolean isDashboardDisplayed(){
+
         return  getDriver().findElement(dashboardHeading).isDisplayed();
+
     }
     public static boolean isWelcomeAdminbtnDisplayed(){
        return getDriver().findElement(welcomeAdminbtn).isDisplayed();

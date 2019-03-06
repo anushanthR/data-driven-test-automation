@@ -1,12 +1,9 @@
 package com.sgic.automation.orangehrm.tests;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.TestData.LoginJPData;
 import com.sgic.automation.orangehrm.pages.DashBoardPage;
 import com.sgic.automation.orangehrm.pages.LoginPage;
-import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
