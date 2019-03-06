@@ -21,6 +21,12 @@ public class DashBoardPage extends PageBase {
     private static By btnTrackers=By.id("menu_performance_addPerformanceTracker");
     private static By btnManageReviews=By.id("menu_performance_searchPerformancReview");
     private static By btnTime=By.id("menu_time_viewTimeModule");
+     /////admin Menu Page Click Theva Cash script
+    private static By btnAdmin=By.id("menu_admin_viewAdminModule");
+   //admim Menu Click Theva Test Cash script
+    public static void clickAdmin(){
+        getDriver().findElement(btnAdmin).click();
+    }
 
     public static boolean isDashboardDisplayed(){
 

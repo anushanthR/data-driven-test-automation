@@ -21,7 +21,7 @@ public class Entitlement extends TestBase {
     private static final Logger LOGGER = Logger.getLogger(Entitlement.class);
 
     //Add Single Entitlement
-    @Test(priority = 1,dataProviderClass = EntitlementsData.class,dataProvider = "AddSingleEntitlements",testName = "Add Leave Single Entitlements")
+    @Test(priority = 1,groups = "REGRESSION",dataProviderClass = EntitlementsData.class,dataProvider = "AddSingleEntitlements",testName = "Add Leave Single Entitlements")
     public void addLeaveSingleEntitlement(String txtEmpName, String LeaveType,String LeavePeriod,String txtEntitlement){
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
@@ -45,7 +45,7 @@ public class Entitlement extends TestBase {
     }
 
     //Add Leave Multiple Entitlement
-    @Test( priority = 2,dataProviderClass = EntitlementsData.class,dataProvider = "AddMultipeEntitlements",testName = "Add Leave Multiple Entitlements")
+    @Test( priority = 2,groups = "REGRESSION",dataProviderClass = EntitlementsData.class,dataProvider = "AddMultipeEntitlements",testName = "Add Leave Multiple Entitlements")
     public void addLeaveMultipleEntitlement(String filtersLocation,String filtersSubunit, String LeaveType,String LeavePeriod,String txtEntitlement){
         extentTest=extentReport.startTest("Add Leave Multiple Entitlements");
         LOGGER.info("Login page is displayed");
@@ -65,7 +65,7 @@ public class Entitlement extends TestBase {
         softAssert.assertAll();
     }
     // Search Entitlement
-    @Test( priority = 3,dataProviderClass = EntitlementsData.class,dataProvider = "SearchEntitlements",testName = "Search Leave Entitlements")
+    @Test( priority = 3,groups = "REGRESSION",dataProviderClass = EntitlementsData.class,dataProvider = "SearchEntitlements",testName = "Search Leave Entitlements")
     public void searchLeaveEntitlement(String employeeName,String leaveType, String leavePeriod) {
         extentTest=extentReport.startTest("Search Leave Entitlements");
         LOGGER.info("Login page is displayed");
@@ -84,7 +84,7 @@ public class Entitlement extends TestBase {
         softAssert.assertAll();
     }
     //Delete Leave Entitlements
-    @Test( priority = 4,dataProviderClass = EntitlementsData.class,dataProvider = "SearchEntitlements",testName = "Delete Leave Entitlements")
+    @Test( priority = 4,groups = "REGRESSION",dataProviderClass = EntitlementsData.class,dataProvider = "SearchEntitlements",testName = "Delete Leave Entitlements")
     public void deleteLeaveEntitlement(String employeeName,String leaveType, String leavePeriod){
         extentTest=extentReport.startTest("Delete Leave Entitlement");
         LOGGER.info("Login page is displayed");

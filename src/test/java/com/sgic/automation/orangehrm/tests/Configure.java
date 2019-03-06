@@ -17,7 +17,7 @@ public class Configure extends TestBase{
     private static final Logger LOGGER = Logger.getLogger(Configure.class);
 
     //Edit Leave Period
-    @Test( priority = 1,dataProviderClass = LeavePeriodData.class,dataProvider = "LeavePeriod",testName = "Leave Entitlements and Usage Report")
+    @Test( priority = 7,groups = "REGRESSION",dataProviderClass = LeavePeriodData.class,dataProvider = "LeavePeriod",testName = "Leave Entitlements and Usage Report")
     public void leavePeriod(String leavePeriodStartMonth, String leavePeriodStartDate){
         extentTest=extentReport.startTest("Edit Leave Period");
         LOGGER.info("Login page is displayed");
@@ -39,7 +39,7 @@ public class Configure extends TestBase{
         softAssert.assertAll();
     }
     //Add New Leave type
-    @Test( priority = 2,dataProviderClass = LeaveTypeData.class,dataProvider = "LeaveType",testName = "Leave Entitlements and Usage Report")
+    @Test( priority = 8,groups = "REGRESSION",dataProviderClass = LeaveTypeData.class,dataProvider = "LeaveType",testName = "Leave Entitlements and Usage Report")
     public void addLeaveType(String LeaveTypeName){
         extentTest=extentReport.startTest("Add Leave Type");
         LOGGER.info("Login page is displayed");
@@ -57,7 +57,7 @@ public class Configure extends TestBase{
         extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
-    @Test( priority = 3,testName = "Delete Leave Type")
+    @Test( priority = 9,groups = "REGRESSION",testName = "Delete Leave Type")
     public void DeleteLeaveType(){
         extentTest=extentReport.startTest("Delete Leave Type");
         LOGGER.info("Login page is displayed");
@@ -76,7 +76,7 @@ public class Configure extends TestBase{
         extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
-    @Test( priority = 4,testName = "Delete Leave Type Confirmation Cancel")
+    @Test( priority = 10,groups = "REGRESSION",testName = "Delete Leave Type Confirmation Cancel")
     public void DeleteLeaveTypeCancel(){
         extentTest=extentReport.startTest("Delete Leave Type Confirmation Cancel");
         LOGGER.info("Login page is displayed");
@@ -96,7 +96,7 @@ public class Configure extends TestBase{
         softAssert.assertAll();
     }
 
-    @Test( priority = 5,dataProviderClass = WorkWeekData.class,dataProvider = "WorkWeek",testName = "Edit Work Week")
+    @Test( priority =11,groups = "REGRESSION",dataProviderClass = WorkWeekData.class,dataProvider = "WorkWeek",testName = "Edit Work Week")
     public void EditWorkWeek(String workWeekMonday,String workWeekTuesday,String workWeekWednesday,String workWeekThursday,String workWeekFriday,String workWeekSaturday,String workWeekSunday){
         extentTest=extentReport.startTest("Edit Work Week");
         LOGGER.info("Login page is displayed");
@@ -115,7 +115,7 @@ public class Configure extends TestBase{
         softAssert.assertAll();
     }
 
-    @Test( priority = 6,dataProviderClass = HolidayData.class,dataProvider = "AddHoliday",testName = "Add Holiday")
+    @Test( priority = 12,groups = "REGRESSION",dataProviderClass = HolidayData.class,dataProvider = "AddHoliday",testName = "Add Holiday")
     public void AddHoliday(String addHolidayName, String calenderDate,String addHolidayLength){
         extentTest=extentReport.startTest("Add New Holiday");
         LOGGER.info("Login page is displayed");
@@ -136,7 +136,7 @@ public class Configure extends TestBase{
         softAssert.assertAll();
     }
 
-    @Test( priority = 7,dataProviderClass = HolidayData.class,dataProvider = "SearchHoliday",testName = "Search Holiday")
+    @Test( priority = 13,groups = "REGRESSION",dataProviderClass = HolidayData.class,dataProvider = "SearchHoliday",testName = "Search Holiday")
     public void SearchHoliday(String calFromDate, String calToDate){
         extentTest=extentReport.startTest("Search Holiday Details");
         LOGGER.info("Login page is displayed");
@@ -154,7 +154,7 @@ public class Configure extends TestBase{
         softAssert.assertAll();
     }
 
-    @Test( priority = 8,dataProviderClass = HolidayData.class,dataProvider = "SearchHoliday",testName = "Search Holiday")
+    @Test( priority = 14,groups = "REGRESSION",dataProviderClass = HolidayData.class,dataProvider = "SearchHoliday",testName = "Search Holiday")
     public void DeleteHoliday(String calFromDate, String calToDate){
         extentTest=extentReport.startTest("Delete Holiday");
         LOGGER.info("Login page is displayed");
@@ -176,7 +176,7 @@ public class Configure extends TestBase{
         softAssert.assertAll();
     }
 
-    @Test( priority = 9,dataProviderClass = AssignLeaveData.class,dataProvider = "AssignLeave",testName = "Assign New Leave")
+    @Test( priority = 15,groups = "REGRESSION",dataProviderClass = AssignLeaveData.class,dataProvider = "AssignLeave",testName = "Assign New Leave")
     public void AssignLeave(String employeeName, String leaveType,String fromDate,String toDate,String duration,String comment) {
         extentTest=extentReport.startTest("Assign Leave");
         LOGGER.info("Login page is displayed");
@@ -196,7 +196,7 @@ public class Configure extends TestBase{
         extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
-    @Test( priority = 10,dataProviderClass = AssignLeaveData.class,dataProvider = "AssignLeave",testName = "Assign New Leave Cancel")
+    @Test( priority = 16,groups = "REGRESSION",dataProviderClass = AssignLeaveData.class,dataProvider = "AssignLeave",testName = "Assign New Leave Cancel")
     public void AssignLeaveCancel(String employeeName, String leaveType,String fromDate,String toDate,String duration,String comment) {
         extentTest=extentReport.startTest("Assign Leave Cancel");
         LOGGER.info("Login page is displayed");
