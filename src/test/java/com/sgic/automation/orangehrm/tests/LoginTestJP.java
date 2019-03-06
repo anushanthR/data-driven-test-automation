@@ -31,7 +31,7 @@ public class LoginTestJP extends TestBase {
             softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed(), "Welcom admin button  is not Displayed");
             extentTest.log(LogStatus.PASS, "Login with Username: " + username + " and Password: " + password,alertMSg);
 
-            DashBoardPage.clickWelcomeAdminbtn();
+            //DashBoardPage.clickWelcomeAdminbtn();
             DashBoardPage.clickLogoutbtn();
             softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
             LOGGER.info("logout success");
