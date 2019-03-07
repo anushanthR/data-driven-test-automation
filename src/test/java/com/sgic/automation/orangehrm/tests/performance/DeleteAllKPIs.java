@@ -1,9 +1,9 @@
-package com.sgic.automation.orangehrm.tests;
+package com.sgic.automation.orangehrm.tests.performance;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.pages.DashBoardPage;
+import com.sgic.automation.orangehrm.pages.KPIsPage;
 import com.sgic.automation.orangehrm.pages.LoginPage;
-import com.sgic.automation.orangehrm.pages.ManageReviewsPage;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
@@ -11,15 +11,14 @@ import org.testng.annotations.Test;
 /**test for performance functionality
  * @Author Jeyapriya
  */
-public class SearchPerformanceReviewWithEmployeeName extends TestBase {
-    private static final Logger LOGGER = Logger.getLogger(SearchPerformanceReviewWithEmployeeName.class);
+public class DeleteAllKPIs extends TestBase {
+    private static final Logger LOGGER = Logger.getLogger(DeleteAllKPIs.class);
     /**
-     *testcase:search PerformanceReview With EmployeeName
+     * testcase:delete all KeyPerformanceIndicators
      */
-
-    @Test(groups = "PERFORMANCE",priority = 9,testName = "Search PerformanceReview with Employee name")
-    public  void searchPerformanceReviewWithEmployeeName(){
-        extentTest=extentReport.startTest("search Performance Review with employee name");
+    @Test( groups = "PERFORMANCE",priority = 4,testName = "delete all KeyPerformanceIndicators")
+    public void deleteAllKIPs( ) {
+        extentTest=extentReport.startTest("Delete KPIs");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         extentTest.log(LogStatus.PASS, "Login page is displayed");
@@ -30,14 +29,18 @@ public class SearchPerformanceReviewWithEmployeeName extends TestBase {
         extentTest.log(LogStatus.PASS, "Dashboard page is displayed");        softAssert.assertTrue(DashBoardPage.isDashboardDisplayed(),"Dashboard page is not displayed");
         softAssert.assertTrue(DashBoardPage.isPerfomanceBtnDisplay(),"Perfomance button is not Displayed");
         DashBoardPage.clickPerfomance();
-        DashBoardPage.clickManageReviewbtn();
-        DashBoardPage.clickManageReviewsbtn();
-        LOGGER.info("Manage review page is displayed");
-        extentTest.log(LogStatus.PASS, "Manage Review page is displayed");
-        softAssert.assertTrue(ManageReviewsPage.isReviewsPageDisplayed() ,"ManageReviewsPage   is not Displayed");
-        LOGGER.info("search manage review by employee name");
-        ManageReviewsPage.searchPerformanceReviewByEmployeeName();
-        extentTest.log(LogStatus.PASS, "search Performance review with employee name");
+        softAssert.assertTrue(DashBoardPage.isConfigureBtnDisplay(),"Configure button is not Displayed");
+        DashBoardPage.clickConfigure();
+        softAssert.assertTrue(DashBoardPage.isKPIsBtnDisplay(),"KPIs button is not Displayed");
+        DashBoardPage.clickKPIs();
+        LOGGER.info("KPIs page is displayed");
+        extentTest.log(LogStatus.PASS, "KPIs page is displayed");
+        softAssert.assertTrue(KPIsPage.isKPIsPageDisplayed(),"KPIs page is not  Displayed");
+        KPIsPage.clickSelectButton();
+        KPIsPage.clickDeleteButton();
+        KPIsPage.clickAlertOk();
+        extentTest.log(LogStatus.PASS, "delete KPIs ");
+        LOGGER.info("Delete KPI ");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
@@ -45,6 +48,5 @@ public class SearchPerformanceReviewWithEmployeeName extends TestBase {
         extentTest.log(LogStatus.PASS, "logout success");
         extentReport.endTest(extentTest);
         softAssert.assertAll();
-
     }
 }

@@ -1,4 +1,4 @@
-package com.sgic.automation.orangehrm.tests;
+package com.sgic.automation.orangehrm.tests.performance;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.TestData.PerformanceTestData;

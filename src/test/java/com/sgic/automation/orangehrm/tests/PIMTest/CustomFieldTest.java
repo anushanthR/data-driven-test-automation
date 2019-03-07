@@ -33,7 +33,7 @@ public class CustomFieldTest extends TestBase {
     CustomFields.clickCustomField();
 
     softAssert.assertTrue(CustomFields.isCustomFieldDisplay(), "CustomField page is not displayed");
-    CustomFields.clickAddBtn();
+    //CustomFields.clickAddBtn();
     CustomFields.addCustomFieldForm(fieldName, screen, type);
     softAssert.assertEquals(CustomFields.getSelectedOption(), "Personal Details",
         "DropDown value is incorrect");
