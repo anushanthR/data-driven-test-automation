@@ -29,7 +29,7 @@
             <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AddLeaveMultipleEntitlements"/>
             <class name="com.sgic.automation.orangehrm.tests.LeaveTest.SearchLeaveEntitlement"/>
             <class name="com.sgic.automation.orangehrm.tests.LeaveTest.DeleteLeaveEntitlement"/>
-            <class name="com.sgic.automation.orangehrm.tes nts.LeaveTest.LeaveEntitlementsAndUsageReport1"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.LeaveEntitlementsAndUsageReport1"/>
             <class name="com.sgic.automation.orangehrm.tests.LeaveTest.LeaveEntitlementsAndUsageReport2"/>
             <class name="com.sgic.automation.orangehrm.tests.LeaveTest.ConfigureLeavePeriod"/>
             <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AddLeaveType"/>
