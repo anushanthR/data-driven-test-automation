@@ -31,7 +31,7 @@ public class EmployeeListPage extends PageBase {
   private static By confirmPassword=By.id("re_password");
   private static By status=By.id("status");
   private static By saveBtn=By.id("btnSave");
-  private static By select=By.id("ohrmList_chkSelectRecord_37");
+  private static By select=By.id("ohrmList_chkSelectRecord_89");
   private static By deleteBtn=By.id("btnDelete");
   private static By okBtnForDelete=By.id("dialogDeleteBtn");
   private static By confirmationMessage=By.xpath("//*[@id=\"frmList_ohrmListComponent\"]/script");

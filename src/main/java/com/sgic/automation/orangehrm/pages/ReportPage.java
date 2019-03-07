@@ -84,8 +84,10 @@ public class ReportPage extends PageBase {
   }
 
   public static void setCriteriaIncludeDownOption(String criteriaInclude) {
-    Select screenDropDownOption = new Select(getDriver().findElement(selectedCriteriaInclude));
-    screenDropDownOption.selectByVisibleText(criteriaInclude);
+    //implicitWait(4);
+    getDriver().findElement(selectedCriteriaInclude).sendKeys(criteriaInclude);
+//    Select screenDropDownOption = new Select(getDriver().findElement(selectedCriteriaInclude));
+//    screenDropDownOption.selectByValue(criteriaInclude);
   }
   public static boolean isFieldGroupsDisplayed() {
     return getDriver().findElement(displayFieldGroups).isDisplayed();

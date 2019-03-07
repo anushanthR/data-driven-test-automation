@@ -21,7 +21,7 @@ public class DeleteTerminationReasonTest extends TestBase {
   public void deleteTerminationReasonPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest = extentReport.startTest("delete Termination Reason");
+    extentTest = extentReport.startTest("Delete Termination Reason");
     extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
