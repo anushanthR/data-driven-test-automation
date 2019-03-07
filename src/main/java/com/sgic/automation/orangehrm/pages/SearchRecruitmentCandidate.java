@@ -38,11 +38,17 @@ public class SearchRecruitmentCandidate extends PageBase {
         LOGGER.info("Candidate button worked");}
     public static boolean isCandidatePageDisplay(){return getDriver().findElement(candidatePage).isDisplayed();}
     public static boolean isCandidateJobTitleDropDownDisplayed() { return getDriver().findElement(candidateJobTitle).isDisplayed();}
-    public static void setCandidateJobTitleSelectedOption(String CanJobTitle) { Select dropDownOption = new Select(getDriver().findElement(candidateJobTitle));dropDownOption.selectByVisibleText(CanJobTitle);
-        LOGGER.info("Candidate job title dropdown worked");}
+    public static void setCandidateJobTitleSelectedOption(String CanJobTitle) {
+        Select dropDownOption = new Select(getDriver().findElement(candidateJobTitle));
+        dropDownOption.selectByVisibleText(CanJobTitle);
+        LOGGER.info("Candidate job title dropdown worked");
+    }
     public static boolean isCandidateVacancyDropDownDisplayed() { return getDriver().findElement(candidateVacancy).isDisplayed();}
-    public static void setCandidateVacancySelectedOption(String CanVacancy) { Select dropDownOption = new Select(getDriver().findElement(candidateVacancy));dropDownOption.selectByVisibleText(CanVacancy);
-        LOGGER.info("Candidate Vacancy dropdown worked");}
+    public static void setCandidateVacancySelectedOption(String CanVacancy) {
+        Select dropDownOption = new Select(getDriver().findElement(candidateVacancy));
+        dropDownOption.selectByVisibleText(CanVacancy);
+        LOGGER.info("Candidate Vacancy dropdown worked");
+    }
     public static boolean isCandidateHiringManagerDropDownDisplayed() { return getDriver().findElement(candidateHiringManager).isDisplayed();}
     public static void setCandidateHiringManagerSelectedOption(String CanHiringManager) { Select dropDownOption = new Select(getDriver().findElement(candidateHiringManager));dropDownOption.selectByVisibleText( CanHiringManager);
         LOGGER.info("Candidate HiringManager dropdown worked");}
@@ -53,6 +59,8 @@ public class SearchRecruitmentCandidate extends PageBase {
         LOGGER.info("Candidate_name sent ");}
     public static void keywords(String CanKey){getDriver().findElement(candidateKeyword ).sendKeys(CanKey);
         LOGGER.info("Candidate_keyword sent ");}
+    public static void applicationFromDateClick(){getDriver().findElement(candidateDateOfApplicationFrom).click();}
+    public static void applicationFromDateClear(){getDriver().findElement(candidateDateOfApplicationFrom).clear();}
     public static void applicationFromDate(String fromDate){getDriver().findElement(candidateDateOfApplicationFrom).sendKeys(fromDate);
         LOGGER.info("Candidate_from date sent ");}
     public static void applicationToDate(String toDate){getDriver().findElement(candidateDateOfApplicationTo).sendKeys(toDate);

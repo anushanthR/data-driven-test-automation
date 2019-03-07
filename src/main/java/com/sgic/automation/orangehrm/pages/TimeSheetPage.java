@@ -4,6 +4,9 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
+/**Identify the TIME SHEET form elements and path
+ * @author Thusya
+ */
 public class TimeSheetPage extends PageBase {
 
     private static final Logger LOGGER = Logger.getLogger(TimeSheetPage.class);
@@ -27,5 +30,4 @@ public class TimeSheetPage extends PageBase {
     public static void addTimesheetDateClear(){getDriver().findElement(timesheetDate).clear();}
     public static void addTimesheetDate(){getDriver().findElement(timesheetDate).sendKeys("2019-02-24");
         LOGGER.info("timesheet date add ");}
-
 }

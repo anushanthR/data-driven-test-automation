@@ -1,55 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="REGRESSION" verbose="1" configfailurepolicy="continue">
-    <test name="REGRESSION">
-        <classes>
+    <!--<test name="REGRESSION">-->
+        <!--<classes>-->
 
 
-            <!--<class name="com.sgic.automation.orangehrm.tests.RecruitmentTest"/>-->
-            <!--<class name="com.sgic.automation.orangehrm.tests.TimeTest"/>-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.RecruitmentTest"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.TimeTest"/>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.Perfomance"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.LoginTestJP"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.AttendanceRecordWithDatePickerTest"/>&ndash;&gt;-->
+
 
             <!--<class name="com.sgic.automation.orangehrm.tests.Perfomance"/>-->
-            <!--<class name="com.sgic.automation.orangehrm.tests.LoginTestJP"/>-->
+            <!--<class name="com.sgic.automation.orangehrm.tests.performance.LoginTestJP"/>-->
             <!--<class name="com.sgic.automation.orangehrm.tests.AttendanceRecordWithDatePickerTest"/>-->
 
-            <!--<class name="com.sgic.automation.orangehrm.tests.PIMPageTest"/>-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.PIMPageTest"/>&ndash;&gt;-->
+
+
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.LeaveTest "/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.LeaveTest.Report"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.LeaveTest.Configure"/>&ndash;&gt;-->
+
 
             <!--<class name="com.sgic.automation.orangehrm.tests.Entitlement"/>-->
             <!--<class name="com.sgic.automation.orangehrm.tests.Report"/>-->
             <!--<class name="com.sgic.automation.orangehrm.tests.Configure"/>-->
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.OptionalFieldTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.CustomFieldTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditCustomFieldTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteCustomFieldTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddReportingMethodTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.deleteReportingMethodTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditReportingMethodTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddTerminationReasonTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteTerminationReasonTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditTerminationReasonTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.ImportDataTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.SearchReportPageTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddReportPageTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteReportPageTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditReportPageTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.SearchEmployeeTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.ResetEmployeePageTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddEmployeeTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteEmployeeTest"/>
 
-
-
-
-
-
-
-
-
-
-
+        <!--</classes>-->
+    <!--</test>-->
+    <test name="LEAVE">
+        <classes>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AddLeaveSingleEntitlements"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AddLeaveMultipleEntitlements"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.SearchLeaveEntitlement"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.DeleteLeaveEntitlement"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.LeaveEntitlementsAndUsageReport1"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.LeaveEntitlementsAndUsageReport2"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.ConfigureLeavePeriod"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AddLeaveType"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.DeleteLeaveType"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.DeleteLeaveTypeConfirmationCancel"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.EditWorkWeek"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.SearchHoliday"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.DeleteHoliday"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignFulldayLeave"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeavehalfday"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeaveSpecificTime"/>
+            <!--<class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeaveCancel"/>-->
 
 
         </classes>
     </test>
+    <test name="PERFORMANCE">
+        <classes>
+            <class name="com.sgic.automation.orangehrm.tests.performance.AddKPIs"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.SearchKPIs"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.EditKPIs"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllKPIs"/>
+
+            <class name="com.sgic.automation.orangehrm.tests.performance.AddTRackers"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.EditTrackers"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllTrackers"/>
+
+            <class name="com.sgic.automation.orangehrm.tests.performance.AddPerformanceReview"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.EditPerformanceReview"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.SearchPerformanceReviewWithEmployeeName"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.searchPerformanceReviewWithJobTitle"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllPerformanceReview"/>
+
+            <class name="com.sgic.automation.orangehrm.tests.performance.LoginTestJP"/>
+
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectDate"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectMonth"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectYear"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttandanceRecordWithSelectNextMonth"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectPreviousMonth"/>
+        </classes>
+    </test>
+  <test name="REGRESSION">
+  <classes>
+
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.OptionalFieldTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.CustomFieldTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditCustomFieldTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteCustomFieldTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddReportingMethodTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.deleteReportingMethodTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditReportingMethodTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddTerminationReasonTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteTerminationReasonTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditTerminationReasonTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.ImportDataTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.SearchReportPageTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddReportPageTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteReportPageTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditReportPageTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.SearchEmployeeTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.ResetEmployeePageTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddEmployeeTest"/>
+    <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteEmployeeTest"/>
+
+
+  </classes>
+  </test>
 
 </suite>

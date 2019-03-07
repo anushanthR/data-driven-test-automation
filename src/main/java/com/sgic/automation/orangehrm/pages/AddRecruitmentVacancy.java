@@ -4,8 +4,6 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
-
-import static org.testng.Assert.assertEquals;
 /**
  * Identify the ADD RECRUITMENT VACANCY form elements and path
  * @author ThusyaG
@@ -23,19 +21,21 @@ public class AddRecruitmentVacancy extends PageBase {
     private static By positionNum = By.id("addJobVacancy_noOfPositions");
     private static By description = By.id("addJobVacancy_description");
     private static By addSaveBtn = By.id("btnSave");
-    private static By checkAdddata = By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[2]/a");
+    private static By checkAdddata = By.linkText("Engineer");
+    private static By checkAdddataPage = By.xpath("//*[@id=\"addJobVacancy\"]/div[1]/h1");
 
     public static boolean isRecruitmentBtnDisplay(){
         return getDriver().findElement(recruitmentButtonLink).isDisplayed();}
-    public static void recruitmentBtnClick(){getDriver().findElement(recruitmentButtonLink).click();
+
+    public static void recruitmentBtnClick(){implicitWait(5);getDriver().findElement(recruitmentButtonLink).click();
         LOGGER.info("Recruitment Button worked " );}
     public static boolean isVancyBtnDisplay(){
         return getDriver().findElement(recruitmentVacancyButtonLink).isDisplayed();}
-    public static void vacancyBtnClick(){ getDriver().findElement(recruitmentVacancyButtonLink).click();
+    public static void vacancyBtnClick(){ implicitWait(10);getDriver().findElement(recruitmentVacancyButtonLink).click();
         LOGGER.info("Recruitment vacancy Button worked " );}
     public static boolean isVacancyAddBtnVerify(){
         return getDriver().findElement(vacancyAddButton).isDisplayed();}
-    public static void vacancyAddBtnClick(){ getDriver().findElement(vacancyAddButton).click();
+    public static void vacancyAddBtnClick(){implicitWait(5); getDriver().findElement(vacancyAddButton).click();
         LOGGER.info("Add Recruitment vacancy Button worked " );}
     public static boolean isVacancyAddPageVerify(){
         return getDriver().findElement(vacancyAddPageVerify).isDisplayed();}
@@ -47,24 +47,32 @@ public class AddRecruitmentVacancy extends PageBase {
      */
     public static boolean isJobTitleDropDownDisplayed() {
         return getDriver().findElement(jobTitleDropdown).isDisplayed();}
-    public static void setDropDownOption(String jobTitle) { Select dropDownOption = new Select(getDriver().findElement(jobTitleDropdown));
+    public static void setDropDownOption(String jobTitle) { implicitWait(5);Select dropDownOption = new Select(getDriver().findElement(jobTitleDropdown));
         dropDownOption.selectByVisibleText(jobTitle);
         LOGGER.info("Add Recruitment vacancy_job title typed " );}
-    public static void vacancyName(String VacancyName){getDriver().findElement(vacancyName).sendKeys(VacancyName);
+    public static void vacancyName(String VacancyName){implicitWait(5);getDriver().findElement(vacancyName).sendKeys(VacancyName);
         LOGGER.info("Add Recruitment vacancy_vacancy name typed " );}
-    public static void hiringManager(String HiringManager){getDriver().findElement(hiringManager).sendKeys(HiringManager);
+    public static void hiringManager(String HiringManager){implicitWait(5);getDriver().findElement(hiringManager).sendKeys(HiringManager);
         LOGGER.info("Add Recruitment vacancy_HiringManager name typed " );}
-    public static void positionNumber(String PositionNum){getDriver().findElement(positionNum).sendKeys(PositionNum);
+    public static void positionNumber(String PositionNum){implicitWait(5);getDriver().findElement(positionNum).sendKeys(PositionNum);
         LOGGER.info("Add Recruitment vacancy_position number typed " );}
-    public static void description(String Description){getDriver().findElement(description).sendKeys(Description);
+    public static void description(String Description){implicitWait(5);getDriver().findElement(description).sendKeys(Description);
         LOGGER.info("Add Recruitment vacancy_description typed " );}
     public static boolean isSaveBtnVisible(){return getDriver().findElement(addSaveBtn).isDisplayed();}
-    public static void saveBtn(){getDriver().findElement(addSaveBtn).click();
-        LOGGER.info("Add Recruitment vacancy_save button worked " );}
-    public static boolean isAddDataVisible(){return getDriver().findElement(checkAdddata).isDisplayed();}
-    public static void Adddatacheck(){getDriver().findElement(checkAdddata);
-        LOGGER.info("Add data verified " );}
+    public static void saveBtn(){implicitWait(5);getDriver().findElement(addSaveBtn).click();
+        LOGGER.info("Add Recruitment vacancy_save button worked " ); }
 
+
+
+
+
+
+
+    // public static boolean isAddDataVisible(){return getDriver().findElement(checkAdddata).isDisplayed();}
+    public static void Adddatacheck(){implicitWait(10);getDriver().findElement(checkAdddata).click();
+        LOGGER.info("Add data verified " );}
+    public static void checkAdddataPage(){implicitWait(10);getDriver().findElement(checkAdddataPage).isDisplayed();}
+//driver.findElement(By.linkText("click here")).click();
     /**
      * @param jobTitle - job title dropdown option
      * @param VacancyName - available job vacancy name

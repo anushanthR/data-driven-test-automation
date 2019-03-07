@@ -5,6 +5,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
+/**Identify the SEARCH RECRUITMENT VACANCY form elements and path
+ * @author Thusya
+ */
 public class SearchRecruitmentVacancy extends PageBase {
 
     private static final Logger LOGGER = Logger.getLogger(SearchRecruitmentVacancy.class);
@@ -17,23 +20,23 @@ public class SearchRecruitmentVacancy extends PageBase {
 
     public static boolean VacancySearch_jobTitle_Display(){return getDriver().findElement(vacancySearch_jobTitle).isDisplayed();}
     public static void VacancySearch_jobTitleDropdown(String SearchJobtitle){
-            Select dropDownOption = new Select(getDriver().findElement(vacancySearch_jobTitle));
-            dropDownOption.selectByVisibleText(SearchJobtitle);
+        Select dropDownOption = new Select(getDriver().findElement(vacancySearch_jobTitle));
+        dropDownOption.selectByVisibleText(SearchJobtitle);
         LOGGER.info("search vacancy_job title dropdown worked");}
     public static boolean vacancySearch_jobVacancy_Display(){return getDriver().findElement(vacancySearch_jobVacancy).isDisplayed();}
     public static void VacancySearch_jobVacancyDropdown(String SearchJobvacancy){
-            Select dropDownOption = new Select(getDriver().findElement(vacancySearch_jobVacancy));
-            dropDownOption.selectByVisibleText(SearchJobvacancy);
+        Select dropDownOption = new Select(getDriver().findElement(vacancySearch_jobVacancy));
+        dropDownOption.selectByVisibleText(SearchJobvacancy);
         LOGGER.info("search vacancy_vacancy dropdown worked");}
     public static boolean vacancySearch_hiringManager_Display(){return getDriver().findElement(vacancySearch_hiringManager).isDisplayed();}
     public static void VacancySearch_hiringManager_Dropdown(String SearchhiringManager){
-            Select dropDownOption = new Select(getDriver().findElement(vacancySearch_hiringManager));
-            dropDownOption.selectByVisibleText(SearchhiringManager);
+        Select dropDownOption = new Select(getDriver().findElement(vacancySearch_hiringManager));
+        dropDownOption.selectByVisibleText(SearchhiringManager);
         LOGGER.info("search vacancy_hiring manager dropdown worked");}
     public static boolean vacancySearch_Status(){return getDriver().findElement(vacancySearch_status).isDisplayed();}
     public static void VacancySearch_Status(String vacancySearch_Status ){
-            Select dropDownOption = new Select(getDriver().findElement(vacancySearch_status));
-            dropDownOption.selectByVisibleText(vacancySearch_Status);
+        Select dropDownOption = new Select(getDriver().findElement(vacancySearch_status));
+        dropDownOption.selectByVisibleText(vacancySearch_Status);
         LOGGER.info("search vacancy_status dropdown worked");}
     public static boolean vacancySearch_button_verify(){return getDriver().findElement(vacancySearch_button).isDisplayed();}
     public static void VacancySearch_button_Click(){getDriver().findElement(vacancySearch_button).click();

@@ -7,6 +7,9 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 
+/**Identify the EDIT RECRUITMENT CANDIDATE form elements and path
+ * @author Thusya
+ */
 public class EditRecruitmentCandidate extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(EditRecruitmentCandidate.class);
 

@@ -5,6 +5,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
+/**Identify the REPORT PROJECT form elements and path
+ * @author Thusya
+ */
 public class ReportReportProject extends PageBase {
 
     private static final Logger LOGGER = Logger.getLogger(ReportReportProject .class);
@@ -17,7 +20,7 @@ public class ReportReportProject extends PageBase {
 
     public static boolean ReportProjectnameVerify(){return getDriver().findElement(Report_projectname).isDisplayed();}
     public static void ReportProjectnameWrite(){Select dropDownOption = new Select (getDriver().findElement(Report_projectname));
-    dropDownOption.selectByVisibleText("thusya - HRMsys");
+        dropDownOption.selectByVisibleText("thusya - HRMsys");
         LOGGER.info("Report project name sent");}
     public static boolean ReportFromDateVerify(){return getDriver().findElement(Report_projectFromDate).isDisplayed();}
     public static void ReportFromDateClear(){getDriver().findElement(Report_projectFromDate).clear();}
@@ -33,5 +36,4 @@ public class ReportReportProject extends PageBase {
     public static boolean ReportViewBtnVerify(){return getDriver().findElement(Report_ViewBtn).isDisplayed();}
     public static void ReportViewBtnClick(){getDriver().findElement(Report_ViewBtn).click();
         LOGGER.info("Report view button clicked");}
-
 }

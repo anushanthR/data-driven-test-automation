@@ -5,6 +5,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
+/**Identify the EDIT RECRUITMENT VACANCY form elements and path
+ * @author Thusya
+ */
 public class EditRecruitmentVacancy extends PageBase {
     private static final Logger LOGGER = Logger.getLogger(EditRecruitmentVacancy.class);
 
@@ -30,8 +33,6 @@ public class EditRecruitmentVacancy extends PageBase {
         return getDriver().findElement(editButton).isDisplayed();}
     public static void vacancyEditBtnClick(){ getDriver().findElement(editButton).click();
         LOGGER.info("vacancyEditBtnClick " );}
-
-
     /**
      * add recruitment vacancy_return boolean data type value
      * @return isJobTitleDropDownDisplayed - check job title dropdown is display

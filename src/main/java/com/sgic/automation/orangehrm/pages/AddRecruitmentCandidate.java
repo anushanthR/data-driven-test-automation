@@ -53,7 +53,7 @@ public class AddRecruitmentCandidate extends PageBase {
         LOGGER.info(" key word Sent ");}
     public static void setComment(String comment){getDriver().findElement(Comment).sendKeys(comment);
         LOGGER.info(" comment Sent ");}
-        public static void dateclear(){getDriver().findElement(DateOfApplication).clear();}
+    public static void dateclear(){getDriver().findElement(DateOfApplication).clear();}
     public static void setDateOfApplication(String dateofApplication){getDriver().findElement(DateOfApplication).sendKeys(dateofApplication);
         LOGGER.info(" date Sent ");}
     public static void setSaveBtn(){getDriver().findElement(SaveBtn).click();
