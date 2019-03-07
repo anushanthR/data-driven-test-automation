@@ -50,7 +50,7 @@
             <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeavehalfday"/>
             <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeaveSpecificTime"/>
             <!--<class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeaveCancel"/>-->
->>>>>>> f2bd6f865653d29eb96031f20b2baf51604a7aad
+
 
         </classes>
     </test>
