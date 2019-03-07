@@ -29,7 +29,11 @@ public class Constants {
   //  public static final String REC_OPTION_1 = "HR Manager";
 
     public static final String REC_OPTION_JOB_TITLE = "IT Manager";
-
+    public static final String Employeename = "Ravi";
+    public static final String Name = "sports";
+    public static final String Description = "Cricket";
+    public static final String Nationality = "SriLankan";
+    public static final String JobCatery = "IT Wornk";
 //add KPIs credentials
     public static final String JobTitle="IT Executive";
     public static final String KPI="knkn";

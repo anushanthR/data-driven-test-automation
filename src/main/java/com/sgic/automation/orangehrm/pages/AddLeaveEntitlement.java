@@ -77,28 +77,20 @@ public class AddLeaveEntitlement {
     public static void AddSingleEntitlementsData(String txtEmpName, String LeaveType,String LeavePeriod,String txtEntitlement){
 
         AddLeaveEntitlement.setTxtEmpName(txtEmpName);
-        staticWait(1);
         AddLeaveEntitlement.setLeaveType(LeaveType);
-        staticWait(1);
         AddLeaveEntitlement.setLeavePeriod(LeavePeriod);
-        staticWait(1);
         AddLeaveEntitlement.setEntitlement(txtEntitlement);
         implicitWait(1);
     }
     public static void AddMultipleEntitlementsData(String filtersLocation,String filtersSubunit, String LeaveType,String LeavePeriod,String txtEntitlement){
 
         AddLeaveEntitlement.clickAddMultipleEmployee();
-        staticWait(1);
         AddLeaveEntitlement.setFiltersLocation(filtersLocation);
-        staticWait(1);
         AddLeaveEntitlement.setFiltersSubunit(filtersSubunit);
-        staticWait(1);
         AddLeaveEntitlement.setLeaveType(LeaveType);
-        staticWait(1);
         AddLeaveEntitlement.setLeavePeriod(LeavePeriod);
-        staticWait(1);
         AddLeaveEntitlement.setEntitlement(txtEntitlement);
-        implicitWait(1);
+
     }
 
     }

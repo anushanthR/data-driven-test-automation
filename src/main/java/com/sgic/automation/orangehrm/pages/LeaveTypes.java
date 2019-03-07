@@ -12,7 +12,7 @@ public class LeaveTypes {
     private static By leaveTypeHeader = By.id("search-results");
     private static By leaveTypeBtnAdd = By.id("btnAdd");
     private static By leaveTypeBtnDelete = By.id("btnDelete");
-    private static By leaveTypeCheckbox = By.xpath("//*[@id=\"ohrmList_chkSelectRecord_2\"]");
+    private static By leaveTypeCheckbox = By.id("ohrmList_chkSelectRecord_11");
     private static By leaveTypeCheckbox2 = By.id("ohrmList_chkSelectRecord_3");
     private static By leaveTypeDeleteConfirmation = By.id("deleteConfModal");
     private static By leaveTypeDeleteConfirmationOk = By.id("dialogDeleteBtn");
@@ -23,6 +23,7 @@ public class LeaveTypes {
     private static By LeaveTypeName = By.id("leaveType_txtLeaveTypeName");
 
     public static boolean isLeaveTypeHeaderDisplay(){
+
         return getDriver().findElement(leaveTypeHeader).isDisplayed();
     }
     public static void clickMenuLeaveType() {
