@@ -15,7 +15,7 @@ public class LeaveEntitlementsAndUsageReport2  extends TestBase {
     //Leave Entitlements and Usage Report
     @Test(priority = 6,groups = "LEAVE",dataProviderClass = ReportData.class, dataProvider = "UsageReport_1", testName = "Leave Entitlements and Usage Report")
     public void LeaveEntitlementsAndUsageReport2(String leaveBalance, String periodFrom, String employeeName) {
-        extentTest = extentReport.startTest("Leave Entitlements And Usage Report");
+        extentTest = extentReport.startTest("Leave Entitlements And Usage Report-2");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LOGGER.info("Login with  "+"UserName: "+ Constants.OrgUserName+" , Pasword: "+Constants.OrgPassword);
