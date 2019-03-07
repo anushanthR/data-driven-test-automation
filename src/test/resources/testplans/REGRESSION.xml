@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="REGRESSION" verbose="1" configfailurepolicy="continue">
-    <test name="REGRESSION">
+    <!--<test name="REGRESSION">-->
+        <!--<classes>-->
+
+
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.RecruitmentTest"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.TimeTest"/>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.Perfomance"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.LoginTestJP"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.AttendanceRecordWithDatePickerTest"/>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.PIMPageTest"/>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.LeaveTest "/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.LeaveTest.Report"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.LeaveTest.Configure"/>&ndash;&gt;-->
+
+        <!--</classes>-->
+    <!--</test>-->
+    <test name="LEAVE">
         <classes>
-
-
-            <!--<class name="com.sgic.automation.orangehrm.tests.RecruitmentTest"/>-->
-            <!--<class name="com.sgic.automation.orangehrm.tests.TimeTest"/>-->
-
-            <!--<class name="com.sgic.automation.orangehrm.tests.Perfomance"/>-->
-            <!--<class name="com.sgic.automation.orangehrm.tests.LoginTestJP"/>-->
-            <!--<class name="com.sgic.automation.orangehrm.tests.AttendanceRecordWithDatePickerTest"/>-->
-
-            <!--<class name="com.sgic.automation.orangehrm.tests.PIMPageTest"/>-->
-
-            <class name="com.sgic.automation.orangehrm.tests.Entitlement"/>
-            <class name="com.sgic.automation.orangehrm.tests.Report"/>
-            <class name="com.sgic.automation.orangehrm.tests.Configure"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AddLeaveSingleEntitlements"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AddLeaveMultipleEntitlements"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.SearchLeaveEntitlement"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.DeleteLeaveEntitlement"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.LeaveEntitlementsAndUsageReport1"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.LeaveEntitlementsAndUsageReport2"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.ConfigureLeavePeriod"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AddLeaveType"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.DeleteLeaveType"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.DeleteLeaveTypeConfirmationCancel"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.EditWorkWeek"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.SearchHoliday"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.DeleteHoliday"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignFulldayLeave"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeavehalfday"/>
+            <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeaveSpecificTime"/>
+            <!--<class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeaveCancel"/>-->
 
         </classes>
     </test>
