@@ -26,10 +26,15 @@ public class AdminMenuPage extends PageBase {
     private static By MenuConfiguration=By.id("menu_admin_Configuration");
     private static By MenuEmail_c_m=By.id("menu_admin_listMailConfiguration");
     private static By MenuregisterOAuthClient=By.id("menu_admin_registerOAuthClient");
+    private static By MenuLocations=By.id("menu_admin_viewLocations");
 
 
     //admim Menu Click Theva Test Cash script
 
+    public static void ClickLocations(){
+        getDriver().findElement(MenuLocations).click();
+        LOGGER.info("Button_MenuLocations_Click*** ");
+    }
     public static void ClickregisterOAuthClient(){
         getDriver().findElement(MenuregisterOAuthClient).click();
         LOGGER.info("Button_MenuregisterOAuthClient_Click*** ");
