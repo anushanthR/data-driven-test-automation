@@ -17,11 +17,12 @@ public class DeleteCustomFieldTest extends TestBase {
   private static final Logger LOGGER = Logger.getLogger(DeleteCustomFieldTest.class);
 
 
-  @Test(priority = 0, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 3, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void deleteCustomField(String username, String password) {
     softAssert = new SoftAssert();
-    extentTest = extentReport.startTest("OrangeHRMLogin");
+    extentTest = extentReport.startTest("Delete custom field");
     LOGGER.info("login with username: " + username + " password: " + password);
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     LoginPage.login(username, password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
