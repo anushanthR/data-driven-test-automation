@@ -43,10 +43,6 @@
             <class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeaveSpecificTime"/>
             <!--<class name="com.sgic.automation.orangehrm.tests.LeaveTest.AssignLeaveCancel"/>-->
 
-
-
-
-
         </classes>
     </test>
     <test name="RECRUITMENT">
@@ -67,9 +63,10 @@
 
             <class name="com.sgic.automation.orangehrm.tests.TimeTest.TimePageVerificationTest"/>
             <class name="com.sgic.automation.orangehrm.tests.TimeTest.ViewTimeSheetTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.TimeTest.ViewAttendanceEmployeeRecord"/>
+            <class name="com.sgic.automation.orangehrm.tests.TimeTest.InEmployeeAttendanceTest"/>
             <class name="com.sgic.automation.orangehrm.tests.TimeTest.SaveAttendanceConfigurationTest"/>
             <class name="com.sgic.automation.orangehrm.tests.TimeTest.ViewProjectReportTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.TimeTest.ViewAttendanceEmployeeRecord"/>
 
         </classes>
     </test>
@@ -100,7 +97,7 @@
             <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectPreviousMonth"/>
         </classes>
     </test>
-  <test name="REGRESSION">
+  <test name="PIM">
   <classes>
 
     <class name="com.sgic.automation.orangehrm.tests.PIMTest.OptionalFieldTest"/>
