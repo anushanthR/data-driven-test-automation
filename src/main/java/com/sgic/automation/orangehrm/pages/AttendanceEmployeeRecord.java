@@ -20,11 +20,11 @@ public class AttendanceEmployeeRecord extends PageBase {
      */
     public static boolean employeeNameVerify(){return getDriver().findElement(attendemployeeName).isDisplayed();}
     public static void employeenameClear(){getDriver().findElement(attendemployeeName).click();}
-    public static void employeeName(){getDriver().findElement(attendemployeeName).sendKeys("Russel Hamilton");
+    public static void employeeName(){getDriver().findElement(attendemployeeName).sendKeys("thusyr thusy gunam");
         LOGGER.info("employeeName sent ");}
     public static boolean AttendanceEmployeeRecordDateVerify(){return getDriver().findElement(attendDate).isDisplayed();}
     public static void AttendanceEmployeeRecordDateClear(){getDriver().findElement(attendDate).clear();}
-    public static void AttendanceEmployeeRecordDate(){getDriver().findElement(attendDate).sendKeys("2019-02-24");
+    public static void AttendanceEmployeeRecordDate(){getDriver().findElement(attendDate).sendKeys("2019-03-07");
         LOGGER.info("attendance date add ");}
     public static boolean viewButtonVerify(){return getDriver().findElement(viewBtn).isDisplayed();}
     public static void viewButtonClick(){getDriver().findElement(viewBtn).click();

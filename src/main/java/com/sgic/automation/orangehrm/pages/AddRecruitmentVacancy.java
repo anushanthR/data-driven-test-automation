@@ -21,7 +21,7 @@ public class AddRecruitmentVacancy extends PageBase {
     private static By positionNum = By.id("addJobVacancy_noOfPositions");
     private static By description = By.id("addJobVacancy_description");
     private static By addSaveBtn = By.id("btnSave");
-    private static By checkAdddata = By.linkText("Engineer");
+    private static By checkAdddata = By.linkText("accounts");
     private static By checkAdddataPage = By.xpath("//*[@id=\"addJobVacancy\"]/div[1]/h1");
 
     public static boolean isRecruitmentBtnDisplay(){
