@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="REGRESSION" verbose="1" configfailurepolicy="continue">
-    <test name="REGRESSION">
+    <!--<test name="REGRESSION">-->
+    <!--<classes>-->
+
+
+        <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.RecruitmentTest"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.TimeTest"/>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.Perfomance"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.LoginTestJP"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.AttendanceRecordWithDatePickerTest"/>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<class name="com.sgic.automation.orangehrm.tests.PIMPageTest"/>&ndash;&gt;-->
+
+        <!--<class name="com.sgic.automation.orangehrm.tests.Entitlement"/>-->
+        <!--<class name="com.sgic.automation.orangehrm.tests.Report"/>-->
+        <!--<class name="com.sgic.automation.orangehrm.tests.Configure"/>-->
+
+    <!--</classes>-->
+<!--</test>-->
+    <test name="AdminTest">
         <classes>
 
-
-            <!--<class name="com.sgic.automation.orangehrm.tests.RecruitmentTest"/>-->
-            <!--<class name="com.sgic.automation.orangehrm.tests.TimeTest"/>-->
-
-            <!--<class name="com.sgic.automation.orangehrm.tests.Perfomance"/>-->
-            <!--<class name="com.sgic.automation.orangehrm.tests.LoginTestJP"/>-->
-            <!--<class name="com.sgic.automation.orangehrm.tests.AttendanceRecordWithDatePickerTest"/>-->
-
-            <!--<class name="com.sgic.automation.orangehrm.tests.PIMPageTest"/>-->
-
-            <class name="com.sgic.automation.orangehrm.tests.Entitlement"/>
-            <class name="com.sgic.automation.orangehrm.tests.Report"/>
-            <class name="com.sgic.automation.orangehrm.tests.Configure"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Add_Memberships_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Add_Nationalities_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.EducationAdd_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Email_Configuration_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Employment_StatusTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.General_Information_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Job_Categories_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.LicensesAdd_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Pay_GradesTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Register_OAuth_Client_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.SkillsAdd_Test"/>
 
         </classes>
     </test>
