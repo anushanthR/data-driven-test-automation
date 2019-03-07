@@ -13,6 +13,10 @@ public class Constants {
     public static final String OrgUserName = "Admin";
     public static final String OrgPassword = "admin123";
 
+    public static final String OrgEmpName = "thusya";
+    public static final String OrgEmpPassword = "thusya1234";
+
+
     public static final String EMPNAME = "John Smith";
     public static final String LEAVETYPE = "Paternity US";
     public static final String LEAVEPERIOD = "Paternity US";

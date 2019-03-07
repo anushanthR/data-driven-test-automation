@@ -13,8 +13,8 @@ public class LeaveEntitlementsAndUsageReport2  extends TestBase {
     private static final Logger LOGGER = Logger.getLogger(LeaveEntitlementsAndUsageReport2.class);
 
     //Leave Entitlements and Usage Report
-    @Test(priority = 6,groups = "LEAVE",dataProviderClass = ReportData.class, dataProvider = "UsageReport_1", testName = "Leave Entitlements and Usage Report")
-    public void LeaveEntitlementsAndUsageReport2(String leaveBalance, String periodFrom, String employeeName) {
+    @Test(priority = 6,groups = "LEAVE",dataProviderClass = ReportData.class, dataProvider = "UsageReport_2", testName = "Leave Entitlements and Usage Report")
+    public void LeaveEntitlementsAndUsageReport2(String leaveBalance, String employeeName , String periodFrom) {
         extentTest = extentReport.startTest("Leave Entitlements And Usage Report-2");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
@@ -29,7 +29,7 @@ public class LeaveEntitlementsAndUsageReport2  extends TestBase {
         LOGGER.info("LeaveEntitlementsAndUsageReport Menu Clicked");
         softAssert.assertTrue(LeaveEntitlementsAndUsageReport.isleaveEntitlementsAndUsageReportDisplay(), "Leave Entitlement and Usage Report");
         LOGGER.info("LeaveEntitlementsAndUsageReport page verified");
-        LeaveEntitlementsAndUsageReport2(leaveBalance, periodFrom, employeeName);
+        LeaveEntitlementsAndUsageReport. ReportData_Employee(leaveBalance,employeeName, periodFrom);
         LeaveEntitlementsAndUsageReport.clickleaveBalanceViewBtn();
         LOGGER.info("View Button is clicked");
         extentTest.log(LogStatus.PASS, "Leave Entitlement Usage Report Sucessfully Generated");

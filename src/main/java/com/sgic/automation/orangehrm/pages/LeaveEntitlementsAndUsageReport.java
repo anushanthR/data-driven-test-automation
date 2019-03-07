@@ -86,23 +86,19 @@ public class LeaveEntitlementsAndUsageReport {
     }
 
     public static void ReportData_LeaveType(String leaveBalance, String leaveType,String leavePeriod,String leaveJobTitle,String leaveBalanceLocation,String leaveBalanceSubUnit){
-        staticWait(4);
+
         LeaveEntitlementsAndUsageReport.setLeaveBalance(leaveBalance);
-        staticWait(4);
         LeaveEntitlementsAndUsageReport.setleaveType(leaveType);
-        staticWait(2);
         LeaveEntitlementsAndUsageReport.setLeavePeriod(leavePeriod);
         staticWait(2);
-        LeaveEntitlementsAndUsageReport.setLeavePeriod(leaveJobTitle);
-        staticWait(2);
-        LeaveEntitlementsAndUsageReport.setleaveBalanceLocation(leaveBalanceLocation);
-        staticWait(2);
-        LeaveEntitlementsAndUsageReport.setleaveBalanceSubUnit(leaveBalanceSubUnit);
-        staticWait(2);
-        LeaveEntitlementsAndUsageReport.clickleaveBalanceTerminatedCheckBox();
         implicitWait(2);
+        LeaveEntitlementsAndUsageReport.setleaveJobTitle(leaveJobTitle);
+        implicitWait(2);
+        LeaveEntitlementsAndUsageReport.setleaveBalanceLocation(leaveBalanceLocation);
+        LeaveEntitlementsAndUsageReport.setleaveBalanceSubUnit(leaveBalanceSubUnit);
+        LeaveEntitlementsAndUsageReport.clickleaveBalanceTerminatedCheckBox();
     }
-    public static void ReportData_Employee(String leaveBalance, String periodFrom,String employeeName){
+    public static void ReportData_Employee(String leaveBalance,String employeeName, String periodFrom){
         LeaveEntitlementsAndUsageReport.setLeaveBalance(leaveBalance);
         staticWait(2);
         LeaveEntitlementsAndUsageReport.setEmployeeName(employeeName);

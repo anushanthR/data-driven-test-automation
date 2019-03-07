@@ -17,7 +17,7 @@ public class deleteReportingMethodTest extends TestBase {
   /*
   Verify delete function in reporting method page
    */
-  @Test(priority = 3, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 5, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void deleteReportingMethod(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
