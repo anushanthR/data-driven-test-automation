@@ -4,6 +4,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.pages.DashBoardPage;
 import com.sgic.automation.orangehrm.pages.LoginPage;
 import com.sgic.automation.orangehrm.pages.ManageReviewsPage;
+import com.sgic.automation.orangehrm.pages.PerformancePage;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
@@ -38,6 +39,8 @@ public class SearchPerformanceReviewWithEmployeeName extends TestBase {
         LOGGER.info("search manage review by employee name");
         ManageReviewsPage.searchPerformanceReviewByEmployeeName();
         extentTest.log(LogStatus.PASS, "search Performance review with employee name");
+        softAssert.assertTrue(ManageReviewsPage.isresultDisplayed(),"Perfomance result is not Displayed");
+
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();

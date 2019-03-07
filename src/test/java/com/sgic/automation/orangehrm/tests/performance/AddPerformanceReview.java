@@ -51,6 +51,7 @@ public class AddPerformanceReview extends TestBase {
         AddPerformanceReviewPage.addPerformanceReview(employeeName,supervisorName,startDate,endDate,dueDate);
         softAssert.assertTrue(AddPerformanceReviewPage.isSavebtnisplayed(),"save button not found");
         AddPerformanceReviewPage.clickSaveBtn();
+        softAssert.assertTrue(ManageReviewsPage.isresultDisplayed(), "result is not Displayed");
         extentTest.log(LogStatus.PASS, "add PerformanceReviews with employeeName: "+employeeName+", supervisorName: "+supervisorName+", startDate: "+
                 startDate+", endDate "+endDate+", dueDate :"+dueDate);
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
