@@ -23,18 +23,18 @@ public class TestAdminPage extends TestBase {
         extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
         LOGGER.info("login success with username: " + username + " password: " + password);
     }
-    @Test(priority = 0, dataProvider = "AddUser", dataProviderClass = UserAddData.class)
-    public void SaveUserTest(String UserRole,String EmployeeName,String Username,String Status,String Password,String Cpassword) {
-        softAssert = new SoftAssert();
-        LoginPage.login(Constants.OrgUserName,Constants.OrgPassword);
-        LOGGER.info("DashBoardPage is displayed");
-        DashBoardPage.clickAdmin();
-        extentTest=extentReport.startTest("UserAdd");
-        AdminPage.SaveUser(UserRole,EmployeeName,Username,Status,Password,Cpassword);
-        extentTest.log(LogStatus.PASS, " OrangeHRM User Add Success: ");
-        extentReport.endTest(extentTest);
-        softAssert.assertAll();
-
-
-    }
+//    @Test(priority = 0, dataProvider = "AddUser", dataProviderClass = UserAddData.class)
+//    public void SaveUserTest(String UserRole,String EmployeeName,String Username,String Status,String Password,String Cpassword) {
+//        softAssert = new SoftAssert();
+//        LoginPage.login(Constants.OrgUserName,Constants.OrgPassword);
+//        LOGGER.info("DashBoardPage is displayed");
+//        DashBoardPage.clickAdmin();
+//        extentTest=extentReport.startTest("UserAdd");
+//        AdminPage.SaveUser(UserRole,EmployeeName,Username,Status,Password,Cpassword);
+//        extentTest.log(LogStatus.PASS, " OrangeHRM User Add Success: ");
+//        extentReport.endTest(extentTest);
+//        softAssert.assertAll();
+//
+//
+//    }
 }

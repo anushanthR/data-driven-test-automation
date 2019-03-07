@@ -17,7 +17,7 @@ public class ImportDataTest extends TestBase {
   Verify file upload in importData page
    */
 
-  @Test(priority = 8, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 10, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void importData(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);

@@ -16,7 +16,7 @@ public class SearchReportPageTest extends TestBase {
   /*
   Verify search function in report page
    */
-  @Test(priority = 9, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 11, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void reportPageSearch(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);

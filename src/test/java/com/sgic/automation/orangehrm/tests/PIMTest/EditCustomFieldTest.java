@@ -1,5 +1,6 @@
 package com.sgic.automation.orangehrm.tests.PIMTest;
 
+import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.TestData.LoginData;
 import com.sgic.automation.orangehrm.pages.CustomFields;
 import com.sgic.automation.orangehrm.pages.DashBoardPage;
@@ -14,11 +15,12 @@ public class EditCustomFieldTest extends TestBase {
   private static final Logger LOGGER = Logger.getLogger(DeleteCustomFieldTest.class);
 
 
-  @Test(priority = 0, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 2, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void editCustomField(String username, String password) {
     softAssert = new SoftAssert();
-    extentTest = extentReport.startTest("OrangeHRMLogin");
+    extentTest = extentReport.startTest("Edit custom Field ");
     LOGGER.info("login with username: " + username + " password: " + password);
+    extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     LoginPage.login(username, password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");

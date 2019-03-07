@@ -19,7 +19,7 @@ public class EditReportingMethodTest extends TestBase {
   /*
   Verify edit function in reporting method page
    */
-  @Test(priority = 4, dataProvider = "EditReportingMethod", dataProviderClass = PIMData.class)
+  @Test(priority = 6, dataProvider = "EditReportingMethod", dataProviderClass = PIMData.class)
   public void editReportingMethod(String name) {
     softAssert = new SoftAssert();
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);

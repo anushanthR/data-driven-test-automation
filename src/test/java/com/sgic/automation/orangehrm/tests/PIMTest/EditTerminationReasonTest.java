@@ -18,7 +18,7 @@ public class EditTerminationReasonTest extends TestBase {
   /*
   Verify edit function in Termination Reason page
    */
-  @Test(priority = 7, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 9, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void editTerminationReasonPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);

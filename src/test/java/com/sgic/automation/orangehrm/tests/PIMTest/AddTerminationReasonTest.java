@@ -20,7 +20,7 @@ public class AddTerminationReasonTest extends TestBase {
   Verify add function in termination reason page
    */
 
-  @Test(priority = 5, dataProvider = "Termination", dataProviderClass = PIMData.class)
+  @Test(priority = 7, dataProvider = "Termination", dataProviderClass = PIMData.class)
   public void addTerminationReasonPage(String name) {
     softAssert = new SoftAssert();
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);

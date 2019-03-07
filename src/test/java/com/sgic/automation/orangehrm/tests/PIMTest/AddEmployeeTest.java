@@ -16,7 +16,7 @@ public class AddEmployeeTest extends TestBase {
 
   private static final Logger LOGGER = Logger.getLogger(AddEmployeeTest.class);
 
-  @Test(priority = 15, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 17, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void addEmployee(String username, String password) throws InterruptedException {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
