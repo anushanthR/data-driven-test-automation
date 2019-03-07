@@ -1,4 +1,4 @@
-package com.sgic.automation.orangehrm.tests;
+package com.sgic.automation.orangehrm.tests.performance;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.TestData.DatePickerData;
@@ -12,16 +12,12 @@ import org.testng.annotations.Test;
 /**
  *  @Author Jeyapriya
  */
-public class ViewAttendanceRecordWithSelectPreviousMonth extends TestBase {
-    /**
-     * testcase:view attendanceRecord (select one specific date with change to previous month ))
-     *
-     */
-    @Test(groups = "DATEPICKER",priority = 19,dataProviderClass = DatePickerData.class,
+public class ViewAttendanceRecordWithSelectMonth extends TestBase {
+    @Test(groups = "DATEPICKER",priority = 15,dataProviderClass = DatePickerData.class,
             dataProvider = "AttendanceRecord",
-            testName = "view attendanceRecord(select one specific date with change to previous month in date picker)")
-    public void attendanceRecordSelectPreviousMonth(String employeeName){
-        extentTest=extentReport.startTest("date picker test with select previous month");
+            testName = "view attendanceRecord(select one specific date with select the month in date picker)")
+    public void attendanceRecordSelectMonth(String employeeName){
+        extentTest=extentReport.startTest("date picker test with select one month");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.isLoginPageDisplay();
         LoginPage.login(Constants.OrgUserName,Constants.OrgPassword);
@@ -31,8 +27,8 @@ public class ViewAttendanceRecordWithSelectPreviousMonth extends TestBase {
         TimePage.clickAttendance();
         TimePage.clickAttendanceRecord();
         AttendanceRecordPage.isAttendanceRecordDisplayed();
-        AttendanceRecordPage.viewAttendanceRecord1WithChangePreviousMonth(employeeName);
-        extentTest.log(LogStatus.PASS,"view "+employeeName+" attendance record with select previous month ");
+        AttendanceRecordPage.viewAttendanceRecord1WithChangeMonth(employeeName);
+        extentTest.log(LogStatus.PASS,"view  "+employeeName+"  attendance record  with select month ");
         softAssert.assertTrue(AttendanceRecordPage.isResultDisplay(),"result is not display");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
@@ -40,5 +36,4 @@ public class ViewAttendanceRecordWithSelectPreviousMonth extends TestBase {
         extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
-
 }

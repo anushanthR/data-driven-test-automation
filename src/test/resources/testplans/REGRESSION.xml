@@ -9,15 +9,41 @@
             <!--<class name="com.sgic.automation.orangehrm.tests.TimeTest"/>-->
 
             <!--<class name="com.sgic.automation.orangehrm.tests.Perfomance"/>-->
-            <!--<class name="com.sgic.automation.orangehrm.tests.LoginTestJP"/>-->
+            <!--<class name="com.sgic.automation.orangehrm.tests.performance.LoginTestJP"/>-->
             <!--<class name="com.sgic.automation.orangehrm.tests.AttendanceRecordWithDatePickerTest"/>-->
 
             <!--<class name="com.sgic.automation.orangehrm.tests.PIMPageTest"/>-->
 
-            <class name="com.sgic.automation.orangehrm.tests.Entitlement"/>
-            <class name="com.sgic.automation.orangehrm.tests.Report"/>
-            <class name="com.sgic.automation.orangehrm.tests.Configure"/>
+            <!--<class name="com.sgic.automation.orangehrm.tests.Entitlement"/>-->
+            <!--<class name="com.sgic.automation.orangehrm.tests.Report"/>-->
+            <!--<class name="com.sgic.automation.orangehrm.tests.Configure"/>-->
 
+        </classes>
+    </test>
+    <test name="PERFORMANCE">
+        <classes>
+            <class name="com.sgic.automation.orangehrm.tests.performance.AddKPIs"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.SearchKPIs"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.EditKPIs"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllKPIs"/>
+
+            <class name="com.sgic.automation.orangehrm.tests.performance.AddTRackers"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.EditTrackers"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllTrackers"/>
+
+            <class name="com.sgic.automation.orangehrm.tests.performance.AddPerformanceReview"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.EditPerformanceReview"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.SearchPerformanceReviewWithEmployeeName"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.searchPerformanceReviewWithJobTitle"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllPerformanceReview"/>
+
+            <class name="com.sgic.automation.orangehrm.tests.performance.LoginTestJP"/>
+
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectDate"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectMonth"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectYear"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttandanceRecordWithSelectNextMonth"/>
+            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectPreviousMonth"/>
         </classes>
     </test>
 
