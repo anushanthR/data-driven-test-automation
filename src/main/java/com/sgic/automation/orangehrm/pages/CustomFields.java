@@ -11,7 +11,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CustomFields extends PageBase {
   private static final Logger LOGGER = Logger.getLogger(CustomFields.class);
-  private static By customFieldHeading=By.xpath("//*[@id=\"customFieldListPane\"]/div[1]/h1");
+  private static By customFieldHeading=By.xpath("//*[@id=\"heading\"]");
+  private static By getCustomFieldDeleteHeading=By.xpath("//*[@id=\"customFieldListPane\"]/div[1]/h1");
   private static By customField=By.id("menu_pim_listCustomFields");
   private static By addBtn=By.id("buttonAdd");
   private static By fieldName1=By.id("customField_name");
@@ -19,6 +20,12 @@ public class CustomFields extends PageBase {
   private static By type1 =By.id("customField_type");
   private static By save =By.id("btnSave");
   private static By addConfirmation=By.xpath("//*[@id=\"customFieldList\"]/tbody/tr[1]/td[2]/a");
+  private static By selectOne =By.xpath("//*[@id=\"customFieldList\"]/tbody/tr/td[1]");
+  private static By delete =By.id("buttonRemove");
+  private static By okBtn=By.id("dialogDeleteBtn");
+  private static By selectCustomField=By.xpath("//*[@id=\"customFieldList\"]/tbody/tr/td[2]/a");
+
+
 
   /*
   Click custom field
@@ -105,6 +112,37 @@ public class CustomFields extends PageBase {
 
     getDriver().findElement(fieldName1).click();
     LOGGER.info("Add button clicked");
+  }
+  public static void clickSelectOne(){
+
+    getDriver().findElement(selectOne).click();
+    LOGGER.info("Select one option");
+  }
+  public static void clickDeleteBtn(){
+
+    getDriver().findElement(delete).click();
+    LOGGER.info("Delete one Custom field name");
+  }
+  public static void clickOkBtn(){
+
+    getDriver().findElement(okBtn).click();
+    LOGGER.info("Ok button for delete clicked");
+  }
+
+  public static boolean isDeleteCustomFieldDisplay(){
+
+    return getDriver().findElement(getCustomFieldDeleteHeading).isDisplayed();
+  }
+  public static void clickSelectCustomField(){
+
+    getDriver().findElement(selectCustomField).click();
+    LOGGER.info("One custom field name clicked");
+  }
+
+  public static void clearFieldName(){
+
+    getDriver().findElement(fieldName1).clear();
+    LOGGER.info("Field name cleared");
   }
 
 
