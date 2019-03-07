@@ -16,7 +16,7 @@ public class EditReportPageTest extends TestBase {
   /*
   Verify edit function in report page
    */
-  @Test(priority = 12, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 14, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void editReportPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);

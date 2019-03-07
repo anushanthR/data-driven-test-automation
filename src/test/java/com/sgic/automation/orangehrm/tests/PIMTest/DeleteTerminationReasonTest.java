@@ -17,7 +17,7 @@ public class DeleteTerminationReasonTest extends TestBase {
   /*
   Verify delete function in termination reason page
    */
-  @Test(priority = 6, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 8, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void deleteTerminationReasonPage(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);

@@ -17,7 +17,7 @@ public class AddReportPageTest extends TestBase {
   /*
   Verify add function in report page
    */
-  @Test(priority = 10, dataProvider = "AddReport", dataProviderClass = PIMData.class)
+  @Test(priority = 12, dataProvider = "AddReport", dataProviderClass = PIMData.class)
   public void addReportPage(String name, String criteria, String criteriaInclude, String fieldGroup,
       String field) {
     softAssert = new SoftAssert();

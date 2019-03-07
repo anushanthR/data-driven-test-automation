@@ -17,7 +17,7 @@ public class ViewAttendanceRecordWithSelectDate extends TestBase {
      * testcase:view attendanceRecord(select one specific date in date picker)
      * @param employeeName
      */
-    @Test(groups = "DATEPICKER",priority = 14,dataProviderClass = DatePickerData.class,
+    @Test(groups = "PERFORMANCE",priority = 14,dataProviderClass = DatePickerData.class,
             dataProvider = "AttendanceRecord",
             testName = "view attendanceRecord(select one specific date in date picker)")
     public void attendanceRecordSelectDate(String employeeName){

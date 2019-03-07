@@ -15,7 +15,7 @@ import org.testng.asserts.SoftAssert;
 public class DeleteEmployeeTest extends TestBase {
   private static final Logger LOGGER = Logger.getLogger(DeleteEmployeeTest.class);
 
-  @Test(priority = 16, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 18, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void deleteEmployee(String username, String password) throws InterruptedException {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);

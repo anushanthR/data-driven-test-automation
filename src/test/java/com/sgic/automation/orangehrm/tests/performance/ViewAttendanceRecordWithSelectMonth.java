@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
  *  @Author Jeyapriya
  */
 public class ViewAttendanceRecordWithSelectMonth extends TestBase {
-    @Test(groups = "DATEPICKER",priority = 15,dataProviderClass = DatePickerData.class,
+    @Test(groups = "PERFORMANCE",priority = 15,dataProviderClass = DatePickerData.class,
             dataProvider = "AttendanceRecord",
             testName = "view attendanceRecord(select one specific date with select the month in date picker)")
     public void attendanceRecordSelectMonth(String employeeName){
