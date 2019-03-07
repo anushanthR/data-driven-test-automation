@@ -26,6 +26,7 @@ public class DeleteHoliday extends TestBase {
         Holidays.clickMenuHoliday();
         LOGGER.info("Holiday Menu Clicked");
         softAssert.assertTrue(Holidays.isholidayInformationHeaderDisplay(),"Holiday page not displyed");
+        LOGGER.info("Holiday details header verified");
         Holidays.SearchHolidays(calFromDate,calToDate);
         Holidays.clickBtnSearch();
         LOGGER.info("Search Button Clicked");
