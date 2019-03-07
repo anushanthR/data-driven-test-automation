@@ -32,17 +32,17 @@ public class ReportData extends ExcelDataConfig{
 
 
         @DataProvider(name = "UsageReport_2")
-        public Object[][] usageReport_Employee() {
+        public Object[][] UsageReport_2() {
 
-            int rows = getRowCount("UsageReport_2");
-            int col = getColumnCount("UsageReport_2");
+            int rows = getRowCount("Usage_Report_2");
+            int col = getColumnCount("Usage_Report_2");
 
             LOGGER.info("row = " + rows + " columns = " + col);
 
             Object[][] data = new Object[rows][col];
             for (int i = 1; i <= rows; i++) {
                 for (int j = 0; j < col; j++) {
-                    data[i - 1][j] = getData("UsageReport_2", i, j);
+                    data[i - 1][j] = getData("Usage_Report_2", i, j);
                 }
             }
             return data;

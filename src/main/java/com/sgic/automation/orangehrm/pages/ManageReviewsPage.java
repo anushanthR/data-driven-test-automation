@@ -49,4 +49,8 @@ public class ManageReviewsPage extends PageBase {
     public static void clickAlertOk(){
         getDriver().findElement(btnAlertOK).click();
     }
+    public static boolean isresultDisplayed(){
+        return getDriver().findElement(result).isDisplayed();
+    }
+
 }

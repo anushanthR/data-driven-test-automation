@@ -19,7 +19,7 @@ public class ViewAttandanceRecordWithSelectNextMonth extends TestBase {
      * testcase:view attendanceRecord (select one specific date with change to next month ))
      *
      */
-    @Test(groups = "DATEPICKER",priority = 18,dataProviderClass = DatePickerData.class,
+    @Test(groups = "PERFORMANCE",priority = 18,dataProviderClass = DatePickerData.class,
             dataProvider = "AttendanceRecord",
             testName = "view attendanceRecord(select one specific date with change to next month in date picker)")
     public void attendanceRecordSelectNextMonth(String employeeName){

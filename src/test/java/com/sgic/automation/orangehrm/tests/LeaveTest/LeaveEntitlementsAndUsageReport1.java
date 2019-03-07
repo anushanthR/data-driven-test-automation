@@ -32,7 +32,7 @@ public class LeaveEntitlementsAndUsageReport1 extends TestBase {
         PageBase.staticWait(2);
         softAssert.assertTrue(LeaveEntitlementsAndUsageReport.isleaveEntitlementsAndUsageReportDisplay(), "Leave Entitlement and Usage Report");
         LOGGER.info("LeaveEntitlementsAndUsageReport Page is Verified");
-        LeaveEntitlementsAndUsageReport1(leaveBalance, leaveType, leavePeriod, leaveJobTitle, leaveBalanceLocation, leaveBalanceSubUnit);
+        LeaveEntitlementsAndUsageReport.ReportData_LeaveType(leaveBalance, leaveType, leavePeriod, leaveJobTitle, leaveBalanceLocation, leaveBalanceSubUnit);
         LeaveEntitlementsAndUsageReport.clickleaveBalanceViewBtn();
         LOGGER.info("Leave Balance view button clicked");
         extentTest.log(LogStatus.PASS, " Report Sucessfully Generated");

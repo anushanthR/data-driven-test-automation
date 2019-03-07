@@ -17,7 +17,7 @@ public class ViewAttendanceRecordWithSelectYear extends TestBase {
      * testcase:view attendanceRecord( select one specific date with change the year)
      *
      */
-    @Test(groups = "DATEPICKER",priority = 16,dataProviderClass = DatePickerData.class,
+    @Test(groups = "PERFORMANCE",priority = 16,dataProviderClass = DatePickerData.class,
             dataProvider = "AttendanceRecord",
             testName = "view attendanceRecord(select one specific date with change the year in date picker)")
     public void attendanceRecordSelectYear(String employeeName){
