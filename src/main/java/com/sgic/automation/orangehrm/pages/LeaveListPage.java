@@ -3,12 +3,15 @@ package com.sgic.automation.orangehrm.pages;
 /**
  * @Author Thanushan
  */
+import com.sgic.automation.orangehrm.utils.PageBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+
 import static com.sgic.automation.orangehrm.utils.PageBase.getDriver;
 import static com.sgic.automation.orangehrm.utils.PageBase.implicitWait;
 
-public class LeaveList {
-
+public class LeaveListPage{
+    private static By leaveMenu = By.id("menu_leave_viewLeaveModule");
     private static By leaveListMenu = By.id("menu_leave_viewLeaveList");
     private static By leaveListHeader = By.id("leave-list-search");
     private static By leaveListFrom= By.id("calFromDate");
@@ -25,25 +28,34 @@ public class LeaveList {
     private static By leaveListBtnSearch= By.id("btnSearch");
     private static By leaveListBtnReset= By.id("btnReset");
     private static By leaveListBtnSave= By.id("btnSave");
+    private static By resultTable= By.id("resultTable");
+    private static By searchResult= By.id("search-results");
+
 
     public static boolean isLeaveListDisplay(){
-
         return getDriver().findElement(leaveListHeader).isDisplayed();
     }
-
+    public static void clickLeaveMenu() {
+        getDriver().findElement(leaveMenu).click();
+    }
     public static void clickLeaveListMenu() {
-
         getDriver().findElement(leaveListMenu).click();
     }
     public static void setLeaveListFrom( String calFromDate ) {
+        getDriver().findElement(leaveListFrom).clear();
         getDriver().findElement(leaveListFrom).sendKeys(calFromDate);
     }
     public static void setLeaveListTo( String calToDate ) {
-        getDriver().findElement(leaveListTo).sendKeys(calToDate);
+        getDriver().findElement(leaveListTo).clear();
+        getDriver().findElement(leaveListTo).sendKeys(calToDate, Keys.ENTER);
     }
     public static void clickleaveListStatusRejected() {
-
         getDriver().findElement(leaveListStatusRejected).click();
+    }
+
+    public static void clickLeaveListStatusAll() {
+
+        getDriver().findElement(leaveListStatusAll).click();
     }
     public static void setLeaveListEmployee( String leaveList_txtEmployee_empName ) {
         getDriver().findElement(leaveListEmployee).sendKeys(leaveList_txtEmployee_empName);
@@ -59,18 +71,20 @@ public class LeaveList {
 
         getDriver().findElement(leaveListBtnSearch).click();
     }
-    public static void LeaveList(String calFromDate,String calToDate,String leaveList_txtEmployee_empName,String leaveList_cmbSubunit){
-      LeaveList.setLeaveListFrom(calFromDate);
-      implicitWait(2);
-      LeaveList.setLeaveListTo(calToDate);
-        implicitWait(2);
-      LeaveList.clickleaveListStatusRejected();
-        implicitWait(2);
-      LeaveList.setLeaveListEmployee(leaveList_txtEmployee_empName);
-        implicitWait(2);
-      LeaveList.setLeaveListSubUnit(leaveList_cmbSubunit);
-        implicitWait(2);
-
+    public static boolean isSearchResultDisplay() {
+        return  getDriver().findElement(searchResult).isDisplayed();
+    }
+    public static boolean isResultTableDisplay() {
+        return getDriver().findElement(resultTable).isDisplayed();
+    }
+    public static void LeaveListData(String calFromDate,String calToDate,String leaveList_txtEmployee_empName,String leaveList_cmbSubunit){
+      LeaveListPage.setLeaveListFrom(calFromDate);
+      LeaveListPage.setLeaveListTo(calToDate);
+      LeaveListPage.clickLeaveListStatusAll();
+      LeaveListPage.setLeaveListEmployee(leaveList_txtEmployee_empName);
+      LeaveListPage.setLeaveListSubUnit(leaveList_cmbSubunit);
+      LeaveListPage.clickLeaveListPastEmployee();
+      PageBase.implicitWait(3);
     }
 
 

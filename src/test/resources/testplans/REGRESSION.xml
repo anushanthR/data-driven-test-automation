@@ -22,6 +22,7 @@
             <class name="com.sgic.automation.orangehrm.tests.performance.LoginTestJP"/>
 
 
+
             <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectDate"/>
             <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectMonth"/>
             <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectYear"/>
@@ -45,6 +46,8 @@
             <class name="com.sgic.automation.orangehrm.tests.AdminTest.SkillsAdd_Test"/>
         </classes>
     </test>
+
+
 
 
     <test name="LEAVE">
@@ -74,6 +77,7 @@
 
         </classes>
     </test>
+
     <test name="RECRUITMENT">
         <classes>
 
@@ -125,5 +129,6 @@
 
   </classes>
   </test>
+
 
 </suite>

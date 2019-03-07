@@ -15,7 +15,7 @@ import org.testng.asserts.SoftAssert;
 public class ResetEmployeePageTest extends TestBase {
   private static final Logger LOGGER = Logger.getLogger(ResetEmployeePageTest.class);
 
-  @Test(priority = 14, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 16, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void resetEmployeePage(String username, String password) throws InterruptedException {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);

@@ -18,7 +18,7 @@ public class AddReportingMethodTest extends TestBase {
   Verify add function in reporting method page
    */
 
-  @Test(priority = 2, dataProvider = "ReportingMethod", dataProviderClass = PIMData.class)
+  @Test(priority = 4, dataProvider = "ReportingMethod", dataProviderClass = PIMData.class)
   public void addReportingMethod(String name) {
     softAssert = new SoftAssert();
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);

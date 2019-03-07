@@ -18,7 +18,7 @@ public class SearchEmployeeTest extends TestBase {
   /*
     verify search by name
    */
-  @Test(priority = 13, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
+  @Test(priority = 15, groups = "REGRESSION", dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void searchEmployeePage(String username, String password) throws InterruptedException {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
