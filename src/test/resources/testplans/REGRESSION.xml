@@ -14,9 +14,40 @@
 
             <!--<class name="com.sgic.automation.orangehrm.tests.PIMPageTest"/>-->
 
-            <class name="com.sgic.automation.orangehrm.tests.Entitlement"/>
-            <class name="com.sgic.automation.orangehrm.tests.Report"/>
-            <class name="com.sgic.automation.orangehrm.tests.Configure"/>
+            <!--<class name="com.sgic.automation.orangehrm.tests.Entitlement"/>-->
+            <!--<class name="com.sgic.automation.orangehrm.tests.Report"/>-->
+            <!--<class name="com.sgic.automation.orangehrm.tests.Configure"/>-->
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.OptionalFieldTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.CustomFieldTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditCustomFieldTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteCustomFieldTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddReportingMethodTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.deleteReportingMethodTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditReportingMethodTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddTerminationReasonTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteTerminationReasonTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditTerminationReasonTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.ImportDataTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.SearchReportPageTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddReportPageTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteReportPageTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.EditReportPageTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.SearchEmployeeTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.ResetEmployeePageTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.AddEmployeeTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.PIMTest.DeleteEmployeeTest"/>
+
+
+
+
+
+
+
+
+
+
+
+
 
         </classes>
     </test>

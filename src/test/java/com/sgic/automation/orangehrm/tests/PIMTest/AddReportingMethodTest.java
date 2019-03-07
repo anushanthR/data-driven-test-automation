@@ -6,15 +6,14 @@ import com.sgic.automation.orangehrm.pages.DashBoardPage;
 import com.sgic.automation.orangehrm.pages.LoginPage;
 import com.sgic.automation.orangehrm.pages.PIMPage;
 import com.sgic.automation.orangehrm.pages.ReportingMethodPage;
-import com.sgic.automation.orangehrm.tests.PIMPageTest;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class addReportingMethodTest extends TestBase {
-  private static final Logger LOGGER = Logger.getLogger(addReportingMethodTest.class);
+public class AddReportingMethodTest extends TestBase {
+  private static final Logger LOGGER = Logger.getLogger(AddReportingMethodTest.class);
    /*
   Verify add function in reporting method page
    */
