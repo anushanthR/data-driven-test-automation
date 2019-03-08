@@ -27,7 +27,11 @@ public class AdminMenuPage extends PageBase {
     private static By MenuEmail_c_m=By.id("menu_admin_listMailConfiguration");
     private static By MenuregisterOAuthClient=By.id("menu_admin_registerOAuthClient");
     private static By MenuLocations=By.id("menu_admin_viewLocations");
-
+    private static By MenuStructure=By.id("menu_admin_viewCompanyStructure");
+    public static void ClickMenuStructure(){
+        getDriver().findElement(MenuStructure).click();
+        LOGGER.info("Button_MenuLocations_Click*** ");
+    }
 
     //admim Menu Click Theva Test Cash script
 
