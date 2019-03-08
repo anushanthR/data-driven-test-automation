@@ -53,7 +53,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2019-03-07 16:12:46</span>
+					<span class='suite-started-time'>2019-03-08 10:41:04</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -83,25 +83,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 28s+36ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 3m 43s+69ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 28s+36ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 3m 43s+69ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2019-03-07 16:12:17</span> 
+							<span class='panel-lead suite-started-time'>2019-03-08 10:37:21</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2019-03-07 16:12:46</span> 
+							<span class='panel-lead suite-ended-time'>2019-03-08 10:41:04</span> 
 						</div> 
 					</div>
 				</div>
@@ -206,6 +206,7 @@
 									<li class='pass'><a href='#!'>Pass</a></li>
 									<li class='fail'><a href='#!'>Fail</a></li>
 									<li class='skip'><a href='#!'>Skip</a></li>
+										<li class='unknown'><a href='#!'>Unknown</a></li>
 									<li class='divider'></li>
 									<li class='clear'><a href='#!'>Clear Filters</a></li>
 								</ul>
@@ -237,17 +238,17 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active pass ' extentid='c1e98eb0-3d52-4fac-98f2-330089f797a2'>
+										<li class='collection-item test displayed active fail ' extentid='47901ff4-93f7-4dc5-a6b3-f1b900ac66bb'>
 											<div class='test-head'>
-												<span class='test-name'>Create user </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='test-name'>AddRecruitmentVacancyTest </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-07 16:12:29</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'></span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'></span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-08 10:37:33</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-03-08 10:37:57</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 23s+340ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -264,8 +265,349 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>16:12:29</td>
-																	<td class='step-details'>username = Admin password =admin123</td>
+																	<td class='timestamp'>10:37:44</td>
+																	<td class='step-details'>recruitment Button Click</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>10:37:45</td>
+																	<td class='step-details'>Vacancy Button Click</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>10:37:45</td>
+																	<td class='step-details'>Vacancy Add Button Verify</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>10:37:46</td>
+																	<td class='step-details'>Vacancy Add Button Click</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>10:37:47</td>
+																	<td class='step-details'>Vacancy Add Page Verify</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>10:37:47</td>
+																	<td class='step-details'>jobtitle = IT Managervacancy name = accountshiringmanager = Russel Hamiltonposition num = 6description =open</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>10:37:57</td>
+																	<td class='step-details'><a href='E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-37-08_10-37-57.jpg' data-featherlight='image'><img class='report-img' src='file:///E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-37-08_10-37-57.jpg' /></a></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='d605ad11-9505-4275-b6b2-2d0da431b8e2'>
+											<div class='test-head'>
+												<span class='test-name'>AddRecruitmentCandidateTest </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-08 10:38:07</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-03-08 10:38:22</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 15s+115ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>10:38:10</td>
+																	<td class='step-details'>Login worked</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>10:38:14</td>
+																	<td class='step-details'>Recruitment button worked</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>10:38:16</td>
+																	<td class='step-details'>Recruitment file upload</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>10:38:16</td>
+																	<td class='step-details'>FirstName = thusya, Middle Name = thusy, Last Name = gunam, Email = gthusi@gmail.com, Contact Number = 770098567, Job Vacancy = accounts, Keyword = 7777, Comment = very soon, Date of Application = 2019-02-15</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>10:38:23</td>
+																	<td class='step-details'><a href='E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-38-08_10-38-22.jpg' data-featherlight='image'><img class='report-img' src='file:///E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-38-08_10-38-22.jpg' /></a></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active unknown ' extentid='afcf7ee0-cf2a-4ce5-9867-273a3f386cdf'>
+											<div class='test-head'>
+												<span class='test-name'>Search Recruitment Candidate </span>
+												<span class='test-status label right outline capitalize unknown'>unknown</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-08 10:38:33</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'></span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'></span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='b1b95e47-b4ee-47e1-a1f2-e9ce539a801b'>
+											<div class='test-head'>
+												<span class='test-name'>JobTitle =IT Manager, Vacancy = IT Manager, HiringManager = Fiona Grace, Status = Hired, Candidate name = Thusya, Keyword = hhh, FromDate = 1/10/19, ToDate1/12/19, Method of Application =online </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-08 10:38:40</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-03-08 10:38:50</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 10s+160ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>10:38:51</td>
+																	<td class='step-details'><a href='E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-38-08_10-38-50.jpg' data-featherlight='image'><img class='report-img' src='file:///E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-38-08_10-38-50.jpg' /></a></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='fe773854-a257-4e0d-a389-c5efb5c865a8'>
+											<div class='test-head'>
+												<span class='test-name'>SearchRecruitmentVacancy </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-08 10:39:01</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-03-08 10:39:19</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 17s+976ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>10:39:19</td>
+																	<td class='step-details'><a href='E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-39-08_10-39-19.jpg' data-featherlight='image'><img class='report-img' src='file:///E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-39-08_10-39-19.jpg' /></a></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='f771b48e-0c98-408f-ba4f-e5db86d02fb0'>
+											<div class='test-head'>
+												<span class='test-name'>EditRecruitmentVacancy </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-08 10:39:29</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-03-08 10:39:46</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 17s+377ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>10:39:46</td>
+																	<td class='step-details'><a href='E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-39-08_10-39-46.jpg' data-featherlight='image'><img class='report-img' src='file:///E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-39-08_10-39-46.jpg' /></a></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='38bbc4ef-351c-476e-90e6-84810ab05c44'>
+											<div class='test-head'>
+												<span class='test-name'>EditRecruitmentCandidate </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-08 10:39:59</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-03-08 10:40:13</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 13s+98ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>10:40:13</td>
+																	<td class='step-details'><a href='E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-40-08_10-40-13.jpg' data-featherlight='image'><img class='report-img' src='file:///E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-40-08_10-40-13.jpg' /></a></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='c8b35d90-9ea1-4493-aaef-1f9242eb5091'>
+											<div class='test-head'>
+												<span class='test-name'>DeleteRecruitmentVacancy </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-08 10:40:23</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-03-08 10:40:40</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 17s+837ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>10:40:41</td>
+																	<td class='step-details'><a href='E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-40-08_10-40-40.jpg' data-featherlight='image'><img class='report-img' src='file:///E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-40-08_10-40-40.jpg' /></a></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='e0279a64-4369-4d42-9558-a0194f848654'>
+											<div class='test-head'>
+												<span class='test-name'>DeleteCandidate </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-03-08 10:40:50</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-03-08 10:41:03</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 12s+553ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>10:41:03</td>
+																	<td class='step-details'><a href='E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-41-08_10-41-03.jpg' data-featherlight='image'><img class='report-img' src='file:///E:\invictaAutomation\data-driven-test-automation\src\test\resources\screenshots\2019-41-08_10-41-03.jpg' /></a></td>
 																</tr>
 														</tbody>
 													</table>

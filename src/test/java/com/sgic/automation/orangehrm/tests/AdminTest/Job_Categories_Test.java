@@ -26,9 +26,7 @@ public class Job_Categories_Test extends TestBase {
         JobCategory.ClickAddButton();
         JobCategory.setjobCategory_name(Constants.JobCatery);
         JobCategory.ClickButtonSave();
-        JobCategory.ClickCheckBox();
-        JobCategory.ClickDeleteButton();
-        JobCategory.ClickConForomOk();
+
         extentTest.log(LogStatus.PASS, " OrangeHRM Add Job Category Add Success: ");
         extentReport.endTest(extentTest);
         softAssert.assertAll();

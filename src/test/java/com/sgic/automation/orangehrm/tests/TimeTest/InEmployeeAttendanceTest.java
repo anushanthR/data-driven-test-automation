@@ -32,7 +32,7 @@ public class InEmployeeAttendanceTest extends TestBase {
         EmployeeListPage.clicSaveBtn();
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
-
+        softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgEmpName,Constants.OrgEmpPassword);
         softAssert.assertTrue(EmployeeAttendanceInOut.employeeTimeBtnDisplay());
         EmployeeAttendanceInOut.employeenameTimeBtnClick();

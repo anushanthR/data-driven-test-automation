@@ -34,6 +34,7 @@ public class Constants {
     public static final String Description = "Cricket";
     public static final String Nationality = "SriLankan";
     public static final String JobCatery = "IT Wornk";
+    public static final String JobCatery1 = "IT Manager";
 //add KPIs credentials
     public static final String JobTitle="IT Executive";
     public static final String KPI="knkn";
