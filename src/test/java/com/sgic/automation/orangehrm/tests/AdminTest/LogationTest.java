@@ -14,7 +14,7 @@ import org.testng.asserts.SoftAssert;
 
 public class LogationTest extends TestBase {
     private static final Logger LOGGER = Logger.getLogger(LogationTest.class);
-    @Test(priority = 10, dataProvider = "Location", dataProviderClass = LocationsData.class)
+    @Test(priority = 13, dataProvider = "Location", dataProviderClass = LocationsData.class)
     public void SaveJobTitleTest(String name,String cuntry,String state,String city,String address,String zip,String phone,String fax,String note) {
         softAssert = new SoftAssert();
         LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
