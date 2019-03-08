@@ -5,7 +5,6 @@ import com.sgic.automation.orangehrm.TestData.EmailConfigData;
 import com.sgic.automation.orangehrm.pages.AdminMenuPage;
 import com.sgic.automation.orangehrm.pages.LoginPage;
 import com.sgic.automation.orangehrm.pages.Mail_Configuration;
-import com.sgic.automation.orangehrm.tests.EmailConfig;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
