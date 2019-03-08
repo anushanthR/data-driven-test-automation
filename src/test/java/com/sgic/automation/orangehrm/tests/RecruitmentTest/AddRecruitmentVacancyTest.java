@@ -2,10 +2,9 @@ package com.sgic.automation.orangehrm.tests.RecruitmentTest;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.TestData.RecruitmentData;
-import com.sgic.automation.orangehrm.pages.AdminMenuPage;
-import com.sgic.automation.orangehrm.pages.JobCategory;
-import com.sgic.automation.orangehrm.pages.LoginPage;
+import com.sgic.automation.orangehrm.pages.*;
 import com.sgic.automation.orangehrm.utils.Constants;
+import com.sgic.automation.orangehrm.utils.PageBase;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
@@ -22,6 +21,13 @@ public class AddRecruitmentVacancyTest extends TestBase {
         extentTest =extentReport.startTest("AddRecruitmentVacancyTest");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
         LoginPage.login(Constants.OrgUserName, Constants.LOGIN_PASSWORD);
+        AdminMenuPage.clickAdmin();
+        AdminMenuPage.clickJobMenu();
+        AdminMenuPage.clickJobTitle();
+        JobTitle.ClickAddButton();
+        PageBase.implicitWait(2);
+        AddRecruitmentVacancy.txtjobTitle_name(Constants.RecruitmentJobTitle);
+        AddRecruitmentVacancy.ClickButtonSave();
 
         softAssert.assertTrue(com.sgic.automation.orangehrm.pages.AddRecruitmentVacancy.isRecruitmentBtnDisplay(),
                 "RecruitmentBtn is not Displayed");

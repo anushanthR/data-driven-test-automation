@@ -13,6 +13,7 @@ public class Constants {
     public static final String OrgUserName = "Admin";
     public static final String OrgPassword = "admin123";
 
+    //Employee login credentials
     public static final String OrgEmpName = "thusya";
     public static final String OrgEmpPassword = "thusya1234";
 
@@ -34,10 +35,13 @@ public class Constants {
     public static final String Description = "Cricket";
     public static final String Nationality = "SriLankan";
     public static final String JobCatery = "IT Wornk";
-    public static final String JobCatery1 = "IT Manager";
+
 //add KPIs credentials
     public static final String JobTitle="IT Executive";
     public static final String KPI="knkn";
     public static final String MaxRating="2";
     public static final String MinRating="1";
+
+//add job title_Recruitment
+    public static final String RecruitmentJobTitle = "QA Engineer";
 }

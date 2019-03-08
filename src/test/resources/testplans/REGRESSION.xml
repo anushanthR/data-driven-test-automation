@@ -3,7 +3,7 @@
 <suite name="REGRESSION" verbose="1" configfailurepolicy="continue">
 
 
-  
+
     <test name="PERFORMANCE">
         <classes>
             <class name="com.sgic.automation.orangehrm.tests.performance.AddKPIs"/>
@@ -22,10 +22,6 @@
             <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllPerformanceReview"/>
 
             <class name="com.sgic.automation.orangehrm.tests.performance.LoginTestJP"/>
-
-
-
-
 
             <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectDate"/>
             <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectMonth"/>
@@ -79,17 +75,16 @@
 
         </classes>
     </test>
-
-
     <test name="RECRUITMENT">
         <classes>
+            <class name="com.sgic.automation.orangehrm.tests.LoginThusyTest"/>
 
             <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.AddRecruitmentVacancyTest"/>
             <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.AddRecruitmentCandidateTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.EditRecruitmentVacancyTest"/>
-            <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.EditRecruitmentCandidateTest"/>
             <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.SearchRecruitmentVacancyTest"/>
             <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.SearchRecruitmentCandidateTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.EditRecruitmentVacancyTest"/>
+            <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.EditRecruitmentCandidateTest"/>
             <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.DeleteRecruitmentVacancyTest"/>
             <class name="com.sgic.automation.orangehrm.tests.RecruitmentTest.DeleteRecruitmentCandidateTest"/>
         </classes>
@@ -107,10 +102,6 @@
 
         </classes>
     </test>
-
-
-
-
     <test name="PIM">
      <classes>
 
