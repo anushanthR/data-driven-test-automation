@@ -4,7 +4,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.sgic.automation.orangehrm.pages.Add_License;
 import com.sgic.automation.orangehrm.pages.AdminMenuPage;
 import com.sgic.automation.orangehrm.pages.LoginPage;
-import com.sgic.automation.orangehrm.tests.TestAdminPage;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;

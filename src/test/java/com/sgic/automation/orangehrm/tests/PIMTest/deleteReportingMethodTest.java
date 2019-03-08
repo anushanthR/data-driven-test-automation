@@ -21,7 +21,7 @@ public class deleteReportingMethodTest extends TestBase {
   public void deleteReportingMethod(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest = extentReport.startTest("delete custom field");
+    extentTest = extentReport.startTest("Delete reporting method");
     extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");

@@ -5,7 +5,6 @@ import com.sgic.automation.orangehrm.TestData.UserAddData;
 import com.sgic.automation.orangehrm.pages.AdminPage;
 import com.sgic.automation.orangehrm.pages.DashBoardPage;
 import com.sgic.automation.orangehrm.pages.LoginPage;
-import com.sgic.automation.orangehrm.tests.TestAdminPage;
 import com.sgic.automation.orangehrm.utils.Constants;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
