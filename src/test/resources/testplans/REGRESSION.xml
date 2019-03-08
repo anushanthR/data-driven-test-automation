@@ -3,29 +3,29 @@
 <suite name="REGRESSION" verbose="1" configfailurepolicy="continue">
 
     <test name="PERFORMANCE">
-        <classes>
-            <class name="com.sgic.automation.orangehrm.tests.performance.AddKPIs"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.SearchKPIs"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.EditKPIs"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllKPIs"/>
+    <classes>
+        <class name="com.sgic.automation.orangehrm.tests.performance.AddKPIs"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.SearchKPIs"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.EditKPIs"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllKPIs"/>
 
-            <class name="com.sgic.automation.orangehrm.tests.performance.AddTRackers"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.EditTrackers"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllTrackers"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.AddTRackers"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.EditTrackers"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllTrackers"/>
 
-            <class name="com.sgic.automation.orangehrm.tests.performance.AddPerformanceReview"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.EditPerformanceReview"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.SearchPerformanceReviewWithEmployeeName"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.searchPerformanceReviewWithJobTitle"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllPerformanceReview"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.LoginTestJP"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectDate"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectMonth"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectYear"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttandanceRecordWithSelectNextMonth"/>
-            <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectPreviousMonth"/>
-        </classes>
-    </test>
+        <class name="com.sgic.automation.orangehrm.tests.performance.AddPerformanceReview"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.EditPerformanceReview"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.SearchPerformanceReviewWithEmployeeName"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.searchPerformanceReviewWithJobTitle"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllPerformanceReview"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.LoginTestJP"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectDate"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectMonth"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectYear"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttandanceRecordWithSelectNextMonth"/>
+        <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectPreviousMonth"/>
+    </classes>
+</test>
 
     <test name="AdminTest">
         <classes>
@@ -45,6 +45,7 @@
             <class name="com.sgic.automation.orangehrm.tests.AdminTest.Edit_Work_Shift_Test"/>
             <class name="com.sgic.automation.orangehrm.tests.AdminTest.LogationTest"/>
             <class name="com.sgic.automation.orangehrm.tests.AdminTest.Add_JobTitle_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Structure_Data_Test"/>
         </classes>
     </test>
 
