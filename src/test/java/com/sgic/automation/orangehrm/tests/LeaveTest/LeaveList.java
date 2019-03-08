@@ -13,12 +13,13 @@ import com.sgic.automation.orangehrm.utils.PageBase;
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class LeaveList extends TestBase {
         private static final Logger LOGGER = Logger.getLogger(LeaveList.class);
 
     @Test( priority = 0,dataProviderClass = LeaveListData.class,dataProvider = "LeaveList",testName = "Leave List")
-    public void LeaveList(String calFromDate,String calToDate,String leaveList_txtEmployee_empName,String leaveList_cmbSubunit) {
+    public void LeaveList(String calFromDate,String calToDate,String leaveList_txtEmployee_empName,String leaveList_cmbSubunit,String leaveComment) {
         extentTest = extentReport.startTest("Leave List Search");
         LOGGER.info("Login page is displayed");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");
@@ -38,8 +39,16 @@ public class LeaveList extends TestBase {
         LOGGER.info("Leave List Search Results table verified");
         softAssert.assertTrue(LeaveListPage.isSearchResultDisplay(),"Search Result not displayed");
         LOGGER.info("Leave List Search Results verified");
-        extentTest.log(LogStatus.PASS, "Leave List Sucessfully Searched");
         LOGGER.info("Leave Sucessfully Searched");
+        implicitWait(2);
+        LeaveListPage.clickCommentIcon();
+        LOGGER.info("Comment Icon Clicked");
+        //softAssert.assertTrue(LeaveListPage.isCommentDialogDisplay(),"Comment Dialog Not Displayed");
+        LOGGER.info("Comment dialog Sucessfully Verified");
+        LeaveListPage.setComment(leaveComment);
+        LeaveListPage.clickCommentSave();
+
+        extentTest.log(LogStatus.PASS, "Leave List Sucessfully Searched");
         extentReport.endTest(extentTest);
         softAssert.assertAll();
     }

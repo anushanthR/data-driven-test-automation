@@ -30,6 +30,10 @@ public class LeaveListPage{
     private static By leaveListBtnSave= By.id("btnSave");
     private static By resultTable= By.id("resultTable");
     private static By searchResult= By.id("search-results");
+    private static By commentIcon= By.xpath("//*[@id=\"resultTable\"]/tbody/tr/td[7]/span/img");
+    private static By commentDialog= By.id("search-commentDialog");
+    private static By comment= By.id("leaveComment");
+    private static By commentSave= By.id("commentSave");
 
 
     public static boolean isLeaveListDisplay(){
@@ -47,7 +51,7 @@ public class LeaveListPage{
     }
     public static void setLeaveListTo( String calToDate ) {
         getDriver().findElement(leaveListTo).clear();
-        getDriver().findElement(leaveListTo).sendKeys(calToDate, Keys.ENTER);
+        getDriver().findElement(leaveListTo).sendKeys(calToDate,Keys.ENTER);
     }
     public static void clickleaveListStatusRejected() {
         getDriver().findElement(leaveListStatusRejected).click();
@@ -77,6 +81,23 @@ public class LeaveListPage{
     public static boolean isResultTableDisplay() {
         return getDriver().findElement(resultTable).isDisplayed();
     }
+    public static void clickCommentIcon() {
+        implicitWait(4);
+        getDriver().findElement(commentIcon).click();
+    }
+    public static boolean isCommentDialogDisplay() {
+
+        return getDriver().findElement(commentDialog).isDisplayed();
+    }
+    public static void setComment(String leaveComment) {
+       // getDriver().switchTo().alert().sendKeys(leaveComment);
+        getDriver().findElement(comment).sendKeys(leaveComment);
+    }
+    public static void clickCommentSave() {
+
+        getDriver().findElement(commentSave).click();
+    }
+
     public static void LeaveListData(String calFromDate,String calToDate,String leaveList_txtEmployee_empName,String leaveList_cmbSubunit){
       LeaveListPage.setLeaveListFrom(calFromDate);
       LeaveListPage.setLeaveListTo(calToDate);
@@ -84,7 +105,18 @@ public class LeaveListPage{
       LeaveListPage.setLeaveListEmployee(leaveList_txtEmployee_empName);
       LeaveListPage.setLeaveListSubUnit(leaveList_cmbSubunit);
       LeaveListPage.clickLeaveListPastEmployee();
+
       PageBase.implicitWait(3);
+    }
+    public static void LeaveListCommentData(String calFromDate,String calToDate,String leaveList_txtEmployee_empName,String leaveList_cmbSubunit){
+        LeaveListPage.setLeaveListFrom(calFromDate);
+        LeaveListPage.setLeaveListTo(calToDate);
+        LeaveListPage.clickLeaveListStatusAll();
+        LeaveListPage.setLeaveListEmployee(leaveList_txtEmployee_empName);
+        LeaveListPage.setLeaveListSubUnit(leaveList_cmbSubunit);
+        //LeaveListPage.clickLeaveListPastEmployee();
+        PageBase.implicitWait(3);
+
     }
 
 
