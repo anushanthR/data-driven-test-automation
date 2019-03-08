@@ -1,6 +1,6 @@
 package com.sgic.automation.orangehrm.tests.AdminTest;
 
-import com.sgic.automation.orangehrm.tests.TestAdminPage;
+
 import com.sgic.automation.orangehrm.utils.TestBase;
 import org.apache.log4j.Logger;
 

@@ -43,11 +43,7 @@ public class LoginTestJP extends TestBase {
                     "alert msg is not displayed");
             extentTest.log(LogStatus.PASS, "Login with Username: " + username + " and Password: " + password,alertMSg);
         }
-
-
         extentReport.endTest(extentTest);
         softAssert.assertAll();
     }
-
-
 }

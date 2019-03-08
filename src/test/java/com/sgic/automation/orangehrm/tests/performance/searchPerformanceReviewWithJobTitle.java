@@ -37,6 +37,7 @@ public class searchPerformanceReviewWithJobTitle extends TestBase {
         LOGGER.info("search manage review by jobTitle");
         ManageReviewsPage.searchPerformanceReviewByJobTitle();
         extentTest.log(LogStatus.PASS, "search Performance review with  job title");
+        softAssert.assertTrue(ManageReviewsPage.isresultDisplayed(),"Perfomance result is not Displayed");
         softAssert.assertTrue(DashBoardPage.isWelcomeAdminbtnDisplayed() ,"Welcom admin button  is not Displayed");
         DashBoardPage.clickWelcomeAdminbtn();
         DashBoardPage.clickLogoutbtn();
