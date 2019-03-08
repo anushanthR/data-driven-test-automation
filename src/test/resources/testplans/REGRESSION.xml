@@ -18,13 +18,7 @@
             <class name="com.sgic.automation.orangehrm.tests.performance.SearchPerformanceReviewWithEmployeeName"/>
             <class name="com.sgic.automation.orangehrm.tests.performance.searchPerformanceReviewWithJobTitle"/>
             <class name="com.sgic.automation.orangehrm.tests.performance.DeleteAllPerformanceReview"/>
-
             <class name="com.sgic.automation.orangehrm.tests.performance.LoginTestJP"/>
-
-
-
-
-
             <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectDate"/>
             <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectMonth"/>
             <class name="com.sgic.automation.orangehrm.tests.performance.ViewAttendanceRecordWithSelectYear"/>
@@ -47,7 +41,8 @@
             <class name="com.sgic.automation.orangehrm.tests.AdminTest.Pay_GradesTest"/>
             <class name="com.sgic.automation.orangehrm.tests.AdminTest.Register_OAuth_Client_Test"/>
             <class name="com.sgic.automation.orangehrm.tests.AdminTest.SkillsAdd_Test"/>
-
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Add_Work_Shift_Test"/>
+            <class name="com.sgic.automation.orangehrm.tests.AdminTest.Edit_Work_Shift_Test"/>
             <class name="com.sgic.automation.orangehrm.tests.AdminTest.LogationTest"/>
             <class name="com.sgic.automation.orangehrm.tests.AdminTest.Add_JobTitle_Test"/>
         </classes>
