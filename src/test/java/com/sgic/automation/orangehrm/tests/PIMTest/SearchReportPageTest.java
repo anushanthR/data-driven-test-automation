@@ -20,7 +20,7 @@ public class SearchReportPageTest extends TestBase {
   public void reportPageSearch(String username, String password) {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest = extentReport.startTest("Search report name");
+    extentTest = extentReport.startTest("Search report name in Report page");
     extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");

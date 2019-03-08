@@ -12,7 +12,7 @@ public class ViewAttendanceEmployeeRecord extends TestBase {
     /**
      * Time_Attendance test
      */
-    @Test(priority = 10,groups = "REGRESSION", testName = "TimePageAttendanceTest")
+    @Test(priority = 14,groups = "REGRESSION", testName = "TimePageAttendanceTest")
     public void TimePageAttendanceTest() {
         extentTest =extentReport.startTest("TimePage_Attendance Test");
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(), "Login Page is not Displayed");

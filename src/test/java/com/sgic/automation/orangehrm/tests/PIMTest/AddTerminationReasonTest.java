@@ -24,7 +24,7 @@ public class AddTerminationReasonTest extends TestBase {
   public void addTerminationReasonPage(String name) {
     softAssert = new SoftAssert();
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
-    extentTest = extentReport.startTest("Edit custom field");
+    extentTest = extentReport.startTest("Add termination reason");
     extentTest.log(LogStatus.PASS, "name = " + name);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");

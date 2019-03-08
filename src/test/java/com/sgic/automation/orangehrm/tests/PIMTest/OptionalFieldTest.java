@@ -21,7 +21,7 @@ public class OptionalFieldTest extends TestBase {
   @Test(priority = 0, dataProvider = "OrangeHRMLogin", dataProviderClass = LoginData.class)
   public void optionalField(String username, String password) {
     softAssert = new SoftAssert();
-    extentTest = extentReport.startTest("OrangeHRMLogin");
+    extentTest = extentReport.startTest("Edit optional field");
     LOGGER.info("login with username: " + username + " password: " + password);
     LoginPage.login(username, password);
     extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);

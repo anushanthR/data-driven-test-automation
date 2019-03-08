@@ -23,7 +23,7 @@ public class EditReportingMethodTest extends TestBase {
   public void editReportingMethod(String name) {
     softAssert = new SoftAssert();
     LoginPage.login(Constants.OrgUserName, Constants.OrgPassword);
-    extentTest = extentReport.startTest("Add custom field");
+    extentTest = extentReport.startTest("Edit reporting method");
     extentTest.log(LogStatus.PASS, "name = " + name);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");

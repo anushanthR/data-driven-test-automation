@@ -28,16 +28,17 @@ public class AddPerformanceReviewPage extends PageBase {
 
     }
     public static void setEmloyee(String employeeName){
-        implicitWait(2);
-        getDriver().findElement(txtemployeeName).sendKeys(employeeName,Keys.ENTER);
+
+        getDriver().findElement(txtemployeeName).sendKeys(employeeName,Keys.TAB);
 
     }
     public static void setsupervisorName(String supervisorName){
-        implicitWait(2);
+        waiTillVisible(txtsupervisorName,2);
         getDriver().findElement(txtsupervisorName).sendKeys(supervisorName);
         getDriver().findElement(txtsupervisorName).sendKeys(Keys.ENTER);
 
     }
+
     public static void setStartDate(String startDate){
         getDriver().findElement(txtstartDate).click();
         getDriver().findElement(txtstartDate).clear();

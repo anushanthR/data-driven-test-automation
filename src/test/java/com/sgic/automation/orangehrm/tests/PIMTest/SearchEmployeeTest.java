@@ -22,7 +22,7 @@ public class SearchEmployeeTest extends TestBase {
   public void searchEmployeePage(String username, String password) throws InterruptedException {
     softAssert = new SoftAssert();
     LoginPage.login(username, password);
-    extentTest = extentReport.startTest("Search employee ");
+    extentTest = extentReport.startTest("Search employee in Employee page ");
     extentTest.log(LogStatus.PASS, "username = " + username + " password =" + password);
     PIMPage.clickPIM();
     softAssert.assertTrue(PIMPage.isPIMPageDisplay(), "PIM page is not displayed");
